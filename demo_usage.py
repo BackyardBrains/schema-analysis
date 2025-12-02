@@ -2,7 +2,7 @@ import sys
 import os
 
 # Mimic installing the package by adding it to path
-sys.path.append(os.path.abspath('schema_analysis'))
+sys.path.append(os.path.abspath('.'))
 
 from schema_analysis import Experiment
 
