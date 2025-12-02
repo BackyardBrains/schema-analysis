@@ -1,0 +1,9 @@
+user_number,face_id,tubeTypeIndex,faceSide,tip_direction,raw_angle
+1,ID001,1,left,left,-10
+1,ID001,1,left,right,10
+1,ID001,1,right,right,10
+1,ID001,1,right,left,-10
+1,ID017,1,left,left,-10
+1,ID017,1,left,right,10
+2,ID001,1,left,left,-50
+2,ID001,1,left,right,50
