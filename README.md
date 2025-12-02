@@ -4,10 +4,10 @@ A Python package for analyzing schema experiment data.
 
 ## Usage in Google Colab
 
-1.  **Clone the repository** (or upload the `schema_analysis` folder to your Drive).
-2.  **Install the package**:
+1.  **Clone and install**:
     ```python
-    !pip install git+https://github.com/BackyardBrains/schema-analysis.git
+    !git clone https://github.com/BackyardBrains/schema-analysis.git
+    !pip install ./schema-analysis
     ```
 3.  **Run the analysis**:
     ```python
@@ -17,15 +17,19 @@ A Python package for analyzing schema experiment data.
     # Path to your data file (upload it to Colab or mount Drive)
     data_file = "path/to/your/data.csv" 
 
-    # Initialize experiment
+    # Initialize experiment (loads data only)
     experiment = Experiment(data_file)
 
-    # View results
-    print(experiment)
-    print(experiment.data.head())
+    # Run processing steps explicitly
+    experiment.preprocess()
+    experiment.filter_trials(min_angle=3, max_angle=40)
+    experiment.exclude_subjects(max_invalid_trials=2)
     
-    # Access statistics
-    print(experiment.stats)
+    # Generate results
+    results = experiment.balance_trials()
+
+    # View results
+    print(results.head())
     ```
 
 ## Package Structure
