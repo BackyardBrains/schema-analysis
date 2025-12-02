@@ -25,6 +25,7 @@ class TubeTrials:
         """
         self.df = processing.rename_face_ids(self.df)
         self.df = processing.transform_angles(self.df)
+        print(f"Processed {len(self.df)} trials, calculated end_angle for all.")
         
     def mark_valid_angles(self, min_angle=3, max_angle=40):
         """
@@ -33,6 +34,10 @@ class TubeTrials:
         """
         # processing.validate_angles adds 'angle_valid' column
         self.df = processing.validate_angles(self.df, min_angle, max_angle)
+        n_valid = self.df['angle_valid'].sum()
+        n_total = len(self.df)
+        pct_valid = (n_valid / n_total * 100) if n_total > 0 else 0
+        print(f"Marked angles: {n_valid}/{n_total} valid ({pct_valid:.1f}%), {n_total - n_valid} invalid ({100 - pct_valid:.1f}%)")
         
     def mark_bad_subjects(self, max_invalid_trials=2):
         """
@@ -44,6 +49,13 @@ class TubeTrials:
             
         bad_subjects = processing.identify_bad_subjects(self.df, max_invalid_trials)
         self.df['is_excluded_subject'] = self.df['user_number'].isin(bad_subjects)
+        n_excluded_subjects = len(bad_subjects)
+        n_total_subjects = self.df['user_number'].nunique()
+        pct_excluded = (n_excluded_subjects / n_total_subjects * 100) if n_total_subjects > 0 else 0
+        n_excluded_trials = self.df['is_excluded_subject'].sum()
+        n_total_trials = len(self.df)
+        pct_excluded_trials = (n_excluded_trials / n_total_trials * 100) if n_total_trials > 0 else 0
+        print(f"Marked subjects: {n_excluded_subjects}/{n_total_subjects} excluded ({pct_excluded:.1f}%), affecting {n_excluded_trials}/{n_total_trials} trials ({pct_excluded_trials:.1f}%)")
         
     def select(self, valid_only=False, query=None):
         """
