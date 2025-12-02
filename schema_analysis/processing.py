@@ -38,14 +38,21 @@ def validate_angles(df, min_angle=3, max_angle=40):
     df['angle_valid'] = (df['end_angle'] > min_angle) & (df['end_angle'] < max_angle)
     return df
 
+def identify_bad_subjects(df, max_invalid_trials=2):
+    """
+    Identifies subjects who have more than `max_invalid_trials` invalid trials.
+    Returns a list of subject IDs to exclude.
+    """
+    angle_invalid_per_subject = df[~df['angle_valid']].groupby('user_number').size()
+    subjects_to_exclude = angle_invalid_per_subject[angle_invalid_per_subject > max_invalid_trials].index.tolist()
+    return subjects_to_exclude
+
 def exclude_subjects(df, max_invalid_trials=2):
     """
     Excludes subjects who have more than `max_invalid_trials` invalid trials.
     Returns the filtered DataFrame and the list of excluded subjects.
     """
-    angle_invalid_per_subject = df[~df['angle_valid']].groupby('user_number').size()
-    subjects_to_exclude = angle_invalid_per_subject[angle_invalid_per_subject > max_invalid_trials].index.tolist()
-    
+    subjects_to_exclude = identify_bad_subjects(df, max_invalid_trials)
     df_filtered = df[~df['user_number'].isin(subjects_to_exclude)].copy()
     return df_filtered, subjects_to_exclude
 
@@ -77,7 +84,7 @@ def balance_trials(df):
                             'face_id': face_id,
                             'tubeTypeIndex': tube_idx,
                             'pair_type': 'FaceLeft',
-                            'D': d_val
+                            'd': d_val
                         })
                         used_indices.update([t_row.name, a_row.name])
                         
@@ -94,12 +101,12 @@ def balance_trials(df):
                             'face_id': face_id,
                             'tubeTypeIndex': tube_idx,
                             'pair_type': 'FaceRight',
-                            'D': d_val
+                            'd': d_val
                         })
                         used_indices.update([t_row.name, a_row.name])
                         
     if not valid_d_values:
-        results_df = pd.DataFrame(columns=['user_number', 'face_id', 'tubeTypeIndex', 'pair_type', 'D'])
+        results_df = pd.DataFrame(columns=['user_number', 'face_id', 'tubeTypeIndex', 'pair_type', 'd'])
     else:
         results_df = pd.DataFrame(valid_d_values)
     return results_df, used_indices
