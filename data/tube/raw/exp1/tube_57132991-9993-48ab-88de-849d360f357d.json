@@ -1,0 +1,274 @@
+{
+    "experiment": "tube",
+    "UUID": "57132991-9993-48ab-88de-849d360f357d",
+    "data": {
+        "session": {
+            "experiment_version": "1.1",
+            "file_version": "1.1",
+            "browserData": {
+                "os": "Macintosh",
+                "browser": "Chrome",
+                "screenResolution": "1920x1200",
+                "browserViewport": "1632x725"
+            }
+        },
+        "trials": [
+            {
+                "trialIndex": 0,
+                "tubeTypeIndex": 2,
+                "arrowDirection": "left",
+                "facetype": "sighted",
+                "faceSide": "left",
+                "endAngle": -6
+            },
+            {
+                "trialIndex": 1,
+                "tubeTypeIndex": 0,
+                "arrowDirection": "right",
+                "facetype": "sighted",
+                "faceSide": "right",
+                "endAngle": 5
+            },
+            {
+                "trialIndex": 2,
+                "tubeTypeIndex": 2,
+                "arrowDirection": "right",
+                "facetype": "sighted",
+                "faceSide": "right",
+                "endAngle": 6
+            },
+            {
+                "trialIndex": 3,
+                "tubeTypeIndex": 0,
+                "arrowDirection": "left",
+                "facetype": "sighted",
+                "faceSide": "left",
+                "endAngle": -6
+            },
+            {
+                "trialIndex": 4,
+                "tubeTypeIndex": 1,
+                "arrowDirection": "left",
+                "facetype": "sighted",
+                "faceSide": "right",
+                "endAngle": -9
+            },
+            {
+                "trialIndex": 5,
+                "tubeTypeIndex": 1,
+                "arrowDirection": "right",
+                "facetype": "sighted",
+                "faceSide": "right",
+                "endAngle": 6
+            },
+            {
+                "trialIndex": 6,
+                "tubeTypeIndex": 0,
+                "arrowDirection": "left",
+                "facetype": "sighted",
+                "faceSide": "right",
+                "endAngle": -7
+            },
+            {
+                "trialIndex": 7,
+                "tubeTypeIndex": 0,
+                "arrowDirection": "right",
+                "facetype": "blindfold",
+                "faceSide": "left",
+                "endAngle": 7
+            },
+            {
+                "trialIndex": 8,
+                "tubeTypeIndex": 3,
+                "arrowDirection": "right",
+                "facetype": "sighted",
+                "faceSide": "right",
+                "endAngle": 12
+            },
+            {
+                "trialIndex": 9,
+                "tubeTypeIndex": 3,
+                "arrowDirection": "right",
+                "facetype": "blindfold",
+                "faceSide": "left",
+                "endAngle": 14
+            },
+            {
+                "trialIndex": 10,
+                "tubeTypeIndex": 2,
+                "arrowDirection": "left",
+                "facetype": "blindfold",
+                "faceSide": "right",
+                "endAngle": -9
+            },
+            {
+                "trialIndex": 11,
+                "tubeTypeIndex": 1,
+                "arrowDirection": "right",
+                "facetype": "blindfold",
+                "faceSide": "right",
+                "endAngle": 13
+            },
+            {
+                "trialIndex": 12,
+                "tubeTypeIndex": 1,
+                "arrowDirection": "left",
+                "facetype": "blindfold",
+                "faceSide": "right",
+                "endAngle": -14
+            },
+            {
+                "trialIndex": 13,
+                "tubeTypeIndex": 1,
+                "arrowDirection": "right",
+                "facetype": "blindfold",
+                "faceSide": "left",
+                "endAngle": 13
+            },
+            {
+                "trialIndex": 14,
+                "tubeTypeIndex": 1,
+                "arrowDirection": "right",
+                "facetype": "sighted",
+                "faceSide": "left",
+                "endAngle": 12
+            },
+            {
+                "trialIndex": 15,
+                "tubeTypeIndex": 2,
+                "arrowDirection": "left",
+                "facetype": "blindfold",
+                "faceSide": "left",
+                "endAngle": -10
+            },
+            {
+                "trialIndex": 16,
+                "tubeTypeIndex": 2,
+                "arrowDirection": "right",
+                "facetype": "sighted",
+                "faceSide": "left",
+                "endAngle": 11
+            },
+            {
+                "trialIndex": 17,
+                "tubeTypeIndex": 0,
+                "arrowDirection": "left",
+                "facetype": "blindfold",
+                "faceSide": "right",
+                "endAngle": -10
+            },
+            {
+                "trialIndex": 18,
+                "tubeTypeIndex": 2,
+                "arrowDirection": "left",
+                "facetype": "sighted",
+                "faceSide": "right",
+                "endAngle": 10
+            },
+            {
+                "trialIndex": 19,
+                "tubeTypeIndex": 3,
+                "arrowDirection": "right",
+                "facetype": "blindfold",
+                "faceSide": "right",
+                "endAngle": 16
+            },
+            {
+                "trialIndex": 20,
+                "tubeTypeIndex": 2,
+                "arrowDirection": "right",
+                "facetype": "blindfold",
+                "faceSide": "right",
+                "endAngle": 12
+            },
+            {
+                "trialIndex": 21,
+                "tubeTypeIndex": 0,
+                "arrowDirection": "right",
+                "facetype": "blindfold",
+                "faceSide": "right",
+                "endAngle": 10
+            },
+            {
+                "trialIndex": 22,
+                "tubeTypeIndex": 0,
+                "arrowDirection": "left",
+                "facetype": "blindfold",
+                "faceSide": "left",
+                "endAngle": -10
+            },
+            {
+                "trialIndex": 23,
+                "tubeTypeIndex": 3,
+                "arrowDirection": "left",
+                "facetype": "blindfold",
+                "faceSide": "right",
+                "endAngle": -13
+            },
+            {
+                "trialIndex": 24,
+                "tubeTypeIndex": 3,
+                "arrowDirection": "right",
+                "facetype": "sighted",
+                "faceSide": "left",
+                "endAngle": 16
+            },
+            {
+                "trialIndex": 25,
+                "tubeTypeIndex": 2,
+                "arrowDirection": "right",
+                "facetype": "blindfold",
+                "faceSide": "left",
+                "endAngle": 10
+            },
+            {
+                "trialIndex": 26,
+                "tubeTypeIndex": 0,
+                "arrowDirection": "right",
+                "facetype": "sighted",
+                "faceSide": "left",
+                "endAngle": 11
+            },
+            {
+                "trialIndex": 27,
+                "tubeTypeIndex": 3,
+                "arrowDirection": "left",
+                "facetype": "sighted",
+                "faceSide": "right",
+                "endAngle": -15
+            },
+            {
+                "trialIndex": 28,
+                "tubeTypeIndex": 3,
+                "arrowDirection": "left",
+                "facetype": "sighted",
+                "faceSide": "left",
+                "endAngle": -13
+            },
+            {
+                "trialIndex": 29,
+                "tubeTypeIndex": 1,
+                "arrowDirection": "left",
+                "facetype": "blindfold",
+                "faceSide": "left",
+                "endAngle": -12
+            },
+            {
+                "trialIndex": 30,
+                "tubeTypeIndex": 3,
+                "arrowDirection": "left",
+                "facetype": "blindfold",
+                "faceSide": "left",
+                "endAngle": -15
+            },
+            {
+                "trialIndex": 31,
+                "tubeTypeIndex": 1,
+                "arrowDirection": "left",
+                "facetype": "sighted",
+                "faceSide": "left",
+                "endAngle": -13
+            }
+        ]
+    }
+}

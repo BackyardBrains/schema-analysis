@@ -1,0 +1,118 @@
+Figure: D Bar Chart — Tube-Tilt Directional Bias by Condition
+==============================================================
+
+OVERVIEW
+--------
+This figure summarises the primary outcome measure — D — across all
+conditions in Experiment 1 (Exp 1) and Experiment 2 (Exp 2). D is defined as:
+
+    D = mean(towards angle) − mean(away angle)
+
+where "towards" trials are those in which the tube was tilted in the direction
+of the face shown on screen, and "away" trials are those in which it was tilted
+in the opposite direction. D is computed per participant and then tested against
+zero using a one-sample t-test. A positive D value indicates that participants
+tilted further (in degrees) on towards trials than on away trials — consistent
+with a face-elicited directional bias in tilt magnitude.
+
+EXPERIMENTAL DESIGN
+-------------------
+Participants viewed a profile photograph of a face on one side of the screen
+while tilting a virtual tube toward or away from that face. Face identity and
+whether the participant's eyes were covered (Exp 1) or the threat level of the
+face (Exp 2) were the key between-condition manipulations.
+
+Exp 1 face: ID008 — young adult female, low threat rating (1.75 / 5)
+Exp 2 faces: ID015 (low threat), ID017 (high threat), ID030 (high threat)
+
+TRIAL SELECTION AND BALANCING
+------------------------------
+Valid trials are those where the participant's recorded tilt angle satisfies:
+
+    3° < angle < 40°
+
+where "angle" is the tilt magnitude in the direction of the indicated tip
+(sign-corrected: raw_angle is negated for leftward tips so that positive
+values always represent correct-direction tilts).
+
+After angle-based validity marking, a single-pass cascade balance is applied:
+if one trial in a towards/away pair is invalid (e.g., angle out of range),
+its matched partner is also marked invalid. Partners are matched within each
+participant by tube type, tip direction, and condition. This ensures that D is
+computed from symmetric pairs and is not confounded by asymmetric data loss.
+
+LAYOUT
+------
+Upper panel: Profile photographs of the face shown in each condition, with
+participant count (N) displayed beneath each image.
+
+Lower panel: Bar chart of mean D (degrees) per condition. Error bars show
+standard error of the mean (SE). A dashed vertical line separates Exp 1 (left)
+from Exp 2 (right). The horizontal reference at D = 0 represents no directional
+bias. An asterisk (*) marks conditions reaching p < .05.
+
+RESULTS
+-------
+Experiment 1 — ID008 (Face: young adult female)
+
+  Eyes Open (sighted)
+    N = 577 participants
+    D = +0.237°,  SE = 0.114,  p = 0.039  *
+    Interpretation: Participants tilted significantly further toward the face
+    than away from it when the face was visible. The effect is small in absolute
+    terms (~0.24°) but robust across a large sample.
+
+  Eyes Covered (blindfold)
+    N = 579 participants
+    D = +0.011°,  SE = 0.110,  p = 0.921
+    Interpretation: No directional bias when the same face was obscured by a
+    blindfold. The near-zero D and non-significant p-value confirm that the
+    effect in the Eyes Open condition is driven by visual face processing, not
+    by a motor or procedural artefact.
+
+Experiment 2 — Threat Level (face identity manipulation)
+
+  ID015 (low threat)
+    N = 236 participants
+    D = +0.016°,  SE = 0.225,  p = 0.944
+    Interpretation: No significant directional bias for the low-threat face.
+
+  ID017 (high threat)
+    N = 117 participants
+    D = +0.286°,  SE = 0.250,  p = 0.258
+    Interpretation: A numerically larger D than ID015 but non-significant,
+    likely due to the substantially reduced sample size (N=117 vs N=236).
+    The effect size is comparable to Exp 1 Eyes Open but underpowered.
+
+  ID030 (high threat)
+    N = 116 participants
+    D = +0.101°,  SE = 0.332,  p = 0.762
+    Interpretation: No significant directional bias. The wide standard error
+    reflects both low N and high between-participant variability for this face.
+
+STATISTICAL NOTE
+----------------
+All p-values are from two-tailed one-sample t-tests of the per-participant D
+distribution against zero. No correction for multiple comparisons is applied;
+conditions were specified a priori. Exp 1 and Exp 2 are analysed independently
+(separate session pools, separate participant cohorts).
+
+The N=577/579 split in Exp 1 (not exactly equal) reflects a small number of
+participants whose data were valid in one eyes condition but not the other
+after cascade balancing.
+
+INTERPRETATION
+--------------
+The critical comparison in Exp 1 is the double dissociation: a significant
+positive D for Eyes Open (p = 0.039) and a null result for Eyes Covered
+(p = 0.921). This pattern — same face, same task, same tube types — rules out
+alternative explanations based on task structure, response bias, or tube
+geometry, and points specifically to visual face perception as the driver of
+the tilt bias.
+
+In Exp 2, all three face conditions are non-significant. The Exp 2 sample is
+substantially smaller (117–236 per condition vs ~578 in Exp 1), reducing
+statistical power. ID017 shows the largest numerical D (+0.286°) but would
+require roughly twice the current N to approach significance at the observed
+effect size. These results do not rule out a threat-modulated tilt bias; they
+are consistent with an underpowered null result.

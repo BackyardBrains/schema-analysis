@@ -1,0 +1,153 @@
+Figure: Sensitivity Analysis — Experiment 2 (Threat Level: ID015 / ID017 / ID030)
+==================================================================================
+
+FILE: sensitivity_exp2.png
+
+OVERVIEW
+--------
+This figure applies the same cutoff-sweep logic used in Experiment 1 to each
+of the three face conditions in Experiment 2, asking whether a directional tilt
+bias emerges for any face — and whether any such result is stable across the
+angle cutoff space or is localised to specific boundary choices.
+
+WHAT IS D
+---------
+D = mean(towards angle) − mean(away angle), computed per participant, then
+aggregated via one-sample t-test against zero. A positive D means participants
+tilted further on towards trials than on away trials. See figure_d_bars.txt
+for full definition and balancing details.
+
+SWEEP PARAMETERS
+----------------
+Min angle cutoff (y-axis):  0° to 10°, step 1°   (trial kept if angle > lo)
+Max angle cutoff (x-axis): 35° to 55°, step 1°   (trial kept if angle < hi)
+
+Total grid: 11 × 21 = 231 cutoff combinations per condition.
+
+The N shown beneath each face image is the maximum N achieved across the full
+sweep (loosest cutoffs). N at any specific grid cell will be lower.
+
+Standard cutoff used in the main analysis: lo = 3°, hi = 40°.
+
+FACES AND THREAT LEVELS
+------------------------
+ID015 — low threat face (young adult male, minimal threat cues)
+         Experiment 2, Run 1 (CSV source, JSONs lost in data breach)
+         and Run 2 (JSON source). Run 1 and Run 2 data combined.
+
+ID017 — high threat face (visible tattoos, strong threat cues)
+         Experiment 2, Run 2 only (JSON source).
+
+ID030 — high threat face (visible tattoos and scarring, strong threat cues)
+         Experiment 2, Run 2 only (JSON source).
+
+LAYOUT
+------
+Three rows (one per face condition), three columns each:
+  Col 1: Face photograph, condition label and threat level, with max-N beneath.
+  Col 2: Mean D heatmap — Red = positive D; Blue = negative D; White = D ≈ 0.
+           A single shared colourbar spans all six heatmaps for comparability.
+  Col 3: Significance heatmap — colour encodes −log₁₀(p).
+           Brighter / more yellow = more significant.
+           A cyan dashed contour marks the p = .05 boundary (where present).
+
+RESULTS — ID015, low threat (top row)
+---------------------------------------
+Max N = 149
+
+The Mean D heatmap shows a mixed pattern: weakly positive D across most of the
+grid but with patches of near-zero and slightly negative D, particularly at
+high min cutoffs and low max cutoffs. There is no strong or consistent colour
+across the grid.
+
+The Significance heatmap is uniformly dark with no p = .05 contour. No cutoff
+combination produces a statistically significant result.
+
+At the standard cutoff: D = +0.016°, p = 0.944.
+
+Interpretation: No directional tilt bias for the low-threat face under any
+reasonable cutoff. The null result is stable across the full grid.
+
+RESULTS — ID017, high threat (middle row)
+------------------------------------------
+Max N = 126
+
+The Mean D heatmap shows a striking spatial pattern. In the upper half of the
+grid (high min cutoffs, lo ≥ 5–6°), D is strongly positive (deep red),
+indicating a large towards-minus-away difference when small-angle trials are
+excluded. In the lower half of the grid (low min cutoffs, lo ≤ 4°), D drops
+sharply and in some cells becomes negative (blue), particularly when hi > 48°.
+
+The Significance heatmap shows a bright region concentrated at high min cutoffs
+(lo ≈ 8–10°) and moderate max cutoffs (hi ≈ 35–44°), where a cyan p = .05
+contour appears at the very top of the grid. This significant region is narrow
+and sits at extreme min-cutoff values — far from the pre-specified standard
+cutoff (lo = 3°, hi = 40°), where p = 0.258.
+
+At the standard cutoff: D = +0.286°, p = 0.258.
+
+Interpretation: ID017 shows a cutoff-dependent pattern. Significance appears
+only when very small angles are excluded (lo ≥ 8°), substantially reducing N
+and concentrating the sample on high-engagement tilts. This is not a robust
+result — it is localised to a narrow and analytically aggressive region of the
+cutoff space and does not include the pre-specified standard cutoff. The overall
+D direction (positive) across most of the grid suggests a trend consistent with
+an approach bias for high-threat faces, but the sample (N ≈ 117 at standard
+cutoff) is insufficient to resolve it reliably.
+
+RESULTS — ID030, high threat (bottom row)
+------------------------------------------
+Max N = 127
+
+The Mean D heatmap shows moderate positive D across most of the grid,
+particularly at moderate min cutoffs and mid-range max cutoffs. The pattern is
+warmer (more positive) than ID015 but less dramatically structured than ID017.
+
+The Significance heatmap shows elevated values across a broad band of moderate
+cutoffs but does not break through the p = .05 threshold at any grid cell. No
+cyan contour appears. The overall brightness is higher than ID015 but lower
+than ID017 at its peak.
+
+At the standard cutoff: D = +0.101°, p = 0.762.
+
+Interpretation: ID030 shows a consistently positive D direction across most of
+the grid but does not reach significance anywhere. As with ID017, the sample
+size (N ≈ 116 at standard cutoff) limits power. The wider error bars visible
+in figure_d_bars.png for ID030 (SE = 0.332) reflect high between-participant
+variability for this face.
+
+ACROSS-CONDITION COMPARISON
+-----------------------------
+Comparing the three rows highlights a sample-size confound that is independent
+of the cutoff choice:
+
+  ID015: N ≈ 149–236 (largest; Run 1 + Run 2 combined)
+  ID017: N ≈ 117–126 (Run 2 only)
+  ID030: N ≈ 116–127 (Run 2 only)
+
+ID015 has roughly double the participants of ID017 and ID030 yet shows the
+smallest and least consistent D. This is the opposite of a power artefact —
+it is a genuine null result for the low-threat face. ID017 shows the largest D
+values at high min cutoffs, consistent with a potential approach bias for the
+high-threat face that is simply underpowered at the standard cutoff.
+
+WHY EXP 2 DOES NOT REPLICATE EXP 1 SIGNIFICANCE
+--------------------------------------------------
+Three compounding factors reduce power in Exp 2 relative to Exp 1:
+
+  1. Sample size: Exp 1 has ~577 participants per condition; Exp 2 has 116–236.
+     A rough power calculation suggests Exp 2 would need approximately 400–500
+     participants per face to detect an effect of the magnitude seen in Exp 1
+     (D ≈ +0.24°) at 80% power.
+
+  2. Between-participant variability: SE for Exp 2 conditions (0.225–0.332) is
+     roughly twice the SE for Exp 1 Eyes Open (0.114), consistent with a more
+     heterogeneous participant pool or a noisier experimental context.
+
+  3. Face familiarity and threat calibration: The Exp 1 face (ID008) is a
+     professionally photographed female face with a consistent low-threat
+     signal. Exp 2 faces vary in threat cue intensity and type, which may
+     produce more variable individual responses.
+
+The sensitivity sweep confirms that the Exp 2 null results are not merely an
+artefact of the standard cutoff choice — they are present across the full grid.

@@ -1,0 +1,102 @@
+Figure: User Tilt Angle vs. Tube Critical Tipping Angle (Experiment 1)
+=======================================================================
+
+OVERVIEW
+--------
+Each of the four tube types used in Experiment 1 has a distinct geometric
+critical tipping angle — the minimum device tilt required for the liquid
+surface to reach the tube rim — computed as arctan(W/H), where W and H are
+the tube's pixel width and height respectively. This figure asks whether
+participants tracked that difficulty level in their actual tilt responses.
+
+Tube types and their critical angles:
+  Tube [0]    24 × 130 px     critical angle = 10.5°
+  Tube [1]    48 × 130 px     critical angle = 20.3°
+  Tube [2]    24 ×  65 px     critical angle = 20.3°   (same ratio as [1])
+  Tube [3]    48 ×  65 px     critical angle = 36.4°
+
+Because Tubes [1] and [2] share an identical width-to-height ratio, and
+therefore an identical critical angle, they are averaged into a single
+x-position (20.3°) in this figure, yielding three distinct difficulty levels.
+
+Note: the faceAngle parameter stored in the JSON (−9° to +1°) is a cosmetic
+rendering offset that tilts the tube face graphic to appear to look toward the
+top of the tube. It does not affect the physical tipping threshold and is not
+used here.
+
+SAMPLE
+------
+N = 493 participants (Experiment 1, Exp1 JSON data, valid trials only,
+all tube types present). Users lacking data for all three difficulty levels
+were excluded from per-user slope estimation.
+
+LEFT PANEL — Spaghetti plot with group means
+--------------------------------------------
+Each thin blue line represents one participant. The line connects that
+participant's mean tilt angle (across all valid towards and away trials) at
+each of the three difficulty levels. The dense vertical clusters of dots show
+the full distribution of per-user means at each x-position.
+
+Group means ± 95% CI (error bars):
+  Critical 10.5°  (Tube [0], 24×130):           mean user angle ≈ 12.8°
+  Critical 20.3°  (Tubes [1,2], avg):            mean user angle ≈ 16.0°
+  Critical 36.4°  (Tube [3], 48×65):             mean user angle ≈ 19.6°
+
+Reference lines:
+  Dotted grey (y = x): "perfect calibration" — a user whose tilt angle exactly
+    equals the critical angle at every difficulty level would lie on this line.
+  Dashed red: ordinary least-squares regression across all users and all
+    difficulty levels (r = 0.43, p < .001, slope = 0.33).
+
+Shaded regions:
+  Green (above y = x): overshoot zone — user tilted past the true tipping point.
+  Red (below y = x):   undershoot zone — user did not reach the tipping point.
+
+Key observations:
+  • At the easiest tube (10.5°) the cloud sits on or above y = x, indicating
+    that most participants reach or exceed the tipping angle.
+  • At medium difficulty (20.3°) the cloud drops below y = x; participants
+    tilt ~4° less than required on average.
+  • At the hardest tube (36.4°) the gap is severe: participants tilt ~19.6°
+    on average against a threshold of 36.4°, undershooting by ~16°. Almost
+    no individual user line crosses y = x at this x-position.
+  • The overall regression slope (0.33 °user / °critical) confirms that
+    participants adjust their tilt in the correct direction but at only about
+    one-third the rate needed to track tube difficulty.
+
+RIGHT PANEL — Per-user slope histogram
+---------------------------------------
+For each participant, a simple linear regression was fit to their three
+(critical angle, mean user angle) data points. The resulting slope (in units
+of degrees of user tilt per degree of critical angle) is shown as a histogram.
+
+Per-user slope statistics:
+  Mean slope:    0.33 °/°
+  Median slope:  0.31 °/°
+  SD:            ~0.34
+  Slope > 0:     89% of participants
+  Slope < 0:     11% of participants
+
+A slope of 1.0 indicates perfect calibration (user matches tube difficulty
+degree-for-degree). A slope of 0 means the participant tilts the same amount
+regardless of tube type. Negative slopes indicate the participant tilted less
+on harder tubes.
+
+The histogram is right-skewed with the bulk of participants clustered between
+0.1 and 0.6, indicating that most users do adjust — but only partially. The
+minority with slopes > 1.0 over-compensate. The 11% with negative slopes
+appear to anchor even more strongly on the easiest tube and do not scale up
+at all.
+
+INTERPRETATION
+--------------
+Participants show a statistically significant but functionally incomplete
+sensitivity to tube difficulty (r = 0.43, p < .001). The pattern is
+consistent with a perceptual anchoring effect: participants appear to adopt
+a personal "comfortable tilt angle" — driven by visual feedback from the
+dotted center line that remains visible when the tube rectangle disappears —
+and adjust away from that anchor only weakly as the geometric demand
+increases. This anchoring is most consequential for Tube [3] (48 × 65 px),
+where the critical angle of 36.4° far exceeds the median response of ~20°,
+meaning the majority of participants never physically reach the tipping point
+for this tube type within the valid-trial window (3°–40°).
