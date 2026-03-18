@@ -1,0 +1,342 @@
+{
+  "experiment": "threat",
+  "UUID": "93b8e9a9-1d3d-4392-94b8-13bfbed6f13a",
+  "data": {
+    "session": {
+      "session_group": "MTURK2601",
+      "experiment_version": "2.2",
+      "file_version": "1.5",
+      "browserData": {
+        "os": "Windows",
+        "browser": "Chrome",
+        "screenResolution": "1238x681",
+        "browserViewport": "1238x520"
+      },
+      "tubeTypes": [
+        {
+          "width": "24",
+          "height": "130",
+          "faceAngle": "-9"
+        },
+        {
+          "width": "48",
+          "height": "130",
+          "faceAngle": "-8"
+        },
+        {
+          "width": "24",
+          "height": "65",
+          "faceAngle": "0"
+        },
+        {
+          "width": "48",
+          "height": "65",
+          "faceAngle": "1"
+        }
+      ],
+      "faceTypes": [
+        "ID015",
+        "ID017"
+      ],
+      "mturk": {
+        "assignmentId": "3DEL4X4ELKJKRQ0HHD6T3UC50N9XY8",
+        "workerId": "A6TRCSGBR71AD",
+        "hitId": "31MBOZ6PB1P919LTH0GE6PTWJQSCLK",
+        "hitTypeId": null,
+        "turkSubmitTo": null,
+        "clientId": null
+      }
+    },
+    "trials": [
+      {
+        "trialIndex": 0,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "left",
+        "faceType": "ID017",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 23418
+      },
+      {
+        "trialIndex": 1,
+        "tubeTypeIndex": 1,
+        "arrowDirection": "right",
+        "faceType": "ID017",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 229
+      },
+      {
+        "trialIndex": 2,
+        "tubeTypeIndex": 2,
+        "arrowDirection": "left",
+        "faceType": "ID017",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 215
+      },
+      {
+        "trialIndex": 3,
+        "tubeTypeIndex": 0,
+        "arrowDirection": "right",
+        "faceType": "ID017",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 188
+      },
+      {
+        "trialIndex": 4,
+        "tubeTypeIndex": 0,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 358
+      },
+      {
+        "trialIndex": 5,
+        "tubeTypeIndex": 1,
+        "arrowDirection": "right",
+        "faceType": "ID017",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 1348
+      },
+      {
+        "trialIndex": 6,
+        "tubeTypeIndex": 2,
+        "arrowDirection": "right",
+        "faceType": "ID015",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 8161
+      },
+      {
+        "trialIndex": 7,
+        "tubeTypeIndex": 0,
+        "arrowDirection": "left",
+        "faceType": "ID017",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 1666
+      },
+      {
+        "trialIndex": 8,
+        "tubeTypeIndex": 1,
+        "arrowDirection": "left",
+        "faceType": "ID017",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 1363
+      },
+      {
+        "trialIndex": 9,
+        "tubeTypeIndex": 0,
+        "arrowDirection": "right",
+        "faceType": "ID017",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 2072
+      },
+      {
+        "trialIndex": 10,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 927
+      },
+      {
+        "trialIndex": 11,
+        "tubeTypeIndex": 2,
+        "arrowDirection": "left",
+        "faceType": "ID017",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 650
+      },
+      {
+        "trialIndex": 12,
+        "tubeTypeIndex": 1,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 869
+      },
+      {
+        "trialIndex": 13,
+        "tubeTypeIndex": 0,
+        "arrowDirection": "right",
+        "faceType": "ID015",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 1328
+      },
+      {
+        "trialIndex": 14,
+        "tubeTypeIndex": 2,
+        "arrowDirection": "right",
+        "faceType": "ID017",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 920
+      },
+      {
+        "trialIndex": 15,
+        "tubeTypeIndex": 2,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 827
+      },
+      {
+        "trialIndex": 16,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "left",
+        "faceType": "ID017",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 1296
+      },
+      {
+        "trialIndex": 17,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "right",
+        "faceType": "ID017",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 1092
+      },
+      {
+        "trialIndex": 18,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "right",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 1550
+      },
+      {
+        "trialIndex": 19,
+        "tubeTypeIndex": 2,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "left",
+        "endAngle": 7,
+        "latency": 4877
+      },
+      {
+        "trialIndex": 20,
+        "tubeTypeIndex": 2,
+        "arrowDirection": "right",
+        "faceType": "ID017",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 1568
+      },
+      {
+        "trialIndex": 21,
+        "tubeTypeIndex": 0,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 969
+      },
+      {
+        "trialIndex": 22,
+        "tubeTypeIndex": 1,
+        "arrowDirection": "right",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 848
+      },
+      {
+        "trialIndex": 23,
+        "tubeTypeIndex": 2,
+        "arrowDirection": "right",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": 90,
+        "latency": 72654
+      },
+      {
+        "trialIndex": 24,
+        "tubeTypeIndex": 1,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 1957
+      },
+      {
+        "trialIndex": 25,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 1182
+      },
+      {
+        "trialIndex": 26,
+        "tubeTypeIndex": 1,
+        "arrowDirection": "right",
+        "faceType": "ID015",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 1762
+      },
+      {
+        "trialIndex": 27,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "right",
+        "faceType": "ID017",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 993
+      },
+      {
+        "trialIndex": 28,
+        "tubeTypeIndex": 1,
+        "arrowDirection": "left",
+        "faceType": "ID017",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 998
+      },
+      {
+        "trialIndex": 29,
+        "tubeTypeIndex": 0,
+        "arrowDirection": "left",
+        "faceType": "ID017",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 2517
+      },
+      {
+        "trialIndex": 30,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "right",
+        "faceType": "ID015",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 974
+      },
+      {
+        "trialIndex": 31,
+        "tubeTypeIndex": 0,
+        "arrowDirection": "right",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 862
+      }
+    ],
+    "earlyExit": null
+  }
+}

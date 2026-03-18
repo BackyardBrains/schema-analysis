@@ -1,0 +1,158 @@
+{
+  "experiment": "threat",
+  "UUID": "b2f06272-3a54-45e4-b36d-cd10360011fa",
+  "data": {
+    "session": {
+      "session_group": "MTURK2601",
+      "experiment_version": "2.2",
+      "file_version": "1.5",
+      "browserData": {
+        "os": "Windows",
+        "browser": "Chrome",
+        "screenResolution": "1366x768",
+        "browserViewport": "1346x582"
+      },
+      "tubeTypes": [
+        {
+          "width": "24",
+          "height": "130",
+          "faceAngle": "-9"
+        },
+        {
+          "width": "48",
+          "height": "130",
+          "faceAngle": "-8"
+        },
+        {
+          "width": "24",
+          "height": "65",
+          "faceAngle": "0"
+        },
+        {
+          "width": "48",
+          "height": "65",
+          "faceAngle": "1"
+        }
+      ],
+      "faceTypes": [
+        "ID015",
+        "ID017"
+      ],
+      "mturk": {
+        "assignmentId": "3JZQSN0I34835DOWNDE1QN5URIOFGU",
+        "workerId": "A2QZI9SJKRQ7DJ",
+        "hitId": "31MBOZ6PB1P919LTH0GE6PTWJQSCLK",
+        "hitTypeId": null,
+        "turkSubmitTo": null,
+        "clientId": null
+      }
+    },
+    "trials": [
+      {
+        "trialIndex": 0,
+        "tubeTypeIndex": 1,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 5005
+      },
+      {
+        "trialIndex": 1,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 1008
+      },
+      {
+        "trialIndex": 2,
+        "tubeTypeIndex": 1,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 1311
+      },
+      {
+        "trialIndex": 3,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "right",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 1119
+      },
+      {
+        "trialIndex": 4,
+        "tubeTypeIndex": 2,
+        "arrowDirection": "right",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 1225
+      },
+      {
+        "trialIndex": 5,
+        "tubeTypeIndex": 2,
+        "arrowDirection": "right",
+        "faceType": "ID017",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 1239
+      },
+      {
+        "trialIndex": 6,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "right",
+        "faceType": "ID015",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 1559
+      },
+      {
+        "trialIndex": 7,
+        "tubeTypeIndex": 0,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 1320
+      },
+      {
+        "trialIndex": 8,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "left",
+        "faceType": "ID017",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 1159
+      },
+      {
+        "trialIndex": 9,
+        "tubeTypeIndex": 0,
+        "arrowDirection": "left",
+        "faceType": "ID017",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 1200
+      }
+    ],
+    "earlyExit": {
+      "trialIndex": 9,
+      "shouldEnd": true,
+      "flags": [
+        "mostly_zero_angles",
+        "mostly_fast_rts"
+      ],
+      "metrics": {
+        "zeroPct": 100,
+        "sd": 0,
+        "medianRt": 1232,
+        "fastRtPct": 80,
+        "wrongDirPct": 0
+      }
+    }
+  }
+}

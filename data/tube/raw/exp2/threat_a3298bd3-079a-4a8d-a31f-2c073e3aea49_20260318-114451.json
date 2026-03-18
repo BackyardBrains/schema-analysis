@@ -1,0 +1,351 @@
+{
+  "experiment": "threat",
+  "UUID": "a3298bd3-079a-4a8d-a31f-2c073e3aea49",
+  "data": {
+    "session": {
+      "session_group": "MTURK2601",
+      "experiment_version": "2.2",
+      "file_version": "1.5",
+      "browserData": {
+        "os": "Windows",
+        "browser": "Chrome",
+        "screenResolution": "1366x768",
+        "browserViewport": "1366x607"
+      },
+      "tubeTypes": [
+        {
+          "width": "24",
+          "height": "130",
+          "faceAngle": "-9"
+        },
+        {
+          "width": "48",
+          "height": "130",
+          "faceAngle": "-8"
+        },
+        {
+          "width": "24",
+          "height": "65",
+          "faceAngle": "0"
+        },
+        {
+          "width": "48",
+          "height": "65",
+          "faceAngle": "1"
+        }
+      ],
+      "faceTypes": [
+        "ID015",
+        "ID017"
+      ],
+      "mturk": {
+        "assignmentId": "3XM0HYN6NYXHCCHZVLKI2EYMG8WPEQ",
+        "workerId": "AAQ3I70BTPR15",
+        "hitId": "31MBOZ6PB1P919LTH0GE6PTWJQSCLK",
+        "hitTypeId": null,
+        "turkSubmitTo": null,
+        "clientId": null
+      }
+    },
+    "trials": [
+      {
+        "trialIndex": 0,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "right",
+        "faceType": "ID017",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 316668
+      },
+      {
+        "trialIndex": 1,
+        "tubeTypeIndex": 1,
+        "arrowDirection": "right",
+        "faceType": "ID015",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 2493
+      },
+      {
+        "trialIndex": 2,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 3825
+      },
+      {
+        "trialIndex": 3,
+        "tubeTypeIndex": 1,
+        "arrowDirection": "right",
+        "faceType": "ID017",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 5304
+      },
+      {
+        "trialIndex": 4,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "left",
+        "faceType": "ID017",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 9200
+      },
+      {
+        "trialIndex": 5,
+        "tubeTypeIndex": 2,
+        "arrowDirection": "right",
+        "faceType": "ID017",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 2574
+      },
+      {
+        "trialIndex": 6,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "left",
+        "faceType": "ID017",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 4569
+      },
+      {
+        "trialIndex": 7,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "right",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 4296
+      },
+      {
+        "trialIndex": 8,
+        "tubeTypeIndex": 0,
+        "arrowDirection": "right",
+        "faceType": "ID017",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 8655
+      },
+      {
+        "trialIndex": 9,
+        "tubeTypeIndex": 2,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 3825
+      },
+      {
+        "trialIndex": 10,
+        "tubeTypeIndex": 2,
+        "arrowDirection": "left",
+        "faceType": "ID017",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 4521
+      },
+      {
+        "trialIndex": 11,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "right",
+        "faceType": "ID015",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 5094
+      },
+      {
+        "trialIndex": 12,
+        "tubeTypeIndex": 1,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 4872
+      },
+      {
+        "trialIndex": 13,
+        "tubeTypeIndex": 0,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 3324
+      },
+      {
+        "trialIndex": 14,
+        "tubeTypeIndex": 1,
+        "arrowDirection": "left",
+        "faceType": "ID017",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 4497
+      },
+      {
+        "trialIndex": 15,
+        "tubeTypeIndex": 0,
+        "arrowDirection": "left",
+        "faceType": "ID017",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 6072
+      },
+      {
+        "trialIndex": 16,
+        "tubeTypeIndex": 2,
+        "arrowDirection": "left",
+        "faceType": "ID017",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 2984
+      },
+      {
+        "trialIndex": 17,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 2387
+      },
+      {
+        "trialIndex": 18,
+        "tubeTypeIndex": 1,
+        "arrowDirection": "left",
+        "faceType": "ID017",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 2403
+      },
+      {
+        "trialIndex": 19,
+        "tubeTypeIndex": 2,
+        "arrowDirection": "right",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 2585
+      },
+      {
+        "trialIndex": 20,
+        "tubeTypeIndex": 2,
+        "arrowDirection": "right",
+        "faceType": "ID017",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 3153
+      },
+      {
+        "trialIndex": 21,
+        "tubeTypeIndex": 2,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 3470
+      },
+      {
+        "trialIndex": 22,
+        "tubeTypeIndex": 0,
+        "arrowDirection": "right",
+        "faceType": "ID017",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 2719
+      },
+      {
+        "trialIndex": 23,
+        "tubeTypeIndex": 0,
+        "arrowDirection": "left",
+        "faceType": "ID017",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 2497
+      },
+      {
+        "trialIndex": 24,
+        "tubeTypeIndex": 1,
+        "arrowDirection": "right",
+        "faceType": "ID017",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 2391
+      },
+      {
+        "trialIndex": 25,
+        "tubeTypeIndex": 0,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 2409
+      },
+      {
+        "trialIndex": 26,
+        "tubeTypeIndex": 1,
+        "arrowDirection": "right",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 1960
+      },
+      {
+        "trialIndex": 27,
+        "tubeTypeIndex": 0,
+        "arrowDirection": "right",
+        "faceType": "ID015",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 2421
+      },
+      {
+        "trialIndex": 28,
+        "tubeTypeIndex": 1,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 3122
+      },
+      {
+        "trialIndex": 29,
+        "tubeTypeIndex": 0,
+        "arrowDirection": "right",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 3860
+      },
+      {
+        "trialIndex": 30,
+        "tubeTypeIndex": 2,
+        "arrowDirection": "right",
+        "faceType": "ID015",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 2997
+      },
+      {
+        "trialIndex": 31,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "right",
+        "faceType": "ID017",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 3648
+      },
+      {
+        "trialIndex": 32,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "right",
+        "faceType": "ID017",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 6689
+      }
+    ],
+    "earlyExit": null
+  }
+}

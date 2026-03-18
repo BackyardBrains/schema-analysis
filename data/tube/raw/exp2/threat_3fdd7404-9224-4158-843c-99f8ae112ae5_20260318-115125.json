@@ -1,0 +1,342 @@
+{
+  "experiment": "threat",
+  "UUID": "3fdd7404-9224-4158-843c-99f8ae112ae5",
+  "data": {
+    "session": {
+      "session_group": "MTURK2601",
+      "experiment_version": "2.2",
+      "file_version": "1.5",
+      "browserData": {
+        "os": "Windows",
+        "browser": "Chrome",
+        "screenResolution": "1366x768",
+        "browserViewport": "1366x607"
+      },
+      "tubeTypes": [
+        {
+          "width": "24",
+          "height": "130",
+          "faceAngle": "-9"
+        },
+        {
+          "width": "48",
+          "height": "130",
+          "faceAngle": "-8"
+        },
+        {
+          "width": "24",
+          "height": "65",
+          "faceAngle": "0"
+        },
+        {
+          "width": "48",
+          "height": "65",
+          "faceAngle": "1"
+        }
+      ],
+      "faceTypes": [
+        "ID015",
+        "ID017"
+      ],
+      "mturk": {
+        "assignmentId": "3I02618YAE4Y18ELLLZN6WKP2WQPU7",
+        "workerId": "A24F5LMWTU34LC",
+        "hitId": "31MBOZ6PB1P919LTH0GE6PTWJQSCLK",
+        "hitTypeId": null,
+        "turkSubmitTo": null,
+        "clientId": null
+      }
+    },
+    "trials": [
+      {
+        "trialIndex": 0,
+        "tubeTypeIndex": 0,
+        "arrowDirection": "right",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 186539
+      },
+      {
+        "trialIndex": 1,
+        "tubeTypeIndex": 0,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 2410
+      },
+      {
+        "trialIndex": 2,
+        "tubeTypeIndex": 2,
+        "arrowDirection": "left",
+        "faceType": "ID017",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 2583
+      },
+      {
+        "trialIndex": 3,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 2689
+      },
+      {
+        "trialIndex": 4,
+        "tubeTypeIndex": 0,
+        "arrowDirection": "right",
+        "faceType": "ID015",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 2911
+      },
+      {
+        "trialIndex": 5,
+        "tubeTypeIndex": 0,
+        "arrowDirection": "left",
+        "faceType": "ID017",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 3120
+      },
+      {
+        "trialIndex": 6,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 2409
+      },
+      {
+        "trialIndex": 7,
+        "tubeTypeIndex": 2,
+        "arrowDirection": "right",
+        "faceType": "ID017",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 2156
+      },
+      {
+        "trialIndex": 8,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "left",
+        "faceType": "ID017",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 2146
+      },
+      {
+        "trialIndex": 9,
+        "tubeTypeIndex": 0,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 2064
+      },
+      {
+        "trialIndex": 10,
+        "tubeTypeIndex": 2,
+        "arrowDirection": "right",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 2094
+      },
+      {
+        "trialIndex": 11,
+        "tubeTypeIndex": 1,
+        "arrowDirection": "right",
+        "faceType": "ID017",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 2440
+      },
+      {
+        "trialIndex": 12,
+        "tubeTypeIndex": 2,
+        "arrowDirection": "right",
+        "faceType": "ID017",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 2277
+      },
+      {
+        "trialIndex": 13,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "right",
+        "faceType": "ID017",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 2386
+      },
+      {
+        "trialIndex": 14,
+        "tubeTypeIndex": 1,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 2785
+      },
+      {
+        "trialIndex": 15,
+        "tubeTypeIndex": 0,
+        "arrowDirection": "right",
+        "faceType": "ID017",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 2062
+      },
+      {
+        "trialIndex": 16,
+        "tubeTypeIndex": 1,
+        "arrowDirection": "right",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 2903
+      },
+      {
+        "trialIndex": 17,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "left",
+        "faceType": "ID017",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 2808
+      },
+      {
+        "trialIndex": 18,
+        "tubeTypeIndex": 2,
+        "arrowDirection": "left",
+        "faceType": "ID017",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 2695
+      },
+      {
+        "trialIndex": 19,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "right",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 2695
+      },
+      {
+        "trialIndex": 20,
+        "tubeTypeIndex": 2,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 2698
+      },
+      {
+        "trialIndex": 21,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "right",
+        "faceType": "ID015",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 2654
+      },
+      {
+        "trialIndex": 22,
+        "tubeTypeIndex": 1,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 1809
+      },
+      {
+        "trialIndex": 23,
+        "tubeTypeIndex": 1,
+        "arrowDirection": "left",
+        "faceType": "ID017",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 2588
+      },
+      {
+        "trialIndex": 24,
+        "tubeTypeIndex": 0,
+        "arrowDirection": "right",
+        "faceType": "ID017",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 2720
+      },
+      {
+        "trialIndex": 25,
+        "tubeTypeIndex": 0,
+        "arrowDirection": "left",
+        "faceType": "ID017",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 2489
+      },
+      {
+        "trialIndex": 26,
+        "tubeTypeIndex": 1,
+        "arrowDirection": "left",
+        "faceType": "ID017",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 2694
+      },
+      {
+        "trialIndex": 27,
+        "tubeTypeIndex": 1,
+        "arrowDirection": "right",
+        "faceType": "ID017",
+        "faceSide": "right",
+        "endAngle": 0,
+        "latency": 2497
+      },
+      {
+        "trialIndex": 28,
+        "tubeTypeIndex": 1,
+        "arrowDirection": "right",
+        "faceType": "ID015",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 3239
+      },
+      {
+        "trialIndex": 29,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "right",
+        "faceType": "ID017",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 2710
+      },
+      {
+        "trialIndex": 30,
+        "tubeTypeIndex": 2,
+        "arrowDirection": "right",
+        "faceType": "ID015",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 3544
+      },
+      {
+        "trialIndex": 31,
+        "tubeTypeIndex": 2,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "left",
+        "endAngle": 0,
+        "latency": 3105
+      }
+    ],
+    "earlyExit": null
+  }
+}

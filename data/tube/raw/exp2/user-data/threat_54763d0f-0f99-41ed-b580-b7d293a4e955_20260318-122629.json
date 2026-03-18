@@ -1,0 +1,342 @@
+{
+  "experiment": "threat",
+  "UUID": "54763d0f-0f99-41ed-b580-b7d293a4e955",
+  "data": {
+    "session": {
+      "session_group": "MTURK2601",
+      "experiment_version": "2.2",
+      "file_version": "1.5",
+      "browserData": {
+        "os": "Windows",
+        "browser": "Chrome",
+        "screenResolution": "1024x768",
+        "browserViewport": "1024x647"
+      },
+      "tubeTypes": [
+        {
+          "width": "24",
+          "height": "130",
+          "faceAngle": "-9"
+        },
+        {
+          "width": "48",
+          "height": "130",
+          "faceAngle": "-8"
+        },
+        {
+          "width": "24",
+          "height": "65",
+          "faceAngle": "0"
+        },
+        {
+          "width": "48",
+          "height": "65",
+          "faceAngle": "1"
+        }
+      ],
+      "faceTypes": [
+        "ID015",
+        "ID017"
+      ],
+      "mturk": {
+        "assignmentId": "3KMS4QQVKGO87ZKFD4ZGOFXNYYZKFU",
+        "workerId": "A5TME37REBMD5",
+        "hitId": "31MBOZ6PB1P919LTH0GE6PTWJQSCLK",
+        "hitTypeId": null,
+        "turkSubmitTo": null,
+        "clientId": null
+      }
+    },
+    "trials": [
+      {
+        "trialIndex": 0,
+        "tubeTypeIndex": 2,
+        "arrowDirection": "right",
+        "faceType": "ID017",
+        "faceSide": "left",
+        "endAngle": 69,
+        "latency": 544517
+      },
+      {
+        "trialIndex": 1,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": -55,
+        "latency": 37594
+      },
+      {
+        "trialIndex": 2,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "right",
+        "faceType": "ID017",
+        "faceSide": "right",
+        "endAngle": 57,
+        "latency": 37365
+      },
+      {
+        "trialIndex": 3,
+        "tubeTypeIndex": 0,
+        "arrowDirection": "left",
+        "faceType": "ID017",
+        "faceSide": "right",
+        "endAngle": -53,
+        "latency": 43611
+      },
+      {
+        "trialIndex": 4,
+        "tubeTypeIndex": 0,
+        "arrowDirection": "right",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": 59,
+        "latency": 40788
+      },
+      {
+        "trialIndex": 5,
+        "tubeTypeIndex": 2,
+        "arrowDirection": "right",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": 59,
+        "latency": 26919
+      },
+      {
+        "trialIndex": 6,
+        "tubeTypeIndex": 0,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": -60,
+        "latency": 30750
+      },
+      {
+        "trialIndex": 7,
+        "tubeTypeIndex": 2,
+        "arrowDirection": "left",
+        "faceType": "ID017",
+        "faceSide": "left",
+        "endAngle": -55,
+        "latency": 31389
+      },
+      {
+        "trialIndex": 8,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "left",
+        "faceType": "ID017",
+        "faceSide": "right",
+        "endAngle": -59,
+        "latency": 23690
+      },
+      {
+        "trialIndex": 9,
+        "tubeTypeIndex": 2,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": -58,
+        "latency": 28647
+      },
+      {
+        "trialIndex": 10,
+        "tubeTypeIndex": 1,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "left",
+        "endAngle": -53,
+        "latency": 23402
+      },
+      {
+        "trialIndex": 11,
+        "tubeTypeIndex": 0,
+        "arrowDirection": "right",
+        "faceType": "ID015",
+        "faceSide": "left",
+        "endAngle": 55,
+        "latency": 19892
+      },
+      {
+        "trialIndex": 12,
+        "tubeTypeIndex": 0,
+        "arrowDirection": "left",
+        "faceType": "ID017",
+        "faceSide": "left",
+        "endAngle": -55,
+        "latency": 20803
+      },
+      {
+        "trialIndex": 13,
+        "tubeTypeIndex": 2,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "left",
+        "endAngle": -60,
+        "latency": 11205
+      },
+      {
+        "trialIndex": 14,
+        "tubeTypeIndex": 0,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "left",
+        "endAngle": -52,
+        "latency": 23265
+      },
+      {
+        "trialIndex": 15,
+        "tubeTypeIndex": 0,
+        "arrowDirection": "right",
+        "faceType": "ID017",
+        "faceSide": "right",
+        "endAngle": 54,
+        "latency": 18556
+      },
+      {
+        "trialIndex": 16,
+        "tubeTypeIndex": 1,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": -55,
+        "latency": 25104
+      },
+      {
+        "trialIndex": 17,
+        "tubeTypeIndex": 1,
+        "arrowDirection": "left",
+        "faceType": "ID017",
+        "faceSide": "left",
+        "endAngle": -54,
+        "latency": 16075
+      },
+      {
+        "trialIndex": 18,
+        "tubeTypeIndex": 1,
+        "arrowDirection": "right",
+        "faceType": "ID017",
+        "faceSide": "left",
+        "endAngle": 54,
+        "latency": 16332
+      },
+      {
+        "trialIndex": 19,
+        "tubeTypeIndex": 1,
+        "arrowDirection": "right",
+        "faceType": "ID017",
+        "faceSide": "right",
+        "endAngle": 57,
+        "latency": 16214
+      },
+      {
+        "trialIndex": 20,
+        "tubeTypeIndex": 1,
+        "arrowDirection": "left",
+        "faceType": "ID017",
+        "faceSide": "right",
+        "endAngle": -51,
+        "latency": 13925
+      },
+      {
+        "trialIndex": 21,
+        "tubeTypeIndex": 1,
+        "arrowDirection": "right",
+        "faceType": "ID015",
+        "faceSide": "left",
+        "endAngle": 58,
+        "latency": 16069
+      },
+      {
+        "trialIndex": 22,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "right",
+        "faceType": "ID015",
+        "faceSide": "left",
+        "endAngle": 63,
+        "latency": 13675
+      },
+      {
+        "trialIndex": 23,
+        "tubeTypeIndex": 2,
+        "arrowDirection": "left",
+        "faceType": "ID017",
+        "faceSide": "right",
+        "endAngle": -55,
+        "latency": 10967
+      },
+      {
+        "trialIndex": 24,
+        "tubeTypeIndex": 0,
+        "arrowDirection": "right",
+        "faceType": "ID017",
+        "faceSide": "left",
+        "endAngle": 59,
+        "latency": 21958
+      },
+      {
+        "trialIndex": 25,
+        "tubeTypeIndex": 2,
+        "arrowDirection": "right",
+        "faceType": "ID015",
+        "faceSide": "left",
+        "endAngle": 62,
+        "latency": 18613
+      },
+      {
+        "trialIndex": 26,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "right",
+        "faceType": "ID017",
+        "faceSide": "left",
+        "endAngle": 57,
+        "latency": 10425
+      },
+      {
+        "trialIndex": 27,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "left",
+        "faceType": "ID017",
+        "faceSide": "left",
+        "endAngle": -58,
+        "latency": 14444
+      },
+      {
+        "trialIndex": 28,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "right",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": 61,
+        "latency": 10117
+      },
+      {
+        "trialIndex": 29,
+        "tubeTypeIndex": 1,
+        "arrowDirection": "right",
+        "faceType": "ID015",
+        "faceSide": "right",
+        "endAngle": 56,
+        "latency": 13213
+      },
+      {
+        "trialIndex": 30,
+        "tubeTypeIndex": 3,
+        "arrowDirection": "left",
+        "faceType": "ID015",
+        "faceSide": "left",
+        "endAngle": -64,
+        "latency": 9395
+      },
+      {
+        "trialIndex": 31,
+        "tubeTypeIndex": 2,
+        "arrowDirection": "right",
+        "faceType": "ID017",
+        "faceSide": "right",
+        "endAngle": 64,
+        "latency": 30812
+      }
+    ],
+    "earlyExit": null
+  }
+}

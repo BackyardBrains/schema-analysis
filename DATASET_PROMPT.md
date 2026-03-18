@@ -134,41 +134,76 @@ duplicate session files that are deduplicated during loading.
 
 ## Experiment 2 (Exp 2)
 
-**Manipulation**: Between-participant, face identity / threat level.
+**Manipulation**: Within-participant, face identity / threat level.
 
-**Faces**:
-| Face  | Description                                     | Threat |
-|-------|-------------------------------------------------|--------|
-| ID015 | Young adult male, minimal threat cues           | Low    |
-| ID017 | Adult male, heavy tattoos                       | High   |
-| ID030 | Adult male, tattoos and visible scarring        | High   |
+**Faces** (current analysis uses ID015 + ID017 only):
+| Face  | Description                                     | Threat | Status           |
+|-------|-------------------------------------------------|--------|------------------|
+| ID015 | Young adult male, minimal threat cues           | Low    | Active (all runs)|
+| ID017 | Adult male, heavy tattoos                       | High   | Active (Run 1+3) |
+| ID030 | Adult male, tattoos and visible scarring        | High   | Excluded for now |
 
-Each participant saw one **meek** and one **threatening** across all 32 trials (16 each).
+Each participant saw one **meek** (ID015) and one **threatening** face across
+all 32 trials (16 each).
 
-**Data sources** (combined into a single flat dataset):
+**Data sources** (all raw files live in `data/tube/raw/exp2/`, never modified):
 - **Run 1** (ID015 + ID017): raw JSONs were lost in a data breach. A
   pre-processed CSV (`exp2_threat_run1.csv`, 145 participants, 4,691 trials)
   is the only source. The angle columns in this CSV are used as-is — the
   sign-correction transform was already applied when the CSV was built.
-- **Run 2** (ID015 + ID030): 150 participants loaded from raw JSON files
-  (same pipeline as Exp 1).
+- **Run 2** (ID015 + ID030): 150 participants loaded from raw JSON files.
+  Excluded from current analysis — we need more data on the ID015 + ID017
+  pairing to confirm the hypothesis before introducing a third face.
+- **Run 3** (ID015 + ID017): MTurk collection, March 2026. 500 raw JSON
+  files from 252 unique MTurk workers. Severe bot contamination: 77 workers
+  submitted multiple sessions (up to 35 from a single worker), nearly all
+  with 100% zero angles and sub-second response times.
 
-Both sources are combined into a single Exp 2 dataset of **295 unique
-participants** with globally unique user IDs assigned at merge time to prevent
-collision between the two sources.
+**Quarantine system**: Because Run 3 introduced `workerId` tracking (via the
+`data.session.mturk.workerId` field), the pipeline now classifies raw files
+before loading:
+
+```
+data/tube/raw/exp2/
+    *.json, *.csv           ← raw files (NEVER modified)
+    quarantined/            ← copies of files from repeat workers (>1 session per workerId)
+    user-data/              ← copies of clean files (pipeline loads from here)
+```
+
+`quarantine_workers()` runs at the start of each analysis. It reads every JSON
+in the raw directory, groups by `workerId`, and copies files into the two
+subfolders. Workers with >1 unique session are quarantined entirely — a human
+has no reason to repeat a 5-minute task for a single payment. Files without a
+`workerId` (all Run 1/2 files) pass through to `user-data/` automatically.
+A `manifest.json` in `quarantined/` logs every decision for audit. Deleting
+both subfolders and re-running regenerates them from scratch.
+
+**Quarantine impact (Run 3)**: 297 files from 77 repeat workers quarantined;
+360 files (199 single-session workers + 161 without workerId) passed to
+analysis.
+
+After quarantine, `flag_bots()` behavioural detection runs on the remaining
+sessions (same criteria as Exp 1: zero angles, fast RTs, low variability),
+removing additional single-session bots.
+
+**Combined dataset**: After quarantine and bot removal, Exp 2 contains
+**282 sessions** with globally unique user IDs assigned at merge time.
 
 ---
 
 ## Data Pipeline
 
 ```
-Raw JSON / CSV
+quarantine_workers()        Exp 2 only: classify raw files into quarantined/
+                            (repeat workers) and user-data/ (clean files).
+                            Raw directory is never modified.
     ↓
-load_from_json()            Parse trials, apply angle sign-correction,
-                            derive towards/away, resolve face columns
+load_from_json()            Parse trials, extract workerId, apply angle
+                            sign-correction, derive towards/away, resolve
+                            face columns.  Exp 2 loads from user-data/.
     ↓
-remove_bad_sessions()       Remove bot-flagged participants (Exp 1 only;
-                            Exp 2 CSV lacks latency data for full bot check)
+remove_bad_sessions()       Remove bot-flagged participants (both Exp 1 and
+                            Exp 2) based on behavioural criteria
     ↓
 validate_trials()           Mark valid = (3° < angle < 40°)
     ↓
@@ -208,13 +243,14 @@ Total valid trials: 15,533 (from 21,449 raw trials across 663 sessions).
 
 ### Experiment 2
 
-| Face  | N   | D      | SE    | p     |
-|-------|-----|--------|-------|-------|
-| ID015 | 236 | +0.016°| 0.225 | 0.944 |
-| ID017 | 117 | +0.286°| 0.250 | 0.258 |
-| ID030 | 116 | +0.101°| 0.332 | 0.762 |
+| Face  | N   | D       | SE    | p     |
+|-------|-----|---------|-------|-------|
+| ID015 | 275 | −0.102° | 0.209 | 0.627 |
+| ID017 | 162 | +0.158° | 0.246 | 0.522 |
 
-Total valid trials: 6,186 (from 9,507 raw trials across 295 sessions).
+ID030 excluded from current analysis (Run 2 data set aside pending more
+ID015 + ID017 data). 282 sessions entering the pipeline after quarantine
+and bot removal.
 
 ---
 
@@ -229,12 +265,14 @@ Total valid trials: 6,186 (from 9,507 raw trials across 295 sessions).
 This dissociation rules out motor artefacts, tube geometry effects, and
 procedural confounds. The effect is driven specifically by the visible face.
 
-**Experiment 2** is non-significant for all three faces. The likely cause is
-insufficient power: Exp 1 requires ~577 participants to detect D ≈ 0.24° at
-p < 0.05; Exp 2 has 117–236 per face. A power calculation suggests ~400–500
-participants per face would be needed to detect an effect of this magnitude.
-The direction of D for ID017 (+0.286°) is consistent with the Exp 1 result,
-suggesting a trend that is simply underpowered.
+**Experiment 2** is non-significant for both faces after three collection runs
+and quarantine of bot-contaminated sessions. Exp 2 now has 162–275 participants
+per face — still short of the ~400–500 per face estimated from Exp 1's effect
+size. The direction of D for ID017 (+0.158°) remains positive and consistent
+with the Exp 1 result. ID015 shows a small negative D (−0.102°), which may
+reflect the low-threat face failing to elicit peripersonal engagement.
+MTurk bot contamination in Run 3 was severe (77 repeat workers, 297 files
+quarantined), reducing the usable yield significantly.
 
 ---
 
@@ -281,11 +319,15 @@ any given tube type) but contextualises participant behaviour in the task.
 
 ## What Has Not Yet Been Done
 
-- **Power analysis / sample size planning** for Exp 2 follow-up runs.
+- **Power analysis / sample size planning** for additional Exp 2 runs. Current
+  N per face (275) is below the estimated ~400–500 needed.
 - **Individual differences**: some participants may show reliably larger D;
   this has not been modelled.
-- **Threat modulation test**: a direct comparison of D across ID015 vs
-  ID017/ID030 is underpowered but not yet formally tested.
+- **Threat modulation test**: a direct comparison of D across ID015 vs ID017
+  is underpowered but not yet formally tested.
+- **ID030 reintegration**: Run 2 data (ID015 + ID030, 150 participants) is
+  collected but set aside. Once the ID015/ID017 pairing has sufficient power,
+  ID030 can be brought back for a three-face threat-level comparison.
 - **Delta analysis**: a sensitivity sweep on `delta = angle − arctan(W/H)`
   (normalising tilt relative to tube difficulty) has been scoped but not yet
   implemented.
@@ -297,7 +339,8 @@ any given tube type) but contextualises participant behaviour in the task.
 ## Code and Reproducibility
 
 All analysis is implemented in Python using a pipeline of modular functions:
-- `load.py` — raw JSON/CSV ingestion, angle transforms, bot detection
+- `load.py` — raw JSON/CSV ingestion, angle transforms, bot detection,
+  worker quarantine (`quarantine_workers()`)
 - `sessions.py` — session management, pipeline chaining
 - `compute.py` — D computation, sensitivity sweep
 - `plots.py` — all figures
@@ -306,6 +349,11 @@ The full pipeline is re-run from raw data with a single command:
 
     python tube_analysis.py
 
+This first runs quarantine (classifying Exp 2 raw files into `quarantined/`
+and `user-data/` subfolders), then loads, cleans, and analyses.
+
 Output: `figure_d_bars.png`, `sensitivity_exp1.png`, `sensitivity_exp2.png`
 
 No manual data manipulation steps exist between raw JSON and final results.
+The raw data directory is never modified; quarantine output folders can be
+deleted and regenerated at any time.

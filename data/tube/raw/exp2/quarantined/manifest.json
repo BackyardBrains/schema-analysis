@@ -1,0 +1,760 @@
+{
+  "generated": "2026-03-18T17:03:58.089596",
+  "source_directory": "/Users/gagegreg/Documents/rhub/schema-analysis/data/tube/raw/exp2",
+  "max_sessions": 1,
+  "total_json_files": 657,
+  "quarantined_files": 297,
+  "quarantined_workers": 77,
+  "userdata_files": 360,
+  "no_worker_id_files": 161,
+  "workers": {
+    "A24D1Z6SX07V8Y": {
+      "sessions": 5,
+      "files": 5,
+      "uuids": [
+        "018892c6-655b-4a25-a3fe-9559ad8091de",
+        "069b90f1-0175-46cd-a196-c2a5761fbc18",
+        "31473bfb-f091-43c5-936b-cc7d914052e6",
+        "80cf003a-a245-4240-a088-61cb2a32a467",
+        "e2f7175d-22f6-4566-b07e-3752523d1866"
+      ]
+    },
+    "A1TNF9Q4I9MJ8B": {
+      "sessions": 4,
+      "files": 4,
+      "uuids": [
+        "01eb1cca-93a9-4207-a586-acff590ac586",
+        "655e2fc2-e00b-4b0c-b06f-cbabba01fac3",
+        "e10807c8-3cc3-45ea-8dc9-3201917ba4ed",
+        "e7787fd6-0ff5-4bf4-9323-07d35b184af8"
+      ]
+    },
+    "A2U70SUM0F3PP": {
+      "sessions": 7,
+      "files": 7,
+      "uuids": [
+        "0352c5f2-ebfe-4b0a-b327-c90b3a3864d4",
+        "27913366-20af-463e-9381-09b8270c28f9",
+        "9815574c-e1bb-451c-8cf1-3be0a440c8a6",
+        "a8e5c105-211e-45e9-b9a1-56bc398ccd40",
+        "ce870303-e532-4e16-96d3-7c00fe9d48ce",
+        "d14eb4cd-d0d7-470f-8164-014d4ee5a2e8",
+        "e4a3d813-ef65-4f3f-8446-54f7b50d3b7f"
+      ]
+    },
+    "A28A2YLRD1VM8Q": {
+      "sessions": 4,
+      "files": 4,
+      "uuids": [
+        "03639d96-ee25-4608-a0ff-26b6da33ac33",
+        "3e0b0485-1186-4ff3-8f24-1927507d8c58",
+        "575826cb-1ef1-4fd8-8af0-ec3850c42f60",
+        "ba30b201-fb5b-4405-ae6b-ea60a7108679"
+      ]
+    },
+    "ACTBZZ0G566SL": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "03c25b54-efb3-479e-84d4-2841afc56449",
+        "a4bad948-b91f-4849-92e1-65c4d0d5a79a"
+      ]
+    },
+    "A1PG1EXFX6JJ9": {
+      "sessions": 35,
+      "files": 35,
+      "uuids": [
+        "042925e3-4a06-4496-b7fb-6884525b2aff",
+        "08c92244-30d7-4511-97ad-c46ead33a7b1",
+        "203bbac2-9010-4531-b42f-7a4694bdf8ee",
+        "2b04d85e-2f3e-4d45-97ce-758dfa74922f",
+        "2d812782-f4f7-4764-b094-499a71dfbda5",
+        "2e748a4b-a927-4ed9-8e8f-9ccaf32389ab",
+        "33925d02-3a14-47de-bd31-06c8dcb3d363",
+        "3827fd65-1853-435d-ab77-3e328900b099",
+        "3cdcabbe-61c2-42b2-8f6a-88c227257379",
+        "4be54485-c430-4cd8-afe0-d2f74745a5cb",
+        "52be48f8-ccdc-43b0-9b76-2b108feb9cdb",
+        "678a01c1-fe4b-412b-9bfe-7a6bbd22609e",
+        "6c460659-5498-47a2-8890-41421fbf0dbf",
+        "7d4d0af2-0be6-43b0-8a83-63ba0b864cc1",
+        "801dd9d9-bcb3-45c3-9395-0dd505fb169b",
+        "86f78a34-bda0-49e0-bf96-a606ca571614",
+        "8bcc2b55-ddfc-43c2-adbb-38b0952c0e5c",
+        "8e1cc456-0463-454e-ac75-2642d9e8ceae",
+        "906a918d-6e7e-4c19-8ecf-4bf9871eecb3",
+        "977ba8e2-9b53-4439-8500-37e09a1b913c",
+        "9bcf7c0e-a707-455d-819b-f646453b17c6",
+        "a9166de4-9e91-4177-a352-72c7871b7114",
+        "ad625ad6-00f7-4586-8c04-6e720b8526c3",
+        "b2d816b7-55ad-42b3-89c1-fb9b2441bfc6",
+        "b9b6ec1c-df01-469b-a5e2-57d0844cc607",
+        "ba50cb1b-c61f-41e8-9aa7-7a5fe6143687",
+        "bae64a0b-d768-4532-bcd5-09437e540ab7",
+        "d5d8ee62-22a1-4ee8-a89d-10e6e712f879",
+        "d67a0385-382d-454f-8915-8dfe7839ac86",
+        "eea4e0ce-c434-4c2b-bd2a-0c58569cd939",
+        "ef88af1e-8f6f-478b-a255-5dd8ca846d1b",
+        "f174d92a-fb2d-48d1-a131-83c8c5adafec",
+        "f6bf58d5-a90e-46c5-827c-cd77a6333ae4",
+        "f87e95a7-0577-4d5d-98bf-81f4275b11f9",
+        "fe3b95ef-468a-4820-9545-f80535e0ff4b"
+      ]
+    },
+    "A3AMYY3QBUOXQ8": {
+      "sessions": 3,
+      "files": 3,
+      "uuids": [
+        "0441fe9f-1d3c-402f-8839-fc99df4286a5",
+        "964b8144-1949-4966-bd61-df8d5dea0e76",
+        "c9894e57-7229-43bc-88d9-446b203339a9"
+      ]
+    },
+    "A3F8WPZV15VNYZ": {
+      "sessions": 3,
+      "files": 3,
+      "uuids": [
+        "055c073d-1712-4785-a484-2f173a202422",
+        "3c4b55e6-9ed7-4dbf-b5aa-315edac38d66",
+        "66f360ae-fc78-47e4-ad80-e76570eb03cf"
+      ]
+    },
+    "A2TRPNQQU15SXE": {
+      "sessions": 5,
+      "files": 5,
+      "uuids": [
+        "05c8d973-a179-4ae1-a8ea-74b126285449",
+        "6cd03cb0-4cf9-4158-baf3-d19fa1a34ce2",
+        "987622a1-1f37-4e3e-8d49-f1638fc063c2",
+        "9899fbe9-ecc4-49ac-8168-596f3d49972e",
+        "cae4ace8-d6f1-46df-baab-2efc764060d0"
+      ]
+    },
+    "A2R69Y9PYEUJ5G": {
+      "sessions": 5,
+      "files": 5,
+      "uuids": [
+        "07659f58-849c-4b0f-ad5a-80c5b0baed27",
+        "29729b67-eff8-4e7f-b095-5fe410e11f6a",
+        "414122b8-5108-4510-8a5d-4f5dc100b433",
+        "e2f244b5-5328-4baa-96b9-f947436214e7",
+        "f4171375-ca99-45a2-a79d-a6e055f755c9"
+      ]
+    },
+    "A19N30FA2S4D0E": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "0d464a0b-2bf2-4680-94c3-a409a0a5927d",
+        "3d0ef94a-efc0-4d89-b100-04236163b142"
+      ]
+    },
+    "A1K8GB1TL6FQUM": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "0d52944e-16b7-4055-8512-ee8c1990d211",
+        "f7121e90-f9a1-4788-a3ec-76c7c647f977"
+      ]
+    },
+    "AYKYL42PQ521P": {
+      "sessions": 23,
+      "files": 23,
+      "uuids": [
+        "0dd2f8b2-d9b8-47d2-b187-4d96eea737a0",
+        "1c6e226f-8e7e-4f0d-93e7-ab8509f1c4a3",
+        "2018142c-3e58-4ec4-a2fc-c7d908baf45c",
+        "21f263ff-1605-4ea4-8714-74112fe88c11",
+        "359add37-777d-4a25-9b93-09ce32b55712",
+        "37e0c286-8bec-4de8-b804-dc3c2508c41d",
+        "428b541e-7d34-4436-9e7d-e7a61f69bca2",
+        "521683ba-1a5a-4f08-8649-3a3a2259286d",
+        "52e4b0fc-746e-4d79-a53a-8a336838bf03",
+        "54bf5436-c0a3-4919-baed-2440a6c7eb76",
+        "67e8801f-ed2e-44b1-824a-84c76e8db5dc",
+        "6e1a3fb9-9d19-4376-aa30-ecfeae8fbf7c",
+        "9ccbaf0d-c6da-4552-a9c1-8462bf75256a",
+        "a27959bf-5c1a-4091-8135-82c0d22c8967",
+        "b7a54e9e-6d8e-4134-89dd-1930f5c002b4",
+        "c1007783-eff9-40d8-a933-67c3205b36dc",
+        "cadbdc1d-6154-4a98-a593-0c06d3730ae4",
+        "cf2f8333-b8cb-4711-88d2-0e571368d815",
+        "d7bbe57a-c78e-4d51-b0f6-7fbdd518beb6",
+        "dfacf7a3-7736-47d0-8e9b-3ba25cf2fa44",
+        "eb4b315f-bfe4-4ae5-81d1-b1911f1495f9",
+        "f001f37f-bdef-4a0b-a611-00cf6d5f3c77",
+        "f0ba7555-4747-403b-a9a5-a11956de5297"
+      ]
+    },
+    "A38N5NPCQMZNQ1": {
+      "sessions": 4,
+      "files": 4,
+      "uuids": [
+        "0f7ce13e-7168-4d7a-8fc4-4adeacbcad18",
+        "2c38755e-fc8a-45f8-9568-3431c2c5bf5a",
+        "f545a558-9aaa-4bea-8c32-8fb90d600a27",
+        "fbfa7b7d-9956-400d-aab4-a860391cbba0"
+      ]
+    },
+    "A1VPQ3PG2ZNIJN": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "0f83037c-04f9-4267-a38d-d6a92c42766b",
+        "57604f70-928c-4a03-876d-2bfde0392a24"
+      ]
+    },
+    "A1M7R2XY0YNLHG": {
+      "sessions": 3,
+      "files": 3,
+      "uuids": [
+        "0fdb6a77-4b74-43f0-8477-ca6f4e2df2d8",
+        "a9a1e0f6-afa6-47f7-81d6-7826dbb44228",
+        "d2ad1a5d-9c76-41ea-883f-031a62ebe7aa"
+      ]
+    },
+    "A1ZXYL2B5W9CQY": {
+      "sessions": 3,
+      "files": 3,
+      "uuids": [
+        "12d4a140-f772-42dd-9124-aa30ddb16cd5",
+        "140972de-a815-4e0f-8ccc-9102529223b1",
+        "941d6fc2-9874-458c-acfa-56a19c46a429"
+      ]
+    },
+    "A2ATKVVP74NP3J": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "141ee9f0-141f-46c8-800c-5bb8c6b3498c",
+        "8daace0d-0152-469f-92f9-e8de348c53d6"
+      ]
+    },
+    "A1G8WANV58AZXJ": {
+      "sessions": 3,
+      "files": 3,
+      "uuids": [
+        "1426a672-6216-46c8-8a57-b9c2283c6efc",
+        "3017cf95-1607-4caa-9773-dbd30739a11f",
+        "8786fe79-da19-44b6-81d9-abc9b4f05215"
+      ]
+    },
+    "A2MD5H2J1SV8NP": {
+      "sessions": 3,
+      "files": 3,
+      "uuids": [
+        "16e172fe-5337-40dc-bfae-2446554aff2f",
+        "6708094a-dbb5-4112-8465-d883264d7b23",
+        "79637de3-8e69-4eee-917c-4f7b5dae34a9"
+      ]
+    },
+    "A16Y0R2H4J881O": {
+      "sessions": 7,
+      "files": 7,
+      "uuids": [
+        "1a758a56-a1c5-4ed2-8ec3-3fbaa6842a41",
+        "20a18795-88ab-45f6-9e1c-aaca44105ad2",
+        "33c89338-d35d-4de2-8d2c-8856eef69c80",
+        "760a1c37-2a70-4e9d-ae8b-73935cbd52c3",
+        "a3e7280a-0e93-4938-ad57-145d75f4d5a0",
+        "be5fe305-ecfc-4cf2-bf87-69197c4b8fa6",
+        "dcc12cf1-78a4-420a-86f7-3299182d6de3"
+      ]
+    },
+    "A1GZF54CANFJQH": {
+      "sessions": 15,
+      "files": 15,
+      "uuids": [
+        "1b02e728-e26a-4a8b-ae2c-282fd19da3a1",
+        "2625c02d-b85f-4743-86ba-915326b384a9",
+        "33ebc5d4-d057-43be-bfd5-0dc3fe2f25d6",
+        "4935d1c1-dadc-408d-a87f-a6f3127f4009",
+        "5d3078db-5a65-46ec-aecb-bb5775ed78fa",
+        "60395a24-5392-4646-8252-658e5c1bed4f",
+        "6649ffc8-a0b0-403c-9dbf-86fe8fe31a82",
+        "6c77d84b-4a45-4f87-850c-7a0706cb5a3e",
+        "91e02946-45a1-49ef-b390-d7eb68323dbe",
+        "9460c488-cf36-4517-ac6d-eddb5324a2fc",
+        "94970d41-d109-4f5a-ab0b-6aa92674684b",
+        "9894fa7f-c9a5-441e-9160-7916a13a8b87",
+        "db49be66-e795-44e8-a66d-4cae20f190e1",
+        "e1c8e666-f8ec-45fe-918a-252bbae5ba80",
+        "f46e2d7a-3540-472e-bcb5-8b11a840c708"
+      ]
+    },
+    "AXYA8DK59P1L8": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "1bc3ad95-7e50-4013-a904-31e57c42179f",
+        "a5f547c5-fa01-4464-886a-dd8792897c52"
+      ]
+    },
+    "A1GE9RD7E64UYV": {
+      "sessions": 2,
+      "files": 3,
+      "uuids": [
+        "1be6cc72-d4db-4ae0-a963-725d65813393",
+        "93855dfc-9489-4f28-bb8b-3be572caf188"
+      ]
+    },
+    "A13I7FWC2NNOT7": {
+      "sessions": 8,
+      "files": 8,
+      "uuids": [
+        "1f858fe9-3b9b-49ff-a708-12dce3461a6d",
+        "4dbb0754-4841-4bf5-bba5-3b75d37a656d",
+        "66e543ef-33ea-40bf-86d8-5fc32e181596",
+        "76f243dd-e80b-40ac-ad31-4cde014dfd2a",
+        "b098d3c8-a1ff-46be-b3d4-74fc19bd75d1",
+        "cb5baf18-8249-4b64-bc5c-138205f42c5f",
+        "d4d1f5af-b0cc-43bf-bebf-8ee520abffd7",
+        "e67853fa-54f3-4a31-913f-572f66a3fd22"
+      ]
+    },
+    "A1HU37WA7MHN57": {
+      "sessions": 3,
+      "files": 3,
+      "uuids": [
+        "2851bab9-d4f9-4672-bd82-9137da0acd35",
+        "a4a2afa1-2770-4d92-8ac4-4813d720e9a0",
+        "e87f2937-018f-468f-9c29-6cbaebd136cf"
+      ]
+    },
+    "A2ZHO2TFIE0V5E": {
+      "sessions": 3,
+      "files": 3,
+      "uuids": [
+        "28d0963f-0ba7-4842-9e3e-757fafabd0e3",
+        "3805ca64-a0f7-4807-b84e-de9318c0be84",
+        "793c2b91-e012-466e-ad15-4d33b8109950"
+      ]
+    },
+    "A1XCTHM4C6CQPJ": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "2b7896d5-f1ac-486a-a0e3-3129f95461e4",
+        "fa49af05-8002-4599-9890-b79b911db39b"
+      ]
+    },
+    "A30J0DBPF7M93X": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "2fc7b570-e280-4f0b-bfbd-f28c2ae01edd",
+        "87460342-4616-4823-952a-c1ad33c44b70"
+      ]
+    },
+    "AIT827TOXHEUN": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "31677643-5dbc-4bbf-81b5-436b731292e4",
+        "e76046a0-6e0c-4207-a0ae-da49739cfa27"
+      ]
+    },
+    "A3GIJUNK2QDX3O": {
+      "sessions": 6,
+      "files": 7,
+      "uuids": [
+        "317711ec-e3b4-40bf-84de-b8094fb18195",
+        "758dad4c-ac35-4360-8dc3-c932c102ef5b",
+        "7660a444-5a74-436e-a9bb-7e3c845a43f0",
+        "85a38cdb-b7c0-42d8-a6e5-623c17d7f154",
+        "99437298-cf49-45f5-a092-47c66970262a",
+        "9d18250c-bca8-4975-8003-8256aa3c742e"
+      ]
+    },
+    "A3JQVOGVJ2OAAX": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "3195cf64-8282-4e38-becc-76506fc17abd",
+        "cd819271-0732-4a60-a666-06aeff4aa8df"
+      ]
+    },
+    "A2X7FTP5ZB892R": {
+      "sessions": 3,
+      "files": 4,
+      "uuids": [
+        "3230cc38-2208-48d9-90ab-439ad82c8eda",
+        "55f4ddee-c0e1-4323-a703-b491a32acb08",
+        "7661c4f0-b3bd-4bb6-a710-a9ff605b87a3"
+      ]
+    },
+    "A1O6Y3RZT838LI": {
+      "sessions": 2,
+      "files": 3,
+      "uuids": [
+        "3416a5ed-7b9c-4dec-a4d3-174ef9c2d0cd",
+        "9a756b27-3886-41c0-8e76-befd7a125139"
+      ]
+    },
+    "A3QHZCELFJ3BSN": {
+      "sessions": 4,
+      "files": 4,
+      "uuids": [
+        "36ccbc76-1b37-4878-9fcd-eece4e6fb185",
+        "80427d33-4e9b-4224-b8e5-6d007d4a9aa2",
+        "8c7a9af6-b138-4654-933f-afe48fe5161c",
+        "924a11a3-dfdf-4431-b763-3d38f0312de6"
+      ]
+    },
+    "A2EWQGZOPQ309": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "3969abca-083e-490a-8689-52a14d328708",
+        "e7437e96-3986-4397-978f-35f36311d23f"
+      ]
+    },
+    "A3EQD8QV3GPXY4": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "3a7cf54a-8d50-4fb8-b182-afd42a37c1cd",
+        "550d7bf8-850f-4f81-812f-ba69247b1eb7"
+      ]
+    },
+    "ARSYPIB62OGI8": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "42a717a1-bb89-49a7-b542-bfa0c58ae72d",
+        "6799b576-7d1d-4326-9c35-86316cd751a2"
+      ]
+    },
+    "ASKHX4QLQI7RA": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "4450295a-068c-4bf4-8d7c-1b457c1aad37",
+        "fb32c852-2f0f-4108-a724-66de71adc067"
+      ]
+    },
+    "ANILSF99XME8P": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "4b523bf7-94b9-44b2-a1cd-82154382b9f5",
+        "806fa52c-6586-474a-94a4-7ca6c1ab5cf3"
+      ]
+    },
+    "A1A5L1S5B2VXZL": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "4dcf6217-c6d5-41c2-8b31-8d3065c1c5e5",
+        "5dcf2a0f-1d71-4b91-a07d-a66676c1c48c"
+      ]
+    },
+    "A21SAAQ8D0FOLW": {
+      "sessions": 3,
+      "files": 4,
+      "uuids": [
+        "4f1d6c81-2937-4201-8ab8-2cc31e42b610",
+        "83f2e499-d7a7-4b8a-92d6-5ac4debf8588",
+        "b43f5908-0e2d-4e5c-84ac-1438d3f701e5"
+      ]
+    },
+    "A527BL69RAB2P": {
+      "sessions": 6,
+      "files": 6,
+      "uuids": [
+        "51bf473d-bc57-4525-81b3-ecf6b8115049",
+        "57f75b50-39db-430b-be7d-f245d37bedcf",
+        "715e53ba-370c-41e2-8f61-3b1040bc4fd4",
+        "c46496ae-db8a-464c-9166-22f6e0f1eaa4",
+        "cafc34b0-0fb1-4da8-8ac7-8c01acc173e5",
+        "d10a4315-7bb0-404a-9f14-f19a68d57d88"
+      ]
+    },
+    "A2R4CVCDYUH6FF": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "526df36d-81d3-4be0-a4fe-58ab7f18ca66",
+        "ca3c778f-fbbe-4589-823e-e35074ce98bd"
+      ]
+    },
+    "A3MD8OAKB99SD0": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "531ff764-5875-40a2-a2b9-778e3e356c1a",
+        "c1ca74cc-3d5a-4f5a-bc44-4b074b73e17d"
+      ]
+    },
+    "A8ITMR9PDI47P": {
+      "sessions": 4,
+      "files": 4,
+      "uuids": [
+        "5ab7b0b8-596d-4e8a-9351-edd6a5b7430b",
+        "674ba883-affd-4064-9d11-afa0ab486e07",
+        "96d062b8-6549-4327-ae05-68d3f87cf4b9",
+        "a5577251-a4c7-47fa-960d-1a959f92af54"
+      ]
+    },
+    "A1YTFCLA5B1VT9": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "5c16abc8-86a3-4b44-952e-298c8a4195b3",
+        "93fbfb7b-d0e1-41ae-a8c3-fce3c4bb3cce"
+      ]
+    },
+    "ATQ0PI89OCDEW": {
+      "sessions": 3,
+      "files": 3,
+      "uuids": [
+        "5eb41784-7a22-4378-a3c7-c3a05795f199",
+        "f3181589-f12c-47c0-8476-b13612c52e01",
+        "f57aa74c-172d-43f7-9ca5-546efb0767fe"
+      ]
+    },
+    "A1509XZN9648IQ": {
+      "sessions": 3,
+      "files": 3,
+      "uuids": [
+        "5eefc70a-d2c8-477a-8930-92939e1f7a20",
+        "d00f308b-180c-4dd0-8395-f295b5370955",
+        "fd407b7c-120c-4fc8-b26c-845bc90efc8b"
+      ]
+    },
+    "A2OYL75547T3F": {
+      "sessions": 3,
+      "files": 3,
+      "uuids": [
+        "5f4581c1-c981-42bc-bd55-758dc526ee51",
+        "a3cdb571-7341-4188-877e-6cf655f47700",
+        "e8764c41-fdde-4112-b264-1b58be9c7c1a"
+      ]
+    },
+    "AGVAF7J5JT2A2": {
+      "sessions": 2,
+      "files": 3,
+      "uuids": [
+        "61d2820c-40dd-449b-bf72-fae0b7ba5068",
+        "de9fe51f-b23d-4a32-bdd0-3868bb851d82"
+      ]
+    },
+    "AMUD05592NHQ": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "64fb4f15-4efd-4572-9f2f-7062ffa07c1d",
+        "8c8643b3-b116-4b41-9d21-642757584ee1"
+      ]
+    },
+    "A2I19HUEE98DX8": {
+      "sessions": 4,
+      "files": 4,
+      "uuids": [
+        "68369768-0fc4-4a16-b83d-3a9f6df2a5aa",
+        "a3331578-c0e9-4e07-b4bd-005539cfcdd9",
+        "bd1dbef5-dcc4-4d16-acde-6d7a24d50035",
+        "d80e70b0-b665-4077-97b2-0fd6483b8077"
+      ]
+    },
+    "AOTVOF6YPEBO1": {
+      "sessions": 3,
+      "files": 3,
+      "uuids": [
+        "6fb1fad4-ca79-4ab4-acaf-8f85c96821fe",
+        "956cd42b-709a-4b6c-b09d-a2f5f10451c6",
+        "f797d19a-3830-4445-80b8-ad3f74804475"
+      ]
+    },
+    "A37JQEFMEWYG68": {
+      "sessions": 3,
+      "files": 3,
+      "uuids": [
+        "7091aba2-568b-45b4-b465-2bc7a927de75",
+        "a3e4b2d0-1c04-4c73-8bfc-5312cfd0cebd",
+        "fe9ea9c1-10ba-4266-9c50-dfec379b861e"
+      ]
+    },
+    "AFO2L3H7S90XY": {
+      "sessions": 4,
+      "files": 5,
+      "uuids": [
+        "70cb3735-bf45-4e56-a90b-c16961525191",
+        "a1da7918-c7fa-43d7-a38d-c0ca64ed38ea",
+        "c8e14361-683c-4017-8c81-4a3e15c0821b",
+        "fc38f039-7c58-42f7-861a-cc1d1bd06605"
+      ]
+    },
+    "AQ3N1U57XRYPB": {
+      "sessions": 3,
+      "files": 3,
+      "uuids": [
+        "771a56c6-11f9-4c31-8953-fc62b143ddb1",
+        "78c0cf83-c52e-4bb4-86bf-0ef38859ed0f",
+        "ccfea5de-e86e-427d-aa71-fdb9329e684c"
+      ]
+    },
+    "A3JI194T9VVETR": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "782a70d1-8a76-4c7e-b70e-3f19c45aea38",
+        "814146cd-06e6-475a-b120-564729e1f57c"
+      ]
+    },
+    "A21ZCZ1RKFOJ41": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "7a7e2813-7f0c-4ef9-91d8-b3d31f2fbf9d",
+        "7f91391f-4917-4acd-a380-b54f386d0d4a"
+      ]
+    },
+    "A6TRCSGBR71AD": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "7df7f347-5bc9-4ada-a90e-aa92b1b7280e",
+        "93b8e9a9-1d3d-4392-94b8-13bfbed6f13a"
+      ]
+    },
+    "A3MGZCGUPG3BL3": {
+      "sessions": 2,
+      "files": 3,
+      "uuids": [
+        "839c4087-a042-4f49-94fe-a2875632a7a1",
+        "a7c40177-b927-4f26-8885-06f3290e118f"
+      ]
+    },
+    "A1IB3KAKJR15NV": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "8695b1f1-e167-454b-98fd-fc95b8eda3ca",
+        "9aacf241-2898-48d6-87c8-bcafb60bf3af"
+      ]
+    },
+    "A2XSVLT89YW73G": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "8d0a3063-2f6e-4b19-9678-445b879a2474",
+        "d94e4860-d4e9-4f52-8160-94167d520e1a"
+      ]
+    },
+    "A2DXOYMV4TJWLF": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "914a394a-a6c7-4aca-92ca-011b9a24bd6a",
+        "9561d23b-b7cf-4f70-94c9-3d3f77c85dce"
+      ]
+    },
+    "A3M0GSO35QDALC": {
+      "sessions": 2,
+      "files": 3,
+      "uuids": [
+        "94014cfa-7442-4557-9e19-e9ea254f8f02",
+        "ffa371a3-0986-40ae-9d51-e88b7b4926eb"
+      ]
+    },
+    "A1HD1P4OPBX6L6": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "963d891e-f5a4-44ab-b5f6-db79e452ff93",
+        "c30aa814-7a4d-4e28-832d-b0ef26e5f39d"
+      ]
+    },
+    "AMEFP3CAT57DH": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "9a5d765d-1995-4978-8abe-9d5916ef117f",
+        "cf11d23d-07e9-484f-b107-8a12498c28b5"
+      ]
+    },
+    "A27I8XV1B8H5UC": {
+      "sessions": 2,
+      "files": 3,
+      "uuids": [
+        "9b31c409-6063-402d-87e2-01e51e0d3815",
+        "f4a9b216-0bcd-4b6a-91cb-71bb23ab053c"
+      ]
+    },
+    "A1O5EIEK0HONJJ": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "9cda6f8c-4aff-477f-bcfe-fc1725b2aa49",
+        "cb880226-34a5-4b2d-a048-602e6e2e7931"
+      ]
+    },
+    "A3736RUNXKG6HZ": {
+      "sessions": 2,
+      "files": 3,
+      "uuids": [
+        "9f9666b9-3827-4272-996f-5db60ddabb3b",
+        "9fd70ac8-5c6a-463c-a48a-c3ff0072cc8b"
+      ]
+    },
+    "A2QZI9SJKRQ7DJ": {
+      "sessions": 4,
+      "files": 4,
+      "uuids": [
+        "b2f06272-3a54-45e4-b36d-cd10360011fa",
+        "b49a00b7-7b1e-4b87-8525-4a4861d42d03",
+        "de43e32e-a6e4-49f4-ad24-8329bab01f7f",
+        "e3da2cd4-17fa-4769-adcf-ee1b0d5537b9"
+      ]
+    },
+    "A1V1HC161U89Z1": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "b9b31295-ef2c-48b2-bd23-58a2b101fa19",
+        "d2323a2e-2c89-4ddc-9fba-d5a4dad8fa98"
+      ]
+    },
+    "A36KVUGD2FEYRO": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "ba30fef2-a970-4ed7-8254-8584937e254d",
+        "e16ab164-ac1f-4f60-8b1a-dcfaef0fb703"
+      ]
+    },
+    "A2U4RHVV1RDQIP": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "c16a7fdd-8b26-4a61-bad7-605486411ddd",
+        "ebaed3d7-acad-41da-a9ec-8c751ec425de"
+      ]
+    },
+    "A19O7BFLBSF0ZY": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "d100eae0-fc97-4484-80f5-b13a87e90ae8",
+        "eece9cbe-5a39-4aac-b554-27c0f90a9b74"
+      ]
+    },
+    "A183QWGBTCXCG": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "d7c2b0ae-0f3a-4b03-8f68-207c4cbd722a",
+        "f7d862ac-54d5-4bb1-be67-88f890253c05"
+      ]
+    },
+    "A3SZ9F0N6TP8Y5": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "db1f8aa6-2ff4-409d-87b2-32540b271c68",
+        "dbcafa1a-f906-4704-9bc9-d90bc99822f9"
+      ]
+    }
+  }
+}

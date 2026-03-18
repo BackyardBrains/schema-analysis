@@ -9,18 +9,21 @@ faceType in the JSON determines how face columns are resolved:
   - 'ID015', 'ID030', etc. (matches ID\\d+) → face_id = faceType, eyes_covered = False
   - 'sighted', 'blindfold', etc.            → face_id from parameter, eyes_covered from faceType
 
-Exp2 data lives in a single flat directory (data/tube/raw/exp2/).  It may
-contain any mix of JSON files (new runs) and CSV files (runs whose raw JSONs
-were lost — currently only exp2_threat_run1.csv).  load_exp2() handles both
-transparently; adding a new run's JSONs or a new fallback CSV to that folder
-is all that is needed.
+Exp2 raw data lives in data/tube/raw/exp2/ (never modified).  Before analysis,
+quarantine_workers() classifies files into:
+  - exp2/quarantined/  (repeat-worker files — bots)
+  - exp2/user-data/    (single-session worker files + files without workerId)
+
+load_exp2() loads from user-data/ (or the raw directory if user-data/ doesn't
+exist yet).  CSV fallback files are always loaded from the raw directory.
 
 Exports:
-    load_from_json(directory, face_id)  → unified trials DataFrame (all JSON experiments)
-    load_exp1()                         → Exp1 loader
-    load_exp2()                         → Exp2 loader (all JSONs + CSVs in exp2 dir)
-    flag_bots(trials_df)               → set of bot UUIDs
-    mark_valid(df, lo, hi)             → df with 'valid' column
+    quarantine_workers(directory)      → classify raw files into quarantined/ + user-data/
+    load_from_json(directory, face_id) → unified trials DataFrame (all JSON experiments)
+    load_exp1()                        → Exp1 loader
+    load_exp2()                        → Exp2 loader
+    flag_bots(trials_df)              → set of bot UUIDs
+    mark_valid(df, lo, hi)            → df with 'valid' column
     balance_cascade(df, condition_col) → df with updated 'valid' column
 """
 
@@ -28,6 +31,9 @@ import glob
 import json
 import os
 import re
+import shutil
+from collections import defaultdict
+from datetime import datetime
 
 import numpy as np
 import pandas as pd
@@ -67,12 +73,16 @@ def _parse_trials(raw):
     trials = data.get('trials', [])
     file_version = session.get('file_version', '')
     has_latency = file_version >= '1.4' if file_version else False
+    worker_id = session.get('mturk', {}).get('workerId', '') if isinstance(session.get('mturk'), dict) else ''
 
     rows = []
     for t in trials:
         face_type = t.get('faceType', t.get('faceTyoe', t.get('facetype', '')))
+        if not face_type:
+            continue
         rows.append({
             'uuid': uuid,
+            'workerId': worker_id,
             'trial_index': t.get('trialIndex', 0),
             'tube_type_index': t.get('tubeTypeIndex', 0),
             'arrow_direction': t.get('arrowDirection', ''),
@@ -315,6 +325,102 @@ def flag_bots(trials_df):
     return bot_uuids
 
 
+# ── Worker quarantine ─────────────────────────────────────────────────────────
+
+def quarantine_workers(directory, max_sessions=1):
+    """
+    Classify raw JSON files into quarantined/ and user-data/ subfolders.
+
+    Reads every JSON in *directory*, groups by workerId.  Workers with
+    more than *max_sessions* unique UUIDs have ALL their files copied to
+    quarantined/.  Everything else (including files without a workerId)
+    goes to user-data/.
+
+    Both output folders are deleted and recreated from scratch each run,
+    so raw/ is never modified.  A manifest.json is written to quarantined/
+    for audit.
+
+    Returns a dict summarising what happened.
+    """
+    quarantined_dir = os.path.join(directory, 'quarantined')
+    userdata_dir = os.path.join(directory, 'user-data')
+
+    # Wipe previous output so the classification is always fresh
+    for d in (quarantined_dir, userdata_dir):
+        if os.path.exists(d):
+            shutil.rmtree(d)
+        os.makedirs(d)
+
+    # Scan every top-level JSON and map workerId → list of (uuid, filepath)
+    worker_files = defaultdict(list)
+    no_worker_files = []
+
+    json_files = sorted(glob.glob(os.path.join(directory, '*.json')))
+    for filepath in json_files:
+        try:
+            with open(filepath) as f:
+                raw = json.load(f)
+        except (json.JSONDecodeError, KeyError):
+            continue
+        uuid = raw.get('UUID', '')
+        mturk = raw.get('data', {}).get('session', {}).get('mturk', {})
+        wid = mturk.get('workerId', '') if isinstance(mturk, dict) else ''
+        if wid:
+            worker_files[wid].append({'uuid': uuid, 'path': filepath})
+        else:
+            no_worker_files.append({'uuid': uuid, 'path': filepath})
+
+    # Classify
+    quarantined_workers = {}
+    n_quarantined = 0
+    n_userdata = 0
+
+    for wid, entries in worker_files.items():
+        unique_uuids = {e['uuid'] for e in entries}
+        if len(unique_uuids) > max_sessions:
+            quarantined_workers[wid] = {
+                'sessions': len(unique_uuids),
+                'files': len(entries),
+                'uuids': sorted(unique_uuids),
+            }
+            for e in entries:
+                shutil.copy2(e['path'], quarantined_dir)
+                n_quarantined += 1
+        else:
+            for e in entries:
+                shutil.copy2(e['path'], userdata_dir)
+                n_userdata += 1
+
+    # Files without workerId always go to user-data
+    for e in no_worker_files:
+        shutil.copy2(e['path'], userdata_dir)
+        n_userdata += 1
+
+    # Also copy CSV files to user-data (run1 fallback etc.)
+    for csv_path in sorted(glob.glob(os.path.join(directory, '*.csv'))):
+        shutil.copy2(csv_path, userdata_dir)
+
+    # Write manifest
+    manifest = {
+        'generated': datetime.now().isoformat(),
+        'source_directory': directory,
+        'max_sessions': max_sessions,
+        'total_json_files': len(json_files),
+        'quarantined_files': n_quarantined,
+        'quarantined_workers': len(quarantined_workers),
+        'userdata_files': n_userdata,
+        'no_worker_id_files': len(no_worker_files),
+        'workers': quarantined_workers,
+    }
+    with open(os.path.join(quarantined_dir, 'manifest.json'), 'w') as f:
+        json.dump(manifest, f, indent=2)
+
+    print(f"  Quarantine: {n_quarantined} files from {len(quarantined_workers)} repeat workers → quarantined/")
+    print(f"  User data:  {n_userdata} files ({len(no_worker_files)} without workerId) → user-data/")
+
+    return manifest
+
+
 # ── Generic JSON loader (all experiments) ─────────────────────────────────────
 
 def load_from_json(directory, face_id=None):
@@ -351,14 +457,16 @@ def load_exp1(json_dir=None):
 
 def load_exp2(exp2_dir=None):
     """
-    Load all Exp2 data from a single directory containing any mix of:
-      - JSON files  (new runs — processed through the standard pipeline)
-      - CSV files   (runs whose raw JSONs were lost, e.g. exp2_threat_run1.csv)
-
-    To add a new run: drop its JSONs (or fallback CSV) into the exp2 directory.
-    No code changes required.
+    Load Exp2 data.  If user-data/ subfolder exists (created by
+    quarantine_workers), loads from there.  Otherwise falls back to the
+    raw directory.  CSV fallback files are loaded from whichever
+    directory contains them.
     """
-    directory = exp2_dir or _EXP2_DIR
+    raw_dir = exp2_dir or _EXP2_DIR
+    userdata_dir = os.path.join(raw_dir, 'user-data')
+    directory = userdata_dir if os.path.isdir(userdata_dir) else raw_dir
+    if directory == userdata_dir:
+        print("  Loading Exp2 from user-data/ (post-quarantine)")
     parts = []
 
     # ── JSON files ────────────────────────────────────────────────────────────
@@ -383,11 +491,7 @@ def load_exp2(exp2_dir=None):
 
     combined = pd.concat(parts, ignore_index=True)
 
-    # Re-assign globally unique user_number across all sources.
-    # JSON rows have a uuid; CSV rows use user_number only.
-    # Build a unique key per participant regardless of source.
     if 'uuid' in combined.columns:
-        # Where uuid is present use it; otherwise synthesise one from source tag
         combined['_uid_key'] = combined['uuid'].where(
             combined['uuid'].notna() & (combined['uuid'] != ''),
             other='csv_user_' + combined['user_number'].astype(str),

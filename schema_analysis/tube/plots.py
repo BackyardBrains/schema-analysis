@@ -25,7 +25,7 @@ if TYPE_CHECKING:
 
 # Canonical group display order
 _EXP1_ORDER = [('ID008', False), ('ID008', True)]
-_EXP2_ORDER = [('ID015', False), ('ID017', False), ('ID030', False)]
+_EXP2_ORDER = [('ID015', False), ('ID017', False)]
 
 
 # ── D bar figure ───────────────────────────────────────────────────────────────
@@ -35,7 +35,7 @@ class DFigure:
     D bar figure. Auto-discovers condition groups from sessions present.
 
     If only Exp1 sessions: 2 bars (eyes open / covered).
-    If only Exp2 sessions: 3 bars (ID015 / ID017 / ID030).
+    If only Exp2 sessions: 2 bars (ID015 / ID017).
     If both: combined figure with spacer.
     """
 

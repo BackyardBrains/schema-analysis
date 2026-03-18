@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Tube-tilt analysis: load → clean → balance → print results → save all plots.
+Tube-tilt analysis: quarantine → load → clean → balance → print results → save plots.
 
 Run:
     python tube_analysis.py
@@ -21,6 +21,7 @@ BOT_CLEAN: True  → remove bot-flagged participants before analysis
 import os
 
 from schema_analysis.tube import load
+from schema_analysis.tube.load import quarantine_workers, _EXP2_DIR
 from schema_analysis.tube.plots import sensitivity_heatmap
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -28,22 +29,41 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 # ── Selection criteria ────────────────────────────────────────────────────────
 ANGLE_LO  = 3      # degrees — lower cutoff (exclusive)
 ANGLE_HI  = 40     # degrees — upper cutoff (exclusive)
-BOT_CLEAN = True   # remove bot-flagged participants (Exp1 only)
+BOT_CLEAN = True   # remove bot-flagged participants
 # ─────────────────────────────────────────────────────────────────────────────
 
 
 def main():
-    print(f"Loading data...  [cutoffs: {ANGLE_LO}° < angle < {ANGLE_HI}°, "
+    # ── Tier 1: Quarantine repeat workers (file-level) ────────────────────────
+    print("=" * 60)
+    print("TIER 1 — Worker quarantine (repeat submissions)")
+    print("=" * 60)
+    manifest = quarantine_workers(_EXP2_DIR, max_sessions=1)
+    print(f"  Total raw files:       {manifest['total_json_files']}")
+    print(f"  Quarantined:           {manifest['quarantined_files']} files "
+          f"({manifest['quarantined_workers']} workers with >1 session)")
+    print(f"  User data:             {manifest['userdata_files']} files "
+          f"({manifest['no_worker_id_files']} without workerId)")
+
+    # ── Load from user-data/ ──────────────────────────────────────────────────
+    print()
+    print("=" * 60)
+    print("LOADING DATA")
+    print("=" * 60)
+    print(f"  [cutoffs: {ANGLE_LO}° < angle < {ANGLE_HI}°, "
           f"bots={'removed' if BOT_CLEAN else 'kept'}]")
 
-    s = load(clean=False)                                   # raw load, no filtering yet
-    if BOT_CLEAN:
-        s = s.remove_bad_sessions()                         # drop bot-flagged participants
-    s = s.validate_trials(min=ANGLE_LO, max=ANGLE_HI)      # apply your chosen cutoffs
-    s = s.balance()                                         # cascade-invalidate orphaned pairs
+    s = load(clean=False)
+    s = s.exclude_face('ID030')
 
-    # Sensitivity sweeps use sessions BEFORE select_trials so all trial data
-    # (valid and invalid) is available to re-apply cutoffs correctly.
+    # ── Tier 2: Behavioral bot detection ──────────────────────────────────────
+    if BOT_CLEAN:
+        s = s.remove_bad_sessions()
+
+    s = s.validate_trials(min=ANGLE_LO, max=ANGLE_HI)
+    s = s.balance()
+
+    # Sensitivity sweeps (before select_trials)
     e1 = s.select(exp_num=1)
     if len(e1) > 0:
         out_s1 = os.path.join(ROOT, 'sensitivity_exp1.png')
@@ -59,10 +79,10 @@ def main():
         sensitivity_heatmap(
             e2,
             save=out_s2,
-            title='Sensitivity Analysis — Exp 2 (Threat Level: ID015 / ID017 / ID030)',
+            title='Sensitivity Analysis — Exp 2 (Threat Level: ID015 / ID017)',
         )
 
-    # Main analysis and bar plot use valid-only trials
+    # Main analysis — valid trials only, ID015 + ID017 paired
     s = s.select_trials('valid == True')
 
     print(f"\n{repr(s)}")

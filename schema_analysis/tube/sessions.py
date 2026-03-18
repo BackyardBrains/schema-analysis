@@ -20,8 +20,9 @@ import pandas as pd
 
 from .load import (
     ANGLE_LO, ANGLE_HI,
-    load_exp1, load_exp2,
+    load_exp1, load_exp2, quarantine_workers,
     flag_bots, mark_valid, balance_cascade,
+    _EXP2_DIR,
 )
 from .treatments import resolve as resolve_treatment
 
@@ -139,15 +140,36 @@ class TubeSessions:
     # ── Pipeline (pre-balance) ─────────────────────────────────────────────────
 
     def remove_bad_sessions(self) -> "TubeSessions":
-        """Remove participants flagged as bots. Only works for Exp1 (has uuid column)."""
-        if self._exp1_df is None or 'uuid' not in self._exp1_df.columns:
-            return self
+        """Remove participants flagged as bots (works for any experiment with uuid + latency)."""
         obj = self._copy_pipeline()
-        bots = flag_bots(obj._exp1_df)
-        if bots:
-            obj._exp1_df = obj._exp1_df[~obj._exp1_df['uuid'].isin(bots)].copy()
-            uid_map = {u: i + 1 for i, u in enumerate(sorted(obj._exp1_df['uuid'].unique()))}
-            obj._exp1_df['user_number'] = obj._exp1_df['uuid'].map(uid_map)
+        for attr in ('_exp1_df', '_exp2_df'):
+            df = getattr(obj, attr)
+            if df is None or 'uuid' not in df.columns:
+                continue
+            has_uuid = df['uuid'].notna() & (df['uuid'] != '')
+            df_with_uuid = df[has_uuid]
+            if df_with_uuid.empty:
+                continue
+            bots = flag_bots(df_with_uuid)
+            if bots:
+                df = df[~df['uuid'].isin(bots)].copy()
+                valid_uuids = sorted(df.loc[has_uuid, 'uuid'].unique())
+                uid_map = {u: i + 1 for i, u in enumerate(valid_uuids)}
+                df.loc[has_uuid, 'user_number'] = df.loc[has_uuid, 'uuid'].map(uid_map)
+                setattr(obj, attr, df)
+        return obj
+
+    def exclude_face(self, face_id: str) -> "TubeSessions":
+        """Drop all participants whose trials contain the given face_id."""
+        obj = self._copy_pipeline()
+        for attr in ('_exp1_df', '_exp2_df'):
+            df = getattr(obj, attr)
+            if df is None or 'face_id' not in df.columns:
+                continue
+            users_with_face = set(df.loc[df['face_id'] == face_id, 'uuid'].dropna().unique())
+            if users_with_face:
+                df = df[~df['uuid'].isin(users_with_face)].copy()
+                setattr(obj, attr, df)
         return obj
 
     def validate_trials(self, min: float = ANGLE_LO, max: float = ANGLE_HI) -> "TubeSessions":
@@ -277,7 +299,7 @@ class TubeSessions:
         e2 = self.select(exp_num=2)
         if len(e2) > 0:
             print(f"\nExp 2  —  Threat faces (N={len(e2)} sessions)")
-            for fid in ['ID015', 'ID017', 'ID030']:
+            for fid in ['ID015', 'ID017']:
                 e2_face = e2.select(face_id=fid)
                 if len(e2_face) == 0:
                     continue
