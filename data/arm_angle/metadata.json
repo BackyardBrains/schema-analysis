@@ -1,0 +1,158 @@
+{
+    "Mia": {
+        "file": "BYB_Recording_2026-03-16_22.37.21 - Mia",
+        "angles": [
+            30.0,
+            40.0,
+            50.0,
+            60.0,
+            80.0
+        ],
+        "vividness": 3,
+        "exclude": false,
+        "comment": "It felt weird, it felt like it was moving, but also that your hand was on my arm, so I knew it wasn't moving "
+    },
+    "Adam": {
+        "file": "BYB_Recording_2026-03-17_21.57.39 - Adam",
+        "angles": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+        ],
+        "vividness": 0,
+        "exclude": false,
+        "comment": "nan"
+    },
+    "Jackson": {
+        "file": "BYB_Recording_2026-03-17_22.24.38 - Jackson",
+        "angles": [
+            60.0,
+            70.0,
+            80.0,
+            100.0,
+            120.0
+        ],
+        "vividness": 5,
+        "exclude": false,
+        "comment": "It felt like my arm was moving "
+    },
+    "Alex": {
+        "file": "BYB_Recording_2026-03-17_22.45.23 - Alex",
+        "angles": [
+            60.0,
+            80.0,
+            90.0,
+            100.0,
+            120.0
+        ],
+        "vividness": 2,
+        "exclude": false,
+        "comment": "I felt like it was moving up and down but barely, felt like my arm was twitching, I( could not tell if it was moving or not "
+    },
+    "Eve": {
+        "file": "BYB_Recording_2026-03-17_23.32.09 - Eve",
+        "angles": [
+            70.0,
+            80.0,
+            90.0,
+            100.0,
+            125.0
+        ],
+        "vividness": 3,
+        "exclude": false,
+        "comment": "I can't believe you weren't moving my arm! "
+    },
+    "Zara": {
+        "file": "BYB_Recording_2026-03-17_23.51.15 - Zara",
+        "angles": [
+            60.0,
+            70.0,
+            80.0,
+            100.0,
+            120.0
+        ],
+        "vividness": 4,
+        "exclude": false,
+        "comment": "I felt like you were slowly bringing my right arm down"
+    },
+    "Christina": {
+        "file": "BYB_Recording_2026-03-23_21.50.05 - Christina",
+        "angles": [
+            60.0,
+            70.0,
+            80.0,
+            100.0,
+            125.0
+        ],
+        "vividness": 1,
+        "exclude": false,
+        "comment": "Didn't really feel like it was moving at all, I can feel my elbow not moving and so I could tell my arm wasn't moving "
+    },
+    "Steph": {
+        "file": "BYB_Recording_2026-03-23_22.06.31 - Steph",
+        "angles": [
+            70.0,
+            80.0,
+            90.0,
+            100.0,
+            120.0
+        ],
+        "vividness": 4,
+        "exclude": false,
+        "comment": "I felt resistance, it felt like I wanted to pull on your hand, it definitnely felt like my arm was going down slowly the whole time and felt like it was being pulled "
+    },
+    "Sanjay": {
+        "file": "BYB_Recording_2026-03-23_22.22.17 - Sanjay",
+        "angles": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+        ],
+        "vividness": 0,
+        "exclude": false,
+        "comment": "nan"
+    },
+    "Kashik": {
+        "file": "BYB_Recording_2026-03-23_22.36.53 - Kashik",
+        "angles": [
+            70.0,
+            80.0,
+            90.0,
+            100.0,
+            135.0
+        ],
+        "vividness": 2,
+        "exclude": false,
+        "comment": "Felt like it was moving down but then felt like it was going up a little bit "
+    },
+    "Valentina": {
+        "file": "BYB_Recording_2026-03-23_22.54.24 - Valentina",
+        "angles": [
+            70.0,
+            80.0,
+            90.0,
+            100.0,
+            125.0
+        ],
+        "vividness": 3,
+        "exclude": false,
+        "comment": "it felt like it was being pulled down, I give it a 3 becuase sometimes it felt stronger and sometimes I couldn't tell "
+    },
+    "Divine": {
+        "file": "BYB_Recording_2026-03-23_23.10.34 - Divine",
+        "angles": [
+            70.0,
+            80.0,
+            90.0,
+            100.0,
+            130.0
+        ],
+        "vividness": 3,
+        "exclude": false,
+        "comment": "I couldn't really tell what was happening, but it felt like my arm was being pulled down "
+    }
+}
