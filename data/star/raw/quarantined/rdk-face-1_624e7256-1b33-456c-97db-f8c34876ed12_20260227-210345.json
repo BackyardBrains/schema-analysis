@@ -1,0 +1,2239 @@
+{
+  "experiment": "rdk-face-1",
+  "UUID": "624e7256-1b33-456c-97db-f8c34876ed12",
+  "data": {
+    "session": {
+      "experiment_version": "1.8.6",
+      "treatment": "faces_towards_away_catch",
+      "file_version": "1.8.6",
+      "totalTrials": 120,
+      "totalTrialsIncludingCatch": 132,
+      "conditions": {
+        "gazeTowardsCount": 60,
+        "gazeAwayCount": 60,
+        "gazeTowardsAccuracy": 8,
+        "gazeAwayAccuracy": 15
+      },
+      "session_group": "default",
+      "browserData": {
+        "os": "Windows",
+        "browser": "Edge",
+        "screenResolution": "1536x864",
+        "browserViewport": "492x698",
+        "devicePixelRatio": 1.25,
+        "colorDepth": 32,
+        "hardwareConcurrency": 8,
+        "deviceMemory": 8,
+        "gpuRenderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "measuredRefreshRateHz": 7
+      },
+      "attention": {
+        "visibilityEvents": [
+          {
+            "event": "blur",
+            "state": "blurred",
+            "timestamp": 1772225021072
+          },
+          {
+            "event": "visibilitychange",
+            "state": "hidden",
+            "timestamp": 1772225021077
+          },
+          {
+            "event": "visibilitychange",
+            "state": "visible",
+            "timestamp": 1772225029779
+          },
+          {
+            "event": "focus",
+            "state": "focused",
+            "timestamp": 1772225029781
+          },
+          {
+            "event": "blur",
+            "state": "blurred",
+            "timestamp": 1772225035258
+          },
+          {
+            "event": "visibilitychange",
+            "state": "hidden",
+            "timestamp": 1772225035411
+          },
+          {
+            "event": "focus",
+            "state": "focused",
+            "timestamp": 1772225035477
+          },
+          {
+            "event": "visibilitychange",
+            "state": "visible",
+            "timestamp": 1772225035486
+          },
+          {
+            "event": "blur",
+            "state": "blurred",
+            "timestamp": 1772225043754
+          },
+          {
+            "event": "focus",
+            "state": "focused",
+            "timestamp": 1772225045368
+          },
+          {
+            "event": "blur",
+            "state": "blurred",
+            "timestamp": 1772225054424
+          },
+          {
+            "event": "focus",
+            "state": "focused",
+            "timestamp": 1772225103796
+          },
+          {
+            "event": "blur",
+            "state": "blurred",
+            "timestamp": 1772225104860
+          },
+          {
+            "event": "focus",
+            "state": "focused",
+            "timestamp": 1772225108491
+          },
+          {
+            "event": "blur",
+            "state": "blurred",
+            "timestamp": 1772225112821
+          },
+          {
+            "event": "focus",
+            "state": "focused",
+            "timestamp": 1772225115138
+          },
+          {
+            "event": "blur",
+            "state": "blurred",
+            "timestamp": 1772225115998
+          },
+          {
+            "event": "focus",
+            "state": "focused",
+            "timestamp": 1772225118842
+          },
+          {
+            "event": "blur",
+            "state": "blurred",
+            "timestamp": 1772225119675
+          },
+          {
+            "event": "focus",
+            "state": "focused",
+            "timestamp": 1772225123384
+          },
+          {
+            "event": "blur",
+            "state": "blurred",
+            "timestamp": 1772225125422
+          },
+          {
+            "event": "focus",
+            "state": "focused",
+            "timestamp": 1772225127831
+          },
+          {
+            "event": "blur",
+            "state": "blurred",
+            "timestamp": 1772225128774
+          },
+          {
+            "event": "focus",
+            "state": "focused",
+            "timestamp": 1772225131285
+          },
+          {
+            "event": "blur",
+            "state": "blurred",
+            "timestamp": 1772225136649
+          },
+          {
+            "event": "focus",
+            "state": "focused",
+            "timestamp": 1772225141288
+          },
+          {
+            "event": "blur",
+            "state": "blurred",
+            "timestamp": 1772225142204
+          },
+          {
+            "event": "focus",
+            "state": "focused",
+            "timestamp": 1772225147309
+          },
+          {
+            "event": "blur",
+            "state": "blurred",
+            "timestamp": 1772225148525
+          },
+          {
+            "event": "focus",
+            "state": "focused",
+            "timestamp": 1772225149973
+          },
+          {
+            "event": "blur",
+            "state": "blurred",
+            "timestamp": 1772225151984
+          },
+          {
+            "event": "focus",
+            "state": "focused",
+            "timestamp": 1772225153740
+          },
+          {
+            "event": "blur",
+            "state": "blurred",
+            "timestamp": 1772225166504
+          },
+          {
+            "event": "focus",
+            "state": "focused",
+            "timestamp": 1772225167458
+          },
+          {
+            "event": "blur",
+            "state": "blurred",
+            "timestamp": 1772225198644
+          },
+          {
+            "event": "focus",
+            "state": "focused",
+            "timestamp": 1772225257849
+          },
+          {
+            "event": "blur",
+            "state": "blurred",
+            "timestamp": 1772225259282
+          },
+          {
+            "event": "focus",
+            "state": "focused",
+            "timestamp": 1772225395452
+          },
+          {
+            "event": "blur",
+            "state": "blurred",
+            "timestamp": 1772225469289
+          },
+          {
+            "event": "focus",
+            "state": "focused",
+            "timestamp": 1772225509493
+          },
+          {
+            "event": "blur",
+            "state": "blurred",
+            "timestamp": 1772225510767
+          },
+          {
+            "event": "focus",
+            "state": "focused",
+            "timestamp": 1772225665635
+          },
+          {
+            "event": "blur",
+            "state": "blurred",
+            "timestamp": 1772225706956
+          },
+          {
+            "event": "focus",
+            "state": "focused",
+            "timestamp": 1772225793238
+          },
+          {
+            "event": "blur",
+            "state": "blurred",
+            "timestamp": 1772225798717
+          },
+          {
+            "event": "focus",
+            "state": "focused",
+            "timestamp": 1772225804772
+          },
+          {
+            "event": "blur",
+            "state": "blurred",
+            "timestamp": 1772225804777
+          },
+          {
+            "event": "focus",
+            "state": "focused",
+            "timestamp": 1772225808306
+          },
+          {
+            "event": "blur",
+            "state": "blurred",
+            "timestamp": 1772225811044
+          },
+          {
+            "event": "focus",
+            "state": "focused",
+            "timestamp": 1772225813716
+          },
+          {
+            "event": "blur",
+            "state": "blurred",
+            "timestamp": 1772225838672
+          },
+          {
+            "event": "focus",
+            "state": "focused",
+            "timestamp": 1772225969001
+          },
+          {
+            "event": "blur",
+            "state": "blurred",
+            "timestamp": 1772225971062
+          },
+          {
+            "event": "focus",
+            "state": "focused",
+            "timestamp": 1772226049405
+          },
+          {
+            "event": "blur",
+            "state": "blurred",
+            "timestamp": 1772226064434
+          },
+          {
+            "event": "focus",
+            "state": "focused",
+            "timestamp": 1772226072499
+          },
+          {
+            "event": "blur",
+            "state": "blurred",
+            "timestamp": 1772226082252
+          },
+          {
+            "event": "focus",
+            "state": "focused",
+            "timestamp": 1772226127705
+          },
+          {
+            "event": "blur",
+            "state": "blurred",
+            "timestamp": 1772226165108
+          },
+          {
+            "event": "focus",
+            "state": "focused",
+            "timestamp": 1772226212593
+          }
+        ]
+      },
+      "calibration": {
+        "monitorWidthCm": 38,
+        "viewingDistanceCm": 54,
+        "pixelsPerDegree": 50
+      },
+      "parameters": {
+        "coherence": 0.4,
+        "apertureDeg": 5,
+        "densityDotsPerDeg2": 40,
+        "dotDiameterDeg": 0.035,
+        "dotSpeedDegPerSec": 3,
+        "lifetimeMs": 200,
+        "fixationDurationMs": 1500,
+        "faceDurationMs": 1500,
+        "testDurationMs": 2000,
+        "catchResponseMs": 3000
+      },
+      "prolific": {
+        "prolificPid": "333",
+        "studyId": "",
+        "sessionId": ""
+      },
+      "timing": {
+        "startTime": "2026-02-27T20:43:40.721Z",
+        "endTime": "2026-02-27T21:04:29.608Z",
+        "totalElapsedTimeMs": 1248887
+      }
+    },
+    "trials": [
+      {
+        "trial_number": 0,
+        "trial_index": 131,
+        "rt": 848,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": false,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 1,
+        "trial_index": 136,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 2,
+        "trial_index": 141,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 3,
+        "trial_index": 146,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 4,
+        "trial_index": 151,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 5,
+        "trial_index": 156,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 6,
+        "trial_index": 161,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 7,
+        "trial_index": 166,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 8,
+        "trial_index": 174,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 9,
+        "trial_index": 179,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 10,
+        "trial_index": 184,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 11,
+        "trial_index": 189,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 12,
+        "trial_index": 194,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 13,
+        "trial_index": 199,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 14,
+        "trial_index": 204,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 15,
+        "trial_index": 209,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 16,
+        "trial_index": 217,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 17,
+        "trial_index": 222,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 18,
+        "trial_index": 227,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 19,
+        "trial_index": 232,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 20,
+        "trial_index": 237,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 21,
+        "trial_index": 242,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 22,
+        "trial_index": 247,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 23,
+        "trial_index": 252,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 24,
+        "trial_index": 257,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 25,
+        "trial_index": 265,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 26,
+        "trial_index": 270,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 27,
+        "trial_index": 275,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 28,
+        "trial_index": 280,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 29,
+        "trial_index": 285,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 30,
+        "trial_index": 291,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 31,
+        "trial_index": 296,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 32,
+        "trial_index": 304,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 33,
+        "trial_index": 309,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 34,
+        "trial_index": 314,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 35,
+        "trial_index": 322,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 36,
+        "trial_index": 327,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 37,
+        "trial_index": 332,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 38,
+        "trial_index": 337,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 39,
+        "trial_index": 342,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 40,
+        "trial_index": 347,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 41,
+        "trial_index": 352,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 42,
+        "trial_index": 357,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 43,
+        "trial_index": 362,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 44,
+        "trial_index": 367,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 45,
+        "trial_index": 372,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 46,
+        "trial_index": 377,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 47,
+        "trial_index": 382,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 48,
+        "trial_index": 387,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 49,
+        "trial_index": 392,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 50,
+        "trial_index": 397,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 51,
+        "trial_index": 402,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 52,
+        "trial_index": 407,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 53,
+        "trial_index": 415,
+        "rt": 563,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": true,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 54,
+        "trial_index": 420,
+        "rt": 351,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": true,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 55,
+        "trial_index": 425,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 56,
+        "trial_index": 430,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 57,
+        "trial_index": 435,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 58,
+        "trial_index": 440,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 59,
+        "trial_index": 449,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 60,
+        "trial_index": 454,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 61,
+        "trial_index": 459,
+        "rt": 473,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": false,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 62,
+        "trial_index": 464,
+        "rt": 482,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": false,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 63,
+        "trial_index": 469,
+        "rt": 691,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": false,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 64,
+        "trial_index": 474,
+        "rt": 918,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": false,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 65,
+        "trial_index": 479,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 66,
+        "trial_index": 484,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 67,
+        "trial_index": 489,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 68,
+        "trial_index": 494,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 69,
+        "trial_index": 499,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 70,
+        "trial_index": 504,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 71,
+        "trial_index": 509,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 72,
+        "trial_index": 514,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 73,
+        "trial_index": 519,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 74,
+        "trial_index": 524,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 75,
+        "trial_index": 529,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 76,
+        "trial_index": 534,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 77,
+        "trial_index": 539,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 78,
+        "trial_index": 544,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 79,
+        "trial_index": 549,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 80,
+        "trial_index": 554,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 81,
+        "trial_index": 559,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 82,
+        "trial_index": 564,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 83,
+        "trial_index": 569,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 84,
+        "trial_index": 574,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 85,
+        "trial_index": 579,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 86,
+        "trial_index": 584,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 87,
+        "trial_index": 589,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 88,
+        "trial_index": 594,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 89,
+        "trial_index": 602,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 90,
+        "trial_index": 607,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 91,
+        "trial_index": 613,
+        "rt": 533,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": false,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 92,
+        "trial_index": 618,
+        "rt": 488,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": false,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 93,
+        "trial_index": 623,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 94,
+        "trial_index": 631,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 95,
+        "trial_index": 636,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 96,
+        "trial_index": 641,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 97,
+        "trial_index": 646,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 98,
+        "trial_index": 651,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 99,
+        "trial_index": 656,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 100,
+        "trial_index": 661,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 101,
+        "trial_index": 666,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 102,
+        "trial_index": 674,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 103,
+        "trial_index": 679,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 104,
+        "trial_index": 684,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 105,
+        "trial_index": 692,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 106,
+        "trial_index": 697,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 107,
+        "trial_index": 702,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 108,
+        "trial_index": 707,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": false,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 109,
+        "trial_index": 712,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 110,
+        "trial_index": 717,
+        "rt": 58,
+        "correct": false,
+        "response": "ArrowRight",
+        "congruent": false,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 111,
+        "trial_index": 722,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_number": 112,
+        "trial_index": 727,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 113,
+        "trial_index": 732,
+        "rt": 37,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": true,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 114,
+        "trial_index": 737,
+        "rt": 85,
+        "correct": false,
+        "response": "ArrowLeft",
+        "congruent": false,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 115,
+        "trial_index": 742,
+        "rt": 58,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": false,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 116,
+        "trial_index": 747,
+        "rt": 7,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": false,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 117,
+        "trial_index": 752,
+        "rt": 103,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": false,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 118,
+        "trial_index": 757,
+        "rt": 18,
+        "correct": false,
+        "response": "ArrowLeft",
+        "congruent": false,
+        "gazeTowards": false,
+        "gazeCondition": "away",
+        "faceOnLeft": false,
+        "impliedDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_number": 119,
+        "trial_index": 762,
+        "rt": 26,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": false,
+        "gazeTowards": true,
+        "gazeCondition": "towards",
+        "faceOnLeft": true,
+        "impliedDirection": 0,
+        "testDirection": 180
+      }
+    ],
+    "catch": {
+      "total": 12,
+      "correct": 3,
+      "accuracy": 25,
+      "meanRT": 2008,
+      "trials": [
+        {
+          "trial_number": 0,
+          "trial_index": 170,
+          "rt": 2219,
+          "correct": true,
+          "colorTarget": "tree",
+          "gazeTowards": true,
+          "gazeCondition": "towards",
+          "faceOnLeft": true
+        },
+        {
+          "trial_number": 1,
+          "trial_index": 213,
+          "rt": null,
+          "correct": false,
+          "colorTarget": "tree",
+          "gazeTowards": true,
+          "gazeCondition": "towards",
+          "faceOnLeft": true
+        },
+        {
+          "trial_number": 2,
+          "trial_index": 261,
+          "rt": null,
+          "correct": false,
+          "colorTarget": "face",
+          "gazeTowards": true,
+          "gazeCondition": "towards",
+          "faceOnLeft": false
+        },
+        {
+          "trial_number": 3,
+          "trial_index": 300,
+          "rt": null,
+          "correct": false,
+          "colorTarget": "tree",
+          "gazeTowards": true,
+          "gazeCondition": "towards",
+          "faceOnLeft": true
+        },
+        {
+          "trial_number": 4,
+          "trial_index": 318,
+          "rt": 1900,
+          "correct": true,
+          "colorTarget": "face",
+          "gazeTowards": false,
+          "gazeCondition": "away",
+          "faceOnLeft": true
+        },
+        {
+          "trial_number": 5,
+          "trial_index": 411,
+          "rt": null,
+          "correct": false,
+          "colorTarget": "face",
+          "gazeTowards": true,
+          "gazeCondition": "towards",
+          "faceOnLeft": true
+        },
+        {
+          "trial_number": 6,
+          "trial_index": 444,
+          "rt": null,
+          "correct": false,
+          "colorTarget": "face",
+          "gazeTowards": false,
+          "gazeCondition": "away",
+          "faceOnLeft": false
+        },
+        {
+          "trial_number": 7,
+          "trial_index": 598,
+          "rt": null,
+          "correct": false,
+          "colorTarget": "face",
+          "gazeTowards": false,
+          "gazeCondition": "away",
+          "faceOnLeft": true
+        },
+        {
+          "trial_number": 8,
+          "trial_index": 627,
+          "rt": 1905,
+          "correct": true,
+          "colorTarget": "tree",
+          "gazeTowards": false,
+          "gazeCondition": "away",
+          "faceOnLeft": false
+        },
+        {
+          "trial_number": 9,
+          "trial_index": 670,
+          "rt": null,
+          "correct": false,
+          "colorTarget": "face",
+          "gazeTowards": false,
+          "gazeCondition": "away",
+          "faceOnLeft": true
+        },
+        {
+          "trial_number": 10,
+          "trial_index": 688,
+          "rt": null,
+          "correct": false,
+          "colorTarget": "tree",
+          "gazeTowards": false,
+          "gazeCondition": "away",
+          "faceOnLeft": false
+        },
+        {
+          "trial_number": 11,
+          "trial_index": 766,
+          "rt": null,
+          "correct": false,
+          "colorTarget": "tree",
+          "gazeTowards": false,
+          "gazeCondition": "away",
+          "faceOnLeft": false
+        }
+      ]
+    },
+    "practice": {
+      "trials": [
+        {
+          "trial_number": 0,
+          "rt": 775,
+          "correct": true,
+          "direction": 180
+        },
+        {
+          "trial_number": 1,
+          "rt": 741,
+          "correct": false,
+          "direction": 180
+        },
+        {
+          "trial_number": 2,
+          "rt": null,
+          "correct": false,
+          "direction": 0
+        },
+        {
+          "trial_number": 3,
+          "rt": null,
+          "correct": false,
+          "direction": 180
+        },
+        {
+          "trial_number": 4,
+          "rt": null,
+          "correct": false,
+          "direction": 180
+        },
+        {
+          "trial_number": 5,
+          "rt": null,
+          "correct": false,
+          "direction": 0
+        },
+        {
+          "trial_number": 6,
+          "rt": null,
+          "correct": false,
+          "direction": 180
+        },
+        {
+          "trial_number": 7,
+          "rt": null,
+          "correct": false,
+          "direction": 180
+        },
+        {
+          "trial_number": 8,
+          "rt": null,
+          "correct": false,
+          "direction": 180
+        },
+        {
+          "trial_number": 9,
+          "rt": null,
+          "correct": false,
+          "direction": 180
+        },
+        {
+          "trial_number": 10,
+          "rt": 1867,
+          "correct": true,
+          "direction": 180
+        },
+        {
+          "trial_number": 11,
+          "rt": 522,
+          "correct": true,
+          "direction": 180
+        },
+        {
+          "trial_number": 12,
+          "rt": 472,
+          "correct": true,
+          "direction": 0
+        },
+        {
+          "trial_number": 13,
+          "rt": 979,
+          "correct": true,
+          "direction": 180
+        },
+        {
+          "trial_number": 14,
+          "rt": 1574,
+          "correct": false,
+          "direction": 180
+        },
+        {
+          "trial_number": 15,
+          "rt": 1482,
+          "correct": true,
+          "direction": 0
+        },
+        {
+          "trial_number": 16,
+          "rt": 428,
+          "correct": true,
+          "direction": 180
+        },
+        {
+          "trial_number": 17,
+          "rt": 520,
+          "correct": true,
+          "direction": 180
+        },
+        {
+          "trial_number": 18,
+          "rt": null,
+          "correct": false,
+          "direction": 180
+        },
+        {
+          "trial_number": 19,
+          "rt": null,
+          "correct": false,
+          "direction": 180
+        },
+        {
+          "trial_number": 20,
+          "rt": 1834,
+          "correct": true,
+          "direction": 180
+        },
+        {
+          "trial_number": 21,
+          "rt": 570,
+          "correct": true,
+          "direction": 180
+        },
+        {
+          "trial_number": 22,
+          "rt": 460,
+          "correct": true,
+          "direction": 0
+        },
+        {
+          "trial_number": 23,
+          "rt": 618,
+          "correct": true,
+          "direction": 180
+        },
+        {
+          "trial_number": 24,
+          "rt": 491,
+          "correct": true,
+          "direction": 180
+        },
+        {
+          "trial_number": 25,
+          "rt": 440,
+          "correct": true,
+          "direction": 0
+        },
+        {
+          "trial_number": 26,
+          "rt": 421,
+          "correct": true,
+          "direction": 180
+        },
+        {
+          "trial_number": 27,
+          "rt": 556,
+          "correct": true,
+          "direction": 180
+        },
+        {
+          "trial_number": 28,
+          "rt": 1006,
+          "correct": true,
+          "direction": 180
+        },
+        {
+          "trial_number": 29,
+          "rt": 1538,
+          "correct": true,
+          "direction": 180
+        }
+      ],
+      "meanRT": 865,
+      "accuracy": 60
+    }
+  }
+}
