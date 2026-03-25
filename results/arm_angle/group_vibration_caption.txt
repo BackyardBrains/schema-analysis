@@ -1,0 +1,10 @@
+Figure: Group Average Angular Displacement During the Vibration Phase (Illusory Drift).
+
+This figure contrasts the independent physical displacement of both arms during the kinesthetic illusion stimulation phase (N=7 participants). 
+
+The x-axis represents time in seconds aligned exactly to the onset of the vibration motor (T=0). The y-axis displays the absolute physical displacement from the participant's baseline orientation at T=0 in degrees. 
+
+The blue line represents the Manipulated Arm (Sensor 1), which is shown to remain physically stationary near 0 displacement throughout the trial. 
+The red line represents the Subject Matching Arm (Sensor 2), which exhibits progressive physical drift as participants reflexively tracked the illusory subjective movement of their manipulated arm. 
+
+Solid lines denote the respective group means, and the shaded regions represent the boundaries of the standard error of the mean (SEM).

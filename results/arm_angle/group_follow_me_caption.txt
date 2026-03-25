@@ -1,0 +1,7 @@
+Figure: Group Average Tracking Error During the Follow Me Phase.
+
+This figure displays the absolute angular difference (in degrees) between the Manipulated Arm (Sensor 1) and the Subject Matching Arm (Sensor 2) over time during the active "Follow Me" phase (N=7 participants). 
+
+The x-axis represents time in seconds uniformly aligned to the start boundary of the phase (T=0). The y-axis represents the absolute difference in physical angle between the two arms. To account for natural human reaction time lag, the sensor sequences for each participant were optimally shifted using cross-correlation (scipy.signal.correlate, bounded to a maximum lag of 2.5s) prior to computing the synchronized absolute tracking error. 
+
+The solid line indicates the group mean over time, while the semi-transparent shaded region represents the standard error of the mean (SEM).

@@ -1,0 +1,7 @@
+Figure: Sensor Coordination (Pearson Correlation) Across Experimental Phases.
+
+This bar chart compares the mean Pearson Correlation Coefficient (r) between the Manipulated Arm (Sensor 1) and the Subject Matching Arm (Sensor 2) during the active "Follow Me" phase against the "Vibration" phase across the valid, high-vividness cohort (N=7). 
+
+To isolate the fully engaged kinesthetic illusion and exclude the initial cognitive latency period, the correlation coefficient for each participant was extracted strictly from the intermediate T=10s to T=25s measurement window within each phase. 
+
+The y-axis denotes the resulting Pearson r metric (-1.0 to 1.0). A paired t-test was conducted to evaluate the statistical significance of the shift from active coordinated tracking (Follow Me) to uncoupled solitary movement (Vibration drift), yielding p=0.0605. Error bars denote the standard error of the mean (SEM).

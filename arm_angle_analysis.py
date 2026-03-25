@@ -109,8 +109,8 @@ def process_subject(subject, wav_file, events_file, calib_angles):
             plot_ch0 = ch0_angles
             plot_ch1 = ch1_angles
             
-        plt.plot(plot_times, plot_ch0, label='Sensor 1', color='#4C72B0')
-        plt.plot(plot_times, plot_ch1, label='Sensor 2', color='#55A868')
+        plt.plot(plot_times, plot_ch0, label='Manipulated Arm', color='#4C72B0')
+        plt.plot(plot_times, plot_ch1, label='Subject Matching Arm', color='#55A868')
         
         for m, t in events:
             if (t_start is None or t_start - 10 <= t <= t_end + 10):
@@ -137,8 +137,8 @@ def process_subject(subject, wav_file, events_file, calib_angles):
                 vel0 = (peak0 - ch0_vib[0]) / (t_peak0 - t_start) if t_peak0 > t_start else 0
                 vel1 = (peak1 - ch1_vib[0]) / (t_peak1 - t_start) if t_peak1 > t_start else 0
                 
-                info = (f"Sensor 1: Max={peak0:.1f}°, Vel={vel0:.2f}°/s\n"
-                        f"Sensor 2: Max={peak1:.1f}°, Vel={vel1:.2f}°/s")
+                info = (f"Manipulated Arm: Max={peak0:.1f}°, Vel={vel0:.2f}°/s\n"
+                        f"Subject Matching Arm: Max={peak1:.1f}°, Vel={vel1:.2f}°/s")
                 plt.annotate(info, xy=(0.02, 0.85), xycoords='axes fraction', 
                              bbox=dict(boxstyle="round,pad=0.3", fc="white", ec="black", alpha=0.8))
                 

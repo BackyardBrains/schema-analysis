@@ -1,0 +1,5 @@
+Figure: Subject-Level Variance in Sensor Coordination During the Follow Me Phase.
+
+This figure provides a granular, discrete breakdown of the Pearson Correlation Coefficient (r) recorded for each of the 7 valid participants during the "Follow Me" tracking phase. 
+
+The x-axis identifies the individual subject, and the y-axis represents their statically computed Pearson r value, extracted from the T=10s to T=25s measurement bounded window. The solid red dashed line overlay indicates the group mean (measuring strongly near r=1.0), demonstrating near-perfect sensor coordination and compliance across the cohort during active, healthy physiological tracking.

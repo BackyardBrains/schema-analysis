@@ -271,10 +271,10 @@ def run_group_analysis():
         
         plt.figure(figsize=(10, 6))
         # Tracking arm
-        plt.plot(t_grid, t_mean, color='#C44E52', linewidth=2, label='Tracking Arm (Physical Movement)')
+        plt.plot(t_grid, t_mean, color='#C44E52', linewidth=2, label='Subject Matching Arm (Physical Movement)')
         plt.fill_between(t_grid, t_mean - t_err, t_mean + t_err, color='#C44E52', alpha=0.3)
         # Stationary arm
-        plt.plot(t_grid, s_mean, color='#4C72B0', linewidth=2, label='Vibrated Arm (Stationary)')
+        plt.plot(t_grid, s_mean, color='#4C72B0', linewidth=2, label='Manipulated Arm (Stationary)')
         plt.fill_between(t_grid, s_mean - s_err, s_mean + s_err, color='#4C72B0', alpha=0.3)
         
         plt.axvline(0, color='black', linestyle='--', alpha=0.6, label='Stimulation Start')
