@@ -1,0 +1,477 @@
+{
+  "generated": "2026-04-24T12:48:26.805457",
+  "source_directory": "/Users/gagegreg/Documents/rhub/schema-analysis/data/star/raw",
+  "max_sessions": 1,
+  "total_json_files": 1303,
+  "quarantined_files": 182,
+  "quarantined_workers": 45,
+  "userdata_files": 1121,
+  "no_id_files": 108,
+  "workers": {
+    "mturk:A2H2EJZW4W05JT": {
+      "sessions": 3,
+      "files": 3,
+      "uuids": [
+        "0036750c-7bdb-4a4a-9dbd-f747bc60ebca",
+        "37fbbcef-6275-45a5-92f5-0a275e29357f",
+        "52721de9-6985-4535-99c9-71bee528723a"
+      ]
+    },
+    "mturk:AM0JKZVOEOTMA": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "02324489-897c-4831-967f-e9b6df3af975",
+        "066e3555-030e-452b-8859-495edb4e85bf"
+      ]
+    },
+    "mturk:A1BCT64OJVVM80": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "030a6657-95f4-47ce-a60a-db0ccb198310",
+        "25c9c662-e0a6-47ae-a91a-ee033e20f321"
+      ]
+    },
+    "mturk:A2QX8AJA1YZL2S": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "034e5702-32fe-4e82-9c1c-56e98211293e",
+        "cbf7cc09-1eb3-4198-8f00-f429fca78c13"
+      ]
+    },
+    "mturk:A16VB8E1222F2R": {
+      "sessions": 25,
+      "files": 25,
+      "uuids": [
+        "0a41c555-a623-45b0-b7e1-e47f04a5eaa3",
+        "0b20ec05-a2d5-4ea1-9a27-c7e109da554e",
+        "1639f2bf-c846-4d4d-80c9-6db3b91ff5c9",
+        "18b93ad5-0ed6-4a5a-b331-dbeab70667dc",
+        "1c0971b5-7978-4bc1-bdcd-7ab3979e75ed",
+        "1d15d23e-6acd-4b7a-a005-a88b2406c82a",
+        "39dd2e72-296e-44df-827e-6a52bc0e2ff1",
+        "609272f5-8301-4489-8cf5-3a783fdce36c",
+        "6cdf8ddc-a473-440c-936d-57672714023f",
+        "70a2b5bd-a6ad-4cfa-9d31-6c014523b15f",
+        "8e09ef5b-7ce5-4eb4-b769-06e166de5ff1",
+        "900341ea-729c-479b-af56-007edbdb078d",
+        "949e0d31-a508-44cd-a62d-ed407514ef84",
+        "9db1abc5-47d3-4fc8-b973-21b97cae55b3",
+        "a788015f-76a3-4222-8e3c-9ffea63c35dc",
+        "ac6d703b-377c-4185-a874-6d90dab84b1f",
+        "b5862cb8-9ff0-4481-bc3b-ee761a377f66",
+        "b90a2178-b9b1-487e-86aa-c2c15244e8cd",
+        "b9d0ee91-a595-47f0-a296-5a9a2f37b818",
+        "c3b98e53-db03-4659-ba0e-b4f977d3c4a1",
+        "d7892192-8f51-4e2c-ab7f-3f49f8468453",
+        "da274663-87d2-4c2d-91d9-2f77a55ee0e5",
+        "ddabd95e-9074-465a-bfca-b87561625498",
+        "ee100c7f-cf59-492e-b84e-167c9aeded2a",
+        "fc422a24-d412-4fdd-8d76-101731fd04ca"
+      ]
+    },
+    "mturk:A22MTRHIYYMK2E": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "0abb17d6-db75-4dbc-97eb-a3dfb8331da1",
+        "d6444e34-2de7-4622-952a-d0b99e2285f0"
+      ]
+    },
+    "mturk:A16MEV9DI9VMAW": {
+      "sessions": 3,
+      "files": 3,
+      "uuids": [
+        "0e52005e-0b96-4ccd-9ae1-4a678fbb3853",
+        "1ab7376b-7e1b-4d41-b08e-8d42b1729356",
+        "55b0fe53-e20b-455c-a0f5-bf8581bc4353"
+      ]
+    },
+    "mturk:AB8PXMMCIFAH4": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "13e36d2a-2c98-4952-aaf0-45f75e1cc512",
+        "d502eef7-69d8-408a-b630-7a492902a427"
+      ]
+    },
+    "mturk:A113SPF56Y3NSG": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "188f649b-dad4-41d2-a367-925aee5dd096",
+        "b4b506cb-9329-4431-8200-3f00a6a7f5e1"
+      ]
+    },
+    "mturk:A3J5JOQMBQXKGM": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "1b0017fa-c719-4873-9fe6-97b41a90381a",
+        "a576ac65-73a9-4090-8c69-7ef0aed6e71b"
+      ]
+    },
+    "mturk:A3K36T8YX6LYAJ": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "20bd6784-4db2-421b-bd31-5cd8d27664f7",
+        "bea25b5e-2a45-437d-8b6b-3ff151bb9bb6"
+      ]
+    },
+    "mturk:A2HMUMOUX66IKX": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "2429c3f4-482b-49e4-b6e1-9ffb25db0dba",
+        "bdbb5380-0e81-4f4e-8785-e6ea1e3952a3"
+      ]
+    },
+    "mturk:A2BF5QWD31FGTQ": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "272cc36f-fce1-419f-ad2d-d1c0c6774b17",
+        "b7028cc1-2710-4bc8-a468-1f93ddf2f5f6"
+      ]
+    },
+    "mturk:A3CRGWKRF9SBSR": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "29e8ddf0-9f67-4a9d-a7f0-502a358130d8",
+        "301c530f-d33a-4813-a08b-daf6e24710d3"
+      ]
+    },
+    "mturk:A2J86NI89IOP17": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "2d10ae22-2692-4a3f-8e25-4201fd43ac9e",
+        "c1f5f870-c31b-441e-95e7-c3e7c6ea7a1d"
+      ]
+    },
+    "mturk:A1KKVENWLOI4NE": {
+      "sessions": 3,
+      "files": 3,
+      "uuids": [
+        "2e2516ed-0553-4120-952e-e9f6fa5f0d3f",
+        "52faffef-08fd-48f8-b4c5-d3da197471e3",
+        "6dae13fc-3f83-4566-96b0-81726528973f"
+      ]
+    },
+    "mturk:A1K26M9SIAQ6QM": {
+      "sessions": 3,
+      "files": 3,
+      "uuids": [
+        "3299963f-fe4a-4dbd-8a2a-de72d2082801",
+        "409112f6-b471-408f-bca3-263cbf2043c7",
+        "5658019c-2fe4-42c2-94e3-0496b8863883"
+      ]
+    },
+    "mturk:A2PYXFVGNJPPX0": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "373b686a-1598-4920-894d-458040b5b80a",
+        "6e24b2ad-a156-4697-be89-dde57a97f2af"
+      ]
+    },
+    "mturk:A32N0XWTTJ5P8Y": {
+      "sessions": 3,
+      "files": 3,
+      "uuids": [
+        "3ec1feb9-68a6-427c-92f3-f40ac9632f5a",
+        "ddba5e33-2c30-4f14-878a-b8d44d590c1b",
+        "f79f800c-cb30-4af4-969f-737ec9d59cbb"
+      ]
+    },
+    "mturk:AKI0PG13TSCWC": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "3f616c68-0327-40fc-8919-0e4abfe51514",
+        "ef60e7b7-be31-44a3-83eb-8ea1c344cccc"
+      ]
+    },
+    "mturk:A272A0JGRTBFCR": {
+      "sessions": 4,
+      "files": 4,
+      "uuids": [
+        "437d7638-167d-48a1-bd82-d734c44501aa",
+        "8f57ab14-d1a7-4559-b717-b9682198af87",
+        "9a403ec4-c32f-480f-9654-885411700d2d",
+        "cf96a529-30a6-455d-b720-63671e54e329"
+      ]
+    },
+    "mturk:A1BTNHSSZO0Q5F": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "453a944e-66c1-44dc-89f9-03d8f216d58b",
+        "8e404c5c-f95d-4227-b938-9806fc2aaecb"
+      ]
+    },
+    "mturk:AI3WITV3Z8GAJ": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "4c0997fa-746e-4180-8b5a-bdc261c28e69",
+        "a530d014-5541-4aac-a4c4-0b466dd1b7ca"
+      ]
+    },
+    "mturk:A2UC1BX7PO9UAK": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "4dfe97e0-e0c4-45d1-af9d-28e9f4730f64",
+        "7a1f39f9-4f9b-412d-b218-799419f288eb"
+      ]
+    },
+    "mturk:A3GLGO4CJNXOPF": {
+      "sessions": 3,
+      "files": 3,
+      "uuids": [
+        "535feef7-6424-4d5e-ad04-fb47f2b59b3f",
+        "5382694a-784d-47b5-94be-19b6bb7d66f0",
+        "c6274426-7f27-4054-a73c-51a95f0de308"
+      ]
+    },
+    "mturk:A29ZWA4IPS0WNC": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "59a76d33-b5af-4fd9-813d-a64c5cb884bb",
+        "d2db4562-daf8-4558-b8df-cd1fe1b9074a"
+      ]
+    },
+    "mturk:A7OCENXZK9YTS": {
+      "sessions": 3,
+      "files": 3,
+      "uuids": [
+        "5b45d478-715f-4ba9-81be-b74fe84d4fb7",
+        "eade8d70-539e-4f83-90a9-709285678461",
+        "fef746b5-6e24-4ad3-afac-30c31852e9aa"
+      ]
+    },
+    "mturk:A2DUB70TM3AHXJ": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "64b672ec-bc84-4b79-8a57-e1a5eb7823a5",
+        "e612363f-0478-47c8-92e5-b753e2e319b0"
+      ]
+    },
+    "mturk:A1MZW31OFMG9A2": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "6a3054b1-6caa-428d-834f-d7465acf9fc9",
+        "bbd65aa3-e0e3-4f1a-8083-29f1468f264d"
+      ]
+    },
+    "mturk:A1ASSNGOOV9BMM": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "70abe035-3bed-4cc4-a0d2-f1de84a642e1",
+        "a314a4ce-e2dc-4dcf-a4f3-5e0d2962a8eb"
+      ]
+    },
+    "mturk:A1HPEY1GDOLK3R": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "7b384265-47a5-4b70-a702-5c6dc0ad0d0b",
+        "e5e8b622-0bea-4649-b2c0-a5cca1f37861"
+      ]
+    },
+    "mturk:APGM5XXRLPHVS": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "825855b2-7093-4ad1-91ce-cb4c5164dd15",
+        "85426975-0ecf-49ab-838a-d0a5ce58b66d"
+      ]
+    },
+    "mturk:A2NY5GDX2W02FX": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "832b8f65-97a2-48b6-9817-8aab850665c4",
+        "97aad1ac-c29c-4bd6-be3e-240b2ba97177"
+      ]
+    },
+    "mturk:AL76RQMDB7YKY": {
+      "sessions": 3,
+      "files": 3,
+      "uuids": [
+        "858f34f7-7ab2-4d37-b0f6-b0c635bc99db",
+        "86e65b3a-c7c5-4975-9c62-a5a151dd7a39",
+        "ec42393e-7f13-4fff-b2ff-752dc73938a7"
+      ]
+    },
+    "mturk:A3N2ZGLDJNCROD": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "88da1d49-4ff8-46f9-91b3-512f7b0e69f9",
+        "8bf6e70c-0324-45ab-ba0b-51402e6f25ed"
+      ]
+    },
+    "mturk:A6CU8RY1F1EWL": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "8cd0f2a3-07e2-4dfc-8c7b-dd4ab56cf892",
+        "c1510a1c-e079-4d86-8b82-68a7f40c808b"
+      ]
+    },
+    "mturk:A2DD99RVKN0WW6": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "96e0cf51-69e8-42c7-8ac4-817f04394975",
+        "c2559458-893f-4434-bdd6-d39e974cea9c"
+      ]
+    },
+    "mturk:A1JST8K4QOV57L": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "97519659-8b90-4189-86a9-047bbc843213",
+        "d4f62ddf-82c6-4d12-a1c7-d185840af612"
+      ]
+    },
+    "mturk:A24PAZ0HAJY96B": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "b5c60ee5-2084-46ac-974b-1b038f5d65f7",
+        "eac81f2f-5e75-4d82-9db2-deb8d9f4c9b0"
+      ]
+    },
+    "mturk:A1N3FWPEIOKWZ9": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "c68f1153-b1d4-4773-bc13-5c726ba37eba",
+        "f18e87e2-7367-4ff9-9e37-b22570206c0b"
+      ]
+    },
+    "mturk:A22PHVLOSW1YPG": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "c8f9fcc8-6f26-4f4e-8bbc-130b8815fccb",
+        "e12c3645-e03d-4d77-a13c-69219fac4009"
+      ]
+    },
+    "mturk:A52BF5BI5VPTZ": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "f4c7c894-e8f0-49a3-976f-a5acc0d77681",
+        "fcf3d84d-cd8b-4529-97c8-f64a70f68edb"
+      ]
+    },
+    "prolific:69aac11c559f872c3e46e67c": {
+      "sessions": 2,
+      "files": 2,
+      "uuids": [
+        "734440bc-03d2-45ef-b551-4a5f631b1fae",
+        "7fc3255b-e7f2-40a2-99df-fc2c4ab12903"
+      ]
+    },
+    "fake_prolific_ids": {
+      "reason": "prolificPid present but not a valid 24-char hex ID",
+      "sessions": 24,
+      "files": 24,
+      "ids": [
+        "191",
+        "3",
+        "33",
+        "333",
+        "3333333",
+        "41626234",
+        "41720263:31pm",
+        "58683275-899c-49af-839f-b3601e678798",
+        "5f588f227723ca000cc5e08f@email.prolific.com"
+      ],
+      "uuids": [
+        "0036e910-3dcb-4c51-b8e8-0a526accdea1",
+        "1cdbaf89-01a6-456a-aebc-aee8f965132a",
+        "262b1cca-463d-4b3f-86ba-6b1369734e20",
+        "2e26c837-06f6-487c-9c2c-2d6cdc74a9b0",
+        "2f75ba3e-291b-415c-b8b2-5c898d1d4ebe",
+        "32f08b57-0d6f-425c-8961-7e577a629fc2",
+        "4208d2e2-de83-4e6f-b55e-b9f1f665f6f5",
+        "5bf7ec89-7b1f-4d4d-b85e-eb264b6e813d",
+        "6127ddb2-1420-4a84-b77f-0d3256800f95",
+        "61b3bf9d-87f7-4cfe-a407-631c45df663d",
+        "624e7256-1b33-456c-97db-f8c34876ed12",
+        "6c899c7b-81e1-44c5-ab77-9d51ae21a735",
+        "791de2ec-0989-488e-9465-ae8f1cddcfcc",
+        "7c3c9d70-113a-4114-8741-b1c6b025ff3e",
+        "7e79a17d-d906-4200-b578-165cc46e20c0",
+        "93e6ac99-42d7-4fa9-8fe5-6b4184549473",
+        "a1d3df89-800b-4221-98d6-adfc64b8c0f3",
+        "a6916eb4-61df-43af-8711-21464995d26f",
+        "b5c8e438-75ae-4c1b-93b5-398fe365678d",
+        "c6f088e0-ea41-42d4-82a0-1f8ce518a126",
+        "ce8e0a7b-8610-4fa1-813f-3eda2d5a6f9b",
+        "d8facc6f-3462-40ef-bdb1-c398db9b9daf",
+        "dd622900-f7b6-4467-957a-611f3599a2f0",
+        "e59884ce-2426-4c85-8bdf-27d1b17c2f89"
+      ]
+    },
+    "test_sessions": {
+      "reason": "face experiment with no valid platform ID, or early prototype",
+      "sessions": 39,
+      "files": 39,
+      "uuids": [
+        "094d89aa-18b4-475d-ad4d-92e231f8b6e3",
+        "0b7141c1-f464-4d8d-9c56-d28e4ea40611",
+        "0f355fbc-da66-475f-9513-a69547d5b5c9",
+        "16283bba-dbd9-4368-8ba6-dd2636885e59",
+        "1b63ca34-614e-4584-8a45-e6aa967d811c",
+        "1edd220b-d8da-4a94-8711-47bacd4581ac",
+        "25c35496-6593-4c4f-a25b-9310bf871693",
+        "37c8c37b-a8ca-4944-9b98-309bfdf865a0",
+        "41905440-349e-46bd-8869-636275b25372",
+        "423a7d51-61fb-47b6-a6f5-5ab2d57666a5",
+        "49c95bd7-204c-4dbd-9d03-d8b1dd58afd6",
+        "4cb814a7-e312-4927-a018-9500d2fbed4c",
+        "520c7905-5ab5-4c74-a2e5-c7b1345f1b44",
+        "57d74a18-80b1-4356-a647-b29e84747192",
+        "61308679-ced2-47b7-93a2-f39ac21c0d21",
+        "76b94b2a-1a7b-42a6-b870-8e84c509bfba",
+        "77574fb9-b117-4c14-83a6-e3efe40aebfa",
+        "826bc973-1529-46ab-ad03-10c86fe7dace",
+        "85f0f235-e028-497d-bee3-035aff3e679c",
+        "8ef538ef-6443-45b2-bf19-9613ca3a734c",
+        "97a03b46-253a-4cdc-b0eb-a6135c5c1356",
+        "9918d624-1a0b-4094-9e60-48e884b0d64a",
+        "9c82678a-2867-4ef7-afff-aa5a083a9676",
+        "a558698e-7009-4eda-994f-caf83e9dafb5",
+        "b6121ae5-6a84-4d99-aa64-3f26eb8effde",
+        "b885e1a7-080e-4949-9ce9-69ce92ab14e6",
+        "ba16e4f8-8b3e-4edb-bfd0-c7c4fa48d84c",
+        "c7483467-ea0f-424d-afee-ca20e490a1ae",
+        "d7fd4c87-9256-429d-87bb-6da8dd5a6df7",
+        "d9d031f1-656a-4e39-98b8-27cd8fe59202",
+        "e1d5dfd6-c899-494d-b459-37ec3b9d31b2",
+        "ee26236f-71b1-4587-8b92-3562212af115",
+        "f08876eb-3775-4be5-8786-f9bf2b2d493c",
+        "f295af17-0011-478f-89e3-41fbd6fe4787",
+        "f57a6af8-3137-4fef-9d5b-032c4a428b46",
+        "fb6b284e-0aff-4090-b15e-8486dcbe913c",
+        "fd602792-4590-44ee-8147-804263ec9c65",
+        "fd602792-4590-44ee-8147-804263ec9c65",
+        "fd75169f-9253-4f2b-8ac3-310d14c4b76b"
+      ]
+    }
+  }
+}

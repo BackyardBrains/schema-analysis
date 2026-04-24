@@ -2,107 +2,216 @@
 Data loading for star experiments (Implied Motion / RDK).
 
 Parses both `rdk-bars` (Exp1 / adaptation control) and `rdk-face-1` (Exp2 / social attention).
+
+Raw data lives in data/star/raw/ (never modified).  Before analysis,
+quarantine_workers() classifies files into:
+  - raw/quarantined/  (repeat-worker files — bots / duplicate submissions)
+  - raw/user-data/    (single-session worker files + files without worker ID)
+
+load_star_data() loads from user-data/ (or raw/ if user-data/ doesn't exist yet).
 """
 
 import glob
 import json
 import os
+import re
 import shutil
 from collections import defaultdict
+from datetime import datetime
 
 import numpy as np
 import pandas as pd
 
+_PROLIFIC_PID_PATTERN = re.compile(r'^[0-9a-f]{24}$')
+
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 _STAR_DIR = os.path.join(ROOT, 'data', 'star', 'raw')
 
-def quarantine_workers(directory):
+
+def quarantine_workers(directory, max_sessions=1):
     """
-    Classify JSON files into 'quarantined/' (repeat workerId/prolificPid) and 'user-data/'.
-    Does not run if user-data already exists to prevent repeated shifting.
+    Classify raw JSON files into quarantined/ and user-data/ subfolders.
+
+    Reads every JSON in *directory*, groups by workerId and prolificPid.
+    Workers with more than *max_sessions* unique UUIDs have ALL their
+    files copied to quarantined/.  Everything else (including files
+    without an ID) goes to user-data/.
+
+    Both output folders are deleted and recreated from scratch each run,
+    so raw/ is never modified.  A manifest.json is written to quarantined/
+    for audit.
+
+    Returns a dict summarising what happened.
     """
     if not os.path.exists(directory):
         return
-        
-    user_data_dir = os.path.join(directory, 'user-data')
-    quarantine_dir = os.path.join(directory, 'quarantined')
-    
-    if os.path.exists(user_data_dir):
-        print(f"  {user_data_dir} exists, skipping quarantine step.")
-        return
 
-    os.makedirs(user_data_dir, exist_ok=True)
-    os.makedirs(quarantine_dir, exist_ok=True)
+    quarantined_dir = os.path.join(directory, 'quarantined')
+    userdata_dir = os.path.join(directory, 'user-data')
 
-    json_files = glob.glob(os.path.join(directory, '*.json'))
-    
-    # 1. First pass: count sessions per worker/prolific ID
-    worker_counts = defaultdict(int)
-    prolific_counts = defaultdict(int)
-    
+    for d in (quarantined_dir, userdata_dir):
+        if os.path.exists(d):
+            shutil.rmtree(d)
+        os.makedirs(d)
+
+    json_files = sorted(glob.glob(os.path.join(directory, '*.json')))
+
+    # Scan every top-level JSON and map identity → list of (uuid, filepath)
+    worker_files = defaultdict(list)   # mturk workerId
+    prolific_files = defaultdict(list) # prolific PID
+    no_id_files = []
+    fake_id_files = []
+
     for filepath in json_files:
         try:
             with open(filepath) as f:
                 raw = json.load(f)
-        except json.JSONDecodeError:
+        except (json.JSONDecodeError, KeyError):
             continue
-            
+        uuid = raw.get('UUID', '')
         session = raw.get('data', {}).get('session', {})
-        
-        # Check standard mturk workerId
-        mturk = session.get('mturk', {})
-        if isinstance(mturk, dict):
-            wid = mturk.get('workerId', '').strip()
-            if wid and 'test' not in wid.lower():
-                worker_counts[wid] += 1
-                
-        # Check prolific PID
-        prolific = session.get('prolific', {})
-        if isinstance(prolific, dict):
-            pid = prolific.get('prolificPid', '').strip()
-            if pid and 'test' not in pid.lower():
-                prolific_counts[pid] += 1
 
-    # 2. Second pass: Move files based on repeat status
-    moved_quarantine = 0
-    moved_user = 0
-    
-    for filepath in json_files:
-        basename = os.path.basename(filepath)
-        
-        try:
-            with open(filepath) as f:
-                raw = json.load(f)
-        except json.JSONDecodeError:
-            continue
-            
-        session = raw.get('data', {}).get('session', {})
-        
         wid = ''
         mturk = session.get('mturk', {})
         if isinstance(mturk, dict):
             wid = mturk.get('workerId', '').strip()
-            
+            if wid and 'test' in wid.lower():
+                wid = ''
+
         pid = ''
         prolific = session.get('prolific', {})
         if isinstance(prolific, dict):
             pid = prolific.get('prolificPid', '').strip()
+            if pid and 'test' in pid.lower():
+                pid = ''
+            elif pid and not _PROLIFIC_PID_PATTERN.match(pid):
+                fake_id_files.append({'uuid': uuid, 'path': filepath, 'fake_pid': pid})
+                pid = ''
 
-        is_repeat = False
-        if wid and 'test' not in wid.lower() and worker_counts[wid] > 1:
-            is_repeat = True
-        if pid and 'test' not in pid.lower() and prolific_counts[pid] > 1:
-            is_repeat = True
-            
-        dest_dir = quarantine_dir if is_repeat else user_data_dir
-        shutil.move(filepath, os.path.join(dest_dir, basename))
-        
-        if is_repeat:
-            moved_quarantine += 1
+        entry = {'uuid': uuid, 'path': filepath}
+        if wid:
+            worker_files[wid].append(entry)
+        if pid:
+            prolific_files[pid].append(entry)
+        if not wid and not pid and filepath not in {f['path'] for f in fake_id_files}:
+            no_id_files.append(entry)
+
+    # Build set of filepaths that should be quarantined
+    quarantined_paths = set()
+    quarantined_workers_detail = {}
+
+    for wid, entries in worker_files.items():
+        unique_uuids = {e['uuid'] for e in entries}
+        if len(unique_uuids) > max_sessions:
+            quarantined_workers_detail[f'mturk:{wid}'] = {
+                'sessions': len(unique_uuids),
+                'files': len(entries),
+                'uuids': sorted(unique_uuids),
+            }
+            for e in entries:
+                quarantined_paths.add(e['path'])
+
+    for pid, entries in prolific_files.items():
+        unique_uuids = {e['uuid'] for e in entries}
+        if len(unique_uuids) > max_sessions:
+            quarantined_workers_detail[f'prolific:{pid}'] = {
+                'sessions': len(unique_uuids),
+                'files': len(entries),
+                'uuids': sorted(unique_uuids),
+            }
+            for e in entries:
+                quarantined_paths.add(e['path'])
+
+    # Quarantine fake Prolific IDs (test sessions)
+    for entry in fake_id_files:
+        quarantined_paths.add(entry['path'])
+    if fake_id_files:
+        quarantined_workers_detail['fake_prolific_ids'] = {
+            'reason': 'prolificPid present but not a valid 24-char hex ID',
+            'sessions': len(fake_id_files),
+            'files': len(fake_id_files),
+            'ids': sorted(set(e['fake_pid'] for e in fake_id_files)),
+            'uuids': sorted(e['uuid'] for e in fake_id_files),
+        }
+
+    # Quarantine test sessions: face experiments with no platform ID,
+    # and early prototype files (rdk_faces).
+    test_sessions = []
+    for filepath in json_files:
+        if filepath in quarantined_paths:
+            continue
+        try:
+            with open(filepath) as f:
+                raw = json.load(f)
+        except (json.JSONDecodeError, KeyError):
+            continue
+        exp = raw.get('experiment', '')
+        uuid = raw.get('UUID', '')
+        session = raw.get('data', {}).get('session', {})
+
+        is_prototype = exp == 'rdk_faces'
+
+        has_platform = False
+        mturk = session.get('mturk', {})
+        if isinstance(mturk, dict) and mturk.get('workerId', '').strip():
+            has_platform = True
+        prolific = session.get('prolific', {})
+        if isinstance(prolific, dict) and _PROLIFIC_PID_PATTERN.match(
+                prolific.get('prolificPid', '').strip()):
+            has_platform = True
+
+        is_face_no_id = 'face' in exp.lower() and not has_platform
+
+        if is_prototype or is_face_no_id:
+            quarantined_paths.add(filepath)
+            test_sessions.append({'uuid': uuid, 'path': filepath,
+                                  'experiment': exp, 'reason': 'prototype' if is_prototype else 'no_platform_id'})
+
+    if test_sessions:
+        quarantined_workers_detail['test_sessions'] = {
+            'reason': 'face experiment with no valid platform ID, or early prototype',
+            'sessions': len(test_sessions),
+            'files': len(test_sessions),
+            'uuids': sorted(e['uuid'] for e in test_sessions),
+        }
+
+    # Copy files to the appropriate subfolder
+    n_quarantined = 0
+    n_userdata = 0
+
+    for filepath in json_files:
+        try:
+            with open(filepath) as f:
+                json.load(f)
+        except (json.JSONDecodeError, KeyError):
+            continue
+
+        if filepath in quarantined_paths:
+            shutil.copy2(filepath, quarantined_dir)
+            n_quarantined += 1
         else:
-            moved_user += 1
-            
-    print(f"  Quarantine: {moved_user} user-data, {moved_quarantine} quarantined.")
+            shutil.copy2(filepath, userdata_dir)
+            n_userdata += 1
+
+    # Write manifest for audit trail
+    manifest = {
+        'generated': datetime.now().isoformat(),
+        'source_directory': directory,
+        'max_sessions': max_sessions,
+        'total_json_files': len(json_files),
+        'quarantined_files': n_quarantined,
+        'quarantined_workers': len(quarantined_workers_detail),
+        'userdata_files': n_userdata,
+        'no_id_files': len(no_id_files),
+        'workers': quarantined_workers_detail,
+    }
+    with open(os.path.join(quarantined_dir, 'manifest.json'), 'w') as f:
+        json.dump(manifest, f, indent=2)
+
+    print(f"  Quarantine: {n_quarantined} files from {len(quarantined_workers_detail)} repeat workers → quarantined/")
+    print(f"  User data:  {n_userdata} files ({len(no_id_files)} without worker ID) → user-data/")
+
+    return manifest
 
 
 def _parse_session(raw):
@@ -158,13 +267,26 @@ def _parse_trials(raw):
             
             gt = t.get('gazeTowards')
             gc = t.get('gazeCondition')
-            if gt is True or gc == 'towards':
-                row['gazeTowards'] = True
-            elif gt is False or gc == 'away':
-                row['gazeTowards'] = False
+            if gt is False or gc == 'away':
+                row['face_direction'] = 'away'
             else:
-                row['gazeTowards'] = True # fallback for V1 versions without backward faces
-                
+                row['face_direction'] = 'towards'
+
+            # Unify blindfold/sighted across schema changes:
+            #   v1.3-1.4: eyesOpen (True/False)
+            #   v1.5-1.7: sighted only (eyesOpen always True)
+            #   v1.8.6-1.9.2: blindfold ran but condition not saved
+            #   v1.10+: condition field ('blindfold'/'normalFace')
+            cond_field = t.get('condition', '')
+            if cond_field == 'blindfold':
+                row['eyes_condition'] = 'blindfold'
+            elif cond_field == 'normalFace':
+                row['eyes_condition'] = 'sighted'
+            elif 'eyesOpen' in t:
+                row['eyes_condition'] = 'sighted' if t['eyesOpen'] else 'blindfold'
+            else:
+                row['eyes_condition'] = 'unknown'
+
             row['condition'] = 'faces'
             
         rows.append(row)
@@ -222,14 +344,18 @@ def load_from_json(directory, experiment_filter=None):
 def load_star_data():
     """
     Main entry point for loading all star experiment data.
-    Automatically handles quarantine logic.
+
+    Runs quarantine_workers() first (copy-based, re-runnable), then loads
+    from user-data/ if it exists, otherwise falls back to raw/.
     """
     quarantine_workers(_STAR_DIR)
     
     user_data = os.path.join(_STAR_DIR, 'user-data')
-    if not os.path.exists(user_data):
+    if os.path.isdir(user_data):
+        print("  Loading star data from user-data/ (post-quarantine)")
+    else:
         user_data = _STAR_DIR
-        
+
     sessions_df, trials_df = load_from_json(user_data)
     
     # Validation filters
