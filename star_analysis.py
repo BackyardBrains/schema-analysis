@@ -62,8 +62,8 @@ def run_analysis():
     # Assign and pool UUIDs by Sub-Experiment
     # -----------------------------------------------------
     exp1_uuids = set(valid_trials[valid_trials['condition'] == 'bars']['uuid'])
-    exp2a_uuids = set(valid_trials[(valid_trials['condition'] == 'faces') & (valid_trials['eyesOpen'] == False)]['uuid'])
-    exp2b_uuids = set(valid_trials[(valid_trials['condition'] == 'faces') & (valid_trials['gazeTowards'] == False)]['uuid'])
+    exp2a_uuids = set(valid_trials[(valid_trials['condition'] == 'faces') & (valid_trials['eyes_condition'] == 'blindfold')]['uuid'])
+    exp2b_uuids = set(valid_trials[(valid_trials['condition'] == 'faces') & (valid_trials['face_direction'] == 'away')]['uuid'])
 
     print(f"Pool sizes: Exp 1 (N={len(exp1_uuids)}), Exp 2a (N={len(exp2a_uuids)}), Exp 2b (N={len(exp2b_uuids)})")
 
@@ -114,10 +114,10 @@ def run_analysis():
     # Data array aligning with the 5 X-axis slots
     stats = [
         get_stats(t_exp1, t_exp1['condition'] == 'bars'),
-        get_stats(t_exp2a, t_exp2a['eyesOpen'] == True),
-        get_stats(t_exp2a, t_exp2a['eyesOpen'] == False),
-        get_stats(t_exp2b, t_exp2b['gazeTowards'] == True),
-        get_stats(t_exp2b, t_exp2b['gazeTowards'] == False)
+        get_stats(t_exp2a, t_exp2a['eyes_condition'] == 'sighted'),
+        get_stats(t_exp2a, t_exp2a['eyes_condition'] == 'blindfold'),
+        get_stats(t_exp2b, t_exp2b['face_direction'] == 'towards'),
+        get_stats(t_exp2b, t_exp2b['face_direction'] == 'away')
     ]
 
     labels = [
