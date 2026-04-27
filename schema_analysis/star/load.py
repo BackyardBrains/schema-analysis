@@ -275,8 +275,9 @@ def _parse_trials(raw):
             # Unify blindfold/sighted across schema changes:
             #   v1.3-1.4: eyesOpen (True/False)
             #   v1.5-1.7: sighted only (eyesOpen always True)
-            #   v1.8.6-1.9.2: blindfold ran but condition not saved
+            #   v1.8.6-1.9.2: sighted-only face-direction runs
             #   v1.10+: condition field ('blindfold'/'normalFace')
+            version = session.get('experiment_version', '')
             cond_field = t.get('condition', '')
             if cond_field == 'blindfold':
                 row['eyes_condition'] = 'blindfold'
@@ -284,6 +285,8 @@ def _parse_trials(raw):
                 row['eyes_condition'] = 'sighted'
             elif 'eyesOpen' in t:
                 row['eyes_condition'] = 'sighted' if t['eyesOpen'] else 'blindfold'
+            elif version in {'1.8.6', '1.9.2'}:
+                row['eyes_condition'] = 'sighted'
             else:
                 row['eyes_condition'] = 'unknown'
 
