@@ -1,0 +1,86 @@
+label,experiment,version,subgroup,participants_total,participants_with_rt_pair,trials,correct_trials,congruent_rt_ms,incongruent_rt_ms,delta_rt_ms,delta_rt_sem,delta_rt_p,congruent_acc_pct,incongruent_acc_pct,delta_acc_pct,delta_acc_sem,delta_acc_p,presented_trials_per_subject,platform,story_type,dot_speed_declared,actual_speed_deg_s,aperture_deg,density,stars,dot_diam_deg,coherence,centerY,rdk_alignment,center_y_offset_deg,center_y_offset_px,border,speed_interleave_fix,face_image_family,normal_towards_image,normal_away_image,blindfold_towards_image,blindfold_away_image,metadata_source,plot_metadata_label,version_note
+Bars v1.0,rdk-bars,1.0,bars,37,37,1088,1028,1121.9237438237435,986.6189535689535,135.30479025479028,21.592790875327896,3.068078908808333e-07,92.13246213246212,96.7052767052767,-4.572814572814574,2.0164070087634554,0.0294409676805769,30.0,MTurk,bars control / no face story,2.0,0.6666666666666666,5,50,1250,0.05,0.4,Math.floor(height / 2),centered on fixation,0.0,0,yes,no,,,,,,star_snapshot_parameters.csv,"0.67 deg/s actual
+50 dots/deg^2, 1250 stars
+coh 0.40, MTurk
+centered on fixation
+bars control / no face story",
+"Face v1.10: blindfold, towards",rdk-face-1,1.10,blindfold / towards,101,101,3502,3378,822.8779058462162,816.5674060673351,6.310499778881473,7.107455640902842,0.3767410146791876,95.7882573046348,97.11390503354762,-1.32564772891283,0.6598652346562174,0.0472359440353269,70.0,Prolific,sighted-blindfold + catch trials,2.0,2.0,5,50,1250,0.05,0.4,Math.floor(height / 2),centered on fixation,0.0,0,no,yes,blank face + drawing blindfold; green catch assets present,BlankFaceLookingRight (1).png,BlankFaceLookingLeft (1).png,BlindfoldDrawingRight.png,BlindfoldDrawingLeft.png,star_snapshot_parameters.csv,"2.00 deg/s actual
+50 dots/deg^2, 1250 stars
+coh 0.40, Prolific
+centered on fixation
+sighted-blindfold + catch trials",
+"Face v1.10: sighted, towards",rdk-face-1,1.10,sighted / towards,101,101,3506,3387,820.2631559371554,821.13890578345,-0.8757498462944192,8.204926444755111,0.91521333731905,96.094304338198,97.10438220530791,-1.010077867109916,0.7032055778579519,0.1540123622733057,70.0,Prolific,sighted-blindfold + catch trials,2.0,2.0,5,50,1250,0.05,0.4,Math.floor(height / 2),centered on fixation,0.0,0,no,yes,blank face + drawing blindfold; green catch assets present,BlankFaceLookingRight (1).png,BlankFaceLookingLeft (1).png,BlindfoldDrawingRight.png,BlindfoldDrawingLeft.png,star_snapshot_parameters.csv,"2.00 deg/s actual
+50 dots/deg^2, 1250 stars
+coh 0.40, Prolific
+centered on fixation
+sighted-blindfold + catch trials",
+"Face v1.10: unknown, towards",rdk-face-1,1.10,unknown / towards,103,103,7161,6815,848.9542203494348,843.752969662433,5.201250687002026,5.959084943383515,0.3848074519965505,94.9234385529981,95.4975874719114,-0.5741489189132822,0.4888614579643614,0.2429449489377953,70.0,Prolific,sighted-blindfold + catch trials,2.0,2.0,5,50,1250,0.05,0.4,Math.floor(height / 2),centered on fixation,0.0,0,no,yes,blank face + drawing blindfold; green catch assets present,BlankFaceLookingRight (1).png,BlankFaceLookingLeft (1).png,BlindfoldDrawingRight.png,BlindfoldDrawingLeft.png,star_snapshot_parameters.csv,"2.00 deg/s actual
+50 dots/deg^2, 1250 stars
+coh 0.40, Prolific
+centered on fixation
+sighted-blindfold + catch trials",
+"Face v1.3: blindfold, towards",rdk-face-1,1.3,blindfold / towards,95,95,2141,2033,1065.3789249639249,1050.5170080504292,14.861916913495875,10.510460441642728,0.1606618988947743,94.61244019138756,95.2535885167464,-0.6411483253588515,1.010164372350751,0.5271678323676845,48.0,MTurk,strict sighted-blindfold,2.0,0.6666666666666666,5,50,1250,0.05,0.4,height / 2,centered on fixation,0.0,0,yes,no,star-face-male-001,star-face-male-001-L.png,star-face-male-001-R.png,star-face-male-001-L-Blindfold.png,star-face-male-001-R-Blindfold.png,star_snapshot_parameters.csv,"0.67 deg/s actual
+50 dots/deg^2, 1250 stars
+coh 0.40, MTurk
+centered on fixation
+strict sighted-blindfold",
+"Face v1.3: sighted, towards",rdk-face-1,1.3,sighted / towards,95,95,2144,2026,1057.8922510822513,1059.482485380117,-1.5902342978658728,10.164217058604414,0.8760105593226079,93.74694311536416,95.39659755449226,-1.6496544391281236,1.161596885618419,0.1588691299309138,48.0,MTurk,strict sighted-blindfold,2.0,0.6666666666666666,5,50,1250,0.05,0.4,height / 2,centered on fixation,0.0,0,yes,no,star-face-male-001,star-face-male-001-L.png,star-face-male-001-R.png,star-face-male-001-L-Blindfold.png,star-face-male-001-R-Blindfold.png,star_snapshot_parameters.csv,"0.67 deg/s actual
+50 dots/deg^2, 1250 stars
+coh 0.40, MTurk
+centered on fixation
+strict sighted-blindfold",
+"Face v1.4: blindfold, towards",rdk-face-1,1.4,blindfold / towards,99,99,2263,2179,746.0136593204775,748.9894070575888,-2.9757477371113725,3.370988859429443,0.3795304383262816,96.98347107438016,95.54790327517598,1.4355677992041622,0.6640531474267034,0.0330664437907796,48.0,MTurk,strict sighted-blindfold / transition,2.4,0.7999999999999999,5,16,400,0.05,0.4,Math.floor(height / 2) - 50,shifted down 50 px (~1.0 deg),-1.0,-50,yes,no,blank face + blank blindfold,BlankFaceLookingRight (1).png,BlankFaceLookingLeft (1).png,BlankFaceLookingRightBlindfold (1).png,BlankFaceLookingLeftBlindfold (1).png,star_snapshot_parameters.csv,"0.80 deg/s actual
+16 dots/deg^2, 400 stars
+coh 0.40, MTurk
+shifted down 50 px (~1.0 deg)
+strict sighted-blindfold / transition",
+"Face v1.4: sighted, towards",rdk-face-1,1.4,sighted / towards,99,99,2282,2196,748.4332415059687,751.0279231711049,-2.594681665136211,3.485421298481535,0.4583926552177184,96.49984695439238,95.99632690541782,0.5035200489745947,0.7784789695994444,0.5192735599280557,48.0,MTurk,strict sighted-blindfold / transition,2.4,0.7999999999999999,5,16,400,0.05,0.4,Math.floor(height / 2) - 50,shifted down 50 px (~1.0 deg),-1.0,-50,yes,no,blank face + blank blindfold,BlankFaceLookingRight (1).png,BlankFaceLookingLeft (1).png,BlankFaceLookingRightBlindfold (1).png,BlankFaceLookingLeftBlindfold (1).png,star_snapshot_parameters.csv,"0.80 deg/s actual
+16 dots/deg^2, 400 stars
+coh 0.40, MTurk
+shifted down 50 px (~1.0 deg)
+strict sighted-blindfold / transition",
+"Face v1.5: sighted, towards",rdk-face-1,1.5,sighted / towards,48,48,5663,5335,1024.8643827219714,1002.2026281976748,22.66175452429684,7.800827734695598,0.0055816685932495,93.87813598561712,94.48440743457763,-0.6062714489605003,0.697416369435281,0.3890951242863998,120.0,Prolific,Bob story / sighted only,2.4,0.7999999999999999,5,16,400,0.05,0.3,Math.floor(height / 2) - 75,shifted down 75 px (~1.5 deg),-1.5,-75,yes,no,blank face + drawing blindfold,BlankFaceLookingRight (1).png,BlankFaceLookingLeft (1).png,BlindfoldDrawingRight.png,BlindfoldDrawingLeft.png,star_snapshot_parameters.csv,"0.80 deg/s actual
+16 dots/deg^2, 400 stars
+coh 0.30, Prolific
+shifted down 75 px (~1.5 deg)
+Bob story / sighted only",
+"Face v1.6: blindfold, towards",rdk-face-1,1.6,blindfold / towards,100,100,5930,5600,963.9085177785954,949.4911773192104,14.417340459385144,7.632231905983771,0.0618175987396214,94.5525977853564,94.25540959678892,0.2971881885674982,0.5880222549772527,0.6143992063378838,120.0,Prolific,Bob story / sighted-blindfold,2.4,0.7999999999999999,5,16,400,0.05,0.4,Math.floor(height / 2) - 75,shifted down 75 px (~1.5 deg),-1.5,-75,yes,no,blank face + drawing blindfold,BlankFaceLookingRight (1).png,BlankFaceLookingLeft (1).png,BlindfoldDrawingRight.png,BlindfoldDrawingLeft.png,star_snapshot_parameters.csv,"0.80 deg/s actual
+16 dots/deg^2, 400 stars
+coh 0.40, Prolific
+shifted down 75 px (~1.5 deg)
+Bob story / sighted-blindfold",
+"Face v1.6: sighted, towards",rdk-face-1,1.6,sighted / towards,100,100,5913,5589,964.8316298583918,948.8567680125748,15.974861845817015,6.320685871561041,0.0130739263809003,94.15939188525395,94.8174603174603,-0.6580684322063628,0.6397883336082782,0.3061872693083825,120.0,Prolific,Bob story / sighted-blindfold,2.4,0.7999999999999999,5,16,400,0.05,0.4,Math.floor(height / 2) - 75,shifted down 75 px (~1.5 deg),-1.5,-75,yes,no,blank face + drawing blindfold,BlankFaceLookingRight (1).png,BlankFaceLookingLeft (1).png,BlindfoldDrawingRight.png,BlindfoldDrawingLeft.png,star_snapshot_parameters.csv,"0.80 deg/s actual
+16 dots/deg^2, 400 stars
+coh 0.40, Prolific
+shifted down 75 px (~1.5 deg)
+Bob story / sighted-blindfold",
+"Face v1.7: blindfold, towards",rdk-face-1,1.7,blindfold / towards,87,87,5160,4796,975.0210139312752,963.332622727624,11.688391203650896,8.054659736204847,0.150380541564401,91.9002845776528,93.96955417565805,-2.0692695980052296,0.5966755476411102,0.0008212895785443,120.0,Prolific,plain task framing / accepted centered wave,2.0,0.6666666666666666,5,50,1250,0.05,0.4,Math.floor(height / 2),centered on fixation,0.0,0,yes,no,blank face + drawing blindfold,BlankFaceLookingRight (1).png,BlankFaceLookingLeft (1).png,BlindfoldDrawingRight.png,BlindfoldDrawingLeft.png,accepted Feb 19 snapshot override,"0.67 deg/s actual
+50 dots/deg^2, 1250 stars
+coh 0.40, Prolific
+centered on fixation
+plain task framing / accepted centered wave","Metadata uses the accepted Feb 19 centered/dense snapshot, not the earlier Feb 10 transition snapshot."
+"Face v1.7: sighted, towards",rdk-face-1,1.7,sighted / towards,87,87,5149,4789,967.4758874824578,959.1306979117488,8.345189570708788,7.964033717664972,0.2976392950315307,92.97871063626116,93.05062210730068,-0.0719114710394936,0.8344329884681616,0.9315236244730912,120.0,Prolific,plain task framing / accepted centered wave,2.0,0.6666666666666666,5,50,1250,0.05,0.4,Math.floor(height / 2),centered on fixation,0.0,0,yes,no,blank face + drawing blindfold,BlankFaceLookingRight (1).png,BlankFaceLookingLeft (1).png,BlindfoldDrawingRight.png,BlindfoldDrawingLeft.png,accepted Feb 19 snapshot override,"0.67 deg/s actual
+50 dots/deg^2, 1250 stars
+coh 0.40, Prolific
+centered on fixation
+plain task framing / accepted centered wave","Metadata uses the accepted Feb 19 centered/dense snapshot, not the earlier Feb 10 transition snapshot."
+"Face v1.8.6: sighted, away",rdk-face-1,1.8.6,sighted / away,99,99,5889,5583,887.8420330043228,918.942207827158,-31.10017482283503,6.766973325146412,1.2854307598464694e-05,96.0345472606009,93.57806306082168,2.4564841997792195,0.6788903875716654,0.000471014247397,120.0,Prolific,towards-away + catch trials,3.0,1.0,5,40,1000,0.035,0.4,Math.floor(height / 2),centered on fixation,0.0,0,no,no,blank face normal; green catch assets present,BlankFaceLookingRight (1).png,BlankFaceLookingLeft (1).png,,,star_snapshot_parameters.csv,"1.00 deg/s actual
+40 dots/deg^2, 1000 stars
+coh 0.40, Prolific
+centered on fixation
+towards-away + catch trials",
+"Face v1.8.6: sighted, towards",rdk-face-1,1.8.6,sighted / towards,99,99,5897,5601,907.0208346081868,897.2362207844783,9.78461382370837,6.269119698239634,0.1218031704381028,94.26523029971308,95.69811414639,-1.4328838466769505,0.6773847719670844,0.036938617560325,120.0,Prolific,towards-away + catch trials,3.0,1.0,5,40,1000,0.035,0.4,Math.floor(height / 2),centered on fixation,0.0,0,no,no,blank face normal; green catch assets present,BlankFaceLookingRight (1).png,BlankFaceLookingLeft (1).png,,,star_snapshot_parameters.csv,"1.00 deg/s actual
+40 dots/deg^2, 1000 stars
+coh 0.40, Prolific
+centered on fixation
+towards-away + catch trials",
+"Face v1.9.2: sighted, away",rdk-face-1,1.9.2,sighted / away,94,94,5599,5340,857.6615437651113,897.4662646276214,-39.8047208625101,6.617332457570819,3.5095190839677576e-08,97.02049051462107,93.70453830835342,3.315952206267686,0.6545723446219278,2.0542128861730833e-06,120.0,Prolific,towards-away + catch trials,2.0,2.0,5,50,1250,0.05,0.4,Math.floor(height / 2),centered on fixation,0.0,0,no,yes,blank face normal; green catch assets present,BlankFaceLookingRight (1).png,BlankFaceLookingLeft (1).png,,,star_snapshot_parameters.csv,"2.00 deg/s actual
+50 dots/deg^2, 1250 stars
+coh 0.40, Prolific
+centered on fixation
+towards-away + catch trials",
+"Face v1.9.2: sighted, towards",rdk-face-1,1.9.2,sighted / towards,94,94,5595,5342,881.4089500638039,866.9147459707067,14.494204093096974,7.593101340855939,0.0593630228389149,94.983492296405,95.94404849247113,-0.9605561960661012,0.657087132462011,0.1471559840642227,120.0,Prolific,towards-away + catch trials,2.0,2.0,5,50,1250,0.05,0.4,Math.floor(height / 2),centered on fixation,0.0,0,no,yes,blank face normal; green catch assets present,BlankFaceLookingRight (1).png,BlankFaceLookingLeft (1).png,,,star_snapshot_parameters.csv,"2.00 deg/s actual
+50 dots/deg^2, 1250 stars
+coh 0.40, Prolific
+centered on fixation
+towards-away + catch trials",

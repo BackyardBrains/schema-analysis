@@ -1,0 +1,344 @@
+{
+  "experiment": "rdk-bars",
+  "UUID": "cd71deac-9fe2-4b9b-bfeb-7dc80ea4c6ce",
+  "data": {
+    "session": {
+      "experiment_version": "1.0",
+      "treatment": "bars",
+      "file_version": "1.1",
+      "totalTrials": 30,
+      "session_group": "default",
+      "browserData": {
+        "os": "Windows",
+        "browser": "Firefox",
+        "screenResolution": "2048x1152",
+        "browserViewport": "1710x1033",
+        "extraHardware": {
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0",
+          "platform": "Win32",
+          "hardwareConcurrency": 20,
+          "deviceMemory": null,
+          "gpu": {
+            "vendor": "Google Inc. (NVIDIA)",
+            "renderer": "ANGLE (NVIDIA, NVIDIA GeForce GTX 980 Direct3D11 vs_5_0 ps_5_0), or similar"
+          },
+          "screen": {
+            "width": 2048,
+            "height": 1152,
+            "availWidth": 2048,
+            "availHeight": 1152,
+            "colorDepth": 24
+          },
+          "viewport": {
+            "width": 1710,
+            "height": 1033
+          },
+          "devicePixelRatio": 1.25,
+          "maxTouchPoints": 0,
+          "pointer": {
+            "coarse": false,
+            "fine": true,
+            "hover": true
+          },
+          "timeZone": "America/Los_Angeles",
+          "language": "en-US",
+          "languages": [
+            "en-US",
+            "en"
+          ]
+        }
+      },
+      "calibration": {
+        "monitorWidthCm": 38,
+        "viewingDistanceCm": 54,
+        "pixelsPerDegree": 0
+      },
+      "parameters": {
+        "coherence": 0.4,
+        "apertureDeg": 5,
+        "dotSpeedDegPerSec": 2,
+        "lifetimeMs": 200,
+        "fixationDurationMs": 1500,
+        "adaptorDurationMs": 1500,
+        "testDurationMs": 2000
+      },
+      "mturk": {
+        "assignmentId": "",
+        "workerId": "",
+        "hitId": ""
+      }
+    },
+    "trials": [
+      {
+        "trial_index": 47,
+        "rt": 169,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": true,
+        "adaptorDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_index": 52,
+        "rt": 783,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": true,
+        "adaptorDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_index": 57,
+        "rt": 894,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": true,
+        "adaptorDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_index": 62,
+        "rt": 810,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": false,
+        "adaptorDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_index": 67,
+        "rt": 1598,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": true,
+        "adaptorDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_index": 72,
+        "rt": 760,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": false,
+        "adaptorDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_index": 77,
+        "rt": 802,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": false,
+        "adaptorDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_index": 82,
+        "rt": 700,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": false,
+        "adaptorDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_index": 87,
+        "rt": 1343,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": true,
+        "adaptorDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_index": 92,
+        "rt": 1364,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": false,
+        "adaptorDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_index": 97,
+        "rt": 767,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": false,
+        "adaptorDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_index": 102,
+        "rt": 661,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": true,
+        "adaptorDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_index": 107,
+        "rt": 899,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": false,
+        "adaptorDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_index": 112,
+        "rt": 794,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": true,
+        "adaptorDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_index": 117,
+        "rt": 940,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": true,
+        "adaptorDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_index": 122,
+        "rt": 1334,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": true,
+        "adaptorDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_index": 127,
+        "rt": 697,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": false,
+        "adaptorDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_index": 132,
+        "rt": 1109,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": false,
+        "adaptorDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_index": 137,
+        "rt": 871,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": false,
+        "adaptorDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_index": 142,
+        "rt": 674,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": false,
+        "adaptorDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_index": 147,
+        "rt": 808,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": false,
+        "adaptorDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_index": 152,
+        "rt": 678,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": true,
+        "adaptorDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_index": 157,
+        "rt": 638,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": false,
+        "adaptorDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_index": 162,
+        "rt": 658,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": true,
+        "adaptorDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_index": 167,
+        "rt": 1217,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": false,
+        "adaptorDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_index": 172,
+        "rt": 782,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": true,
+        "adaptorDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_index": 177,
+        "rt": 1000,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": true,
+        "adaptorDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_index": 182,
+        "rt": 811,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": false,
+        "adaptorDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_index": 187,
+        "rt": 1548,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": true,
+        "adaptorDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_index": 192,
+        "rt": 1286,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": true,
+        "adaptorDirection": 180,
+        "testDirection": 180
+      }
+    ]
+  }
+}

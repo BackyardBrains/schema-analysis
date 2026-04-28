@@ -21,6 +21,106 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 RESULTS_DIR = os.path.join(ROOT, 'results')
 IMG_DIR = os.path.join(ROOT, 'schema_analysis', 'star', 'img')
 
+VERSION_STORY_TYPE = {
+    '1.0': 'bars control / no face story',
+    '1.3': 'strict sighted-blindfold',
+    '1.4': 'strict sighted-blindfold / transition',
+    '1.5': 'Bob story / sighted only',
+    '1.6': 'Bob story / sighted-blindfold',
+    '1.7': 'plain task framing / accepted centered wave',
+    '1.8.6': 'towards-away + catch trials',
+    '1.9.2': 'towards-away + catch trials',
+    '1.10': 'sighted-blindfold + catch trials',
+}
+
+VERSION_NOTES = {
+    '1.7': 'Metadata uses the accepted Feb 19 centered/dense snapshot, not the earlier Feb 10 transition snapshot.',
+}
+
+VERSION_PLATFORM = {
+    '1.0': 'MTurk',
+    '1.3': 'MTurk',
+    '1.4': 'MTurk',
+    '1.5': 'Prolific',
+    '1.6': 'Prolific',
+    '1.7': 'Prolific',
+    '1.8.6': 'Prolific',
+    '1.9.2': 'Prolific',
+    '1.10': 'Prolific',
+}
+
+VERSION_PARAMETER_OVERRIDES = {
+    '1.7': {
+        'name': 'v1.7_face_20260219_49ef4702.html',
+        'density': 50,
+        'dot_speed_declared': 2.0,
+        'effective_speed_deg_s': 2.0 / 3.0,
+        'centerY': 'Math.floor(height / 2)',
+        'metadata_source': 'accepted Feb 19 snapshot override',
+    },
+}
+
+PX_PER_DEG = 50
+
+FACE_IMAGE_METADATA = {
+    '1.3': {
+        'face_image_family': 'star-face-male-001',
+        'normal_towards_image': 'star-face-male-001-L.png',
+        'normal_away_image': 'star-face-male-001-R.png',
+        'blindfold_towards_image': 'star-face-male-001-L-Blindfold.png',
+        'blindfold_away_image': 'star-face-male-001-R-Blindfold.png',
+    },
+    '1.4': {
+        'face_image_family': 'blank face + blank blindfold',
+        'normal_towards_image': 'BlankFaceLookingRight (1).png',
+        'normal_away_image': 'BlankFaceLookingLeft (1).png',
+        'blindfold_towards_image': 'BlankFaceLookingRightBlindfold (1).png',
+        'blindfold_away_image': 'BlankFaceLookingLeftBlindfold (1).png',
+    },
+    '1.5': {
+        'face_image_family': 'blank face + drawing blindfold',
+        'normal_towards_image': 'BlankFaceLookingRight (1).png',
+        'normal_away_image': 'BlankFaceLookingLeft (1).png',
+        'blindfold_towards_image': 'BlindfoldDrawingRight.png',
+        'blindfold_away_image': 'BlindfoldDrawingLeft.png',
+    },
+    '1.6': {
+        'face_image_family': 'blank face + drawing blindfold',
+        'normal_towards_image': 'BlankFaceLookingRight (1).png',
+        'normal_away_image': 'BlankFaceLookingLeft (1).png',
+        'blindfold_towards_image': 'BlindfoldDrawingRight.png',
+        'blindfold_away_image': 'BlindfoldDrawingLeft.png',
+    },
+    '1.7': {
+        'face_image_family': 'blank face + drawing blindfold',
+        'normal_towards_image': 'BlankFaceLookingRight (1).png',
+        'normal_away_image': 'BlankFaceLookingLeft (1).png',
+        'blindfold_towards_image': 'BlindfoldDrawingRight.png',
+        'blindfold_away_image': 'BlindfoldDrawingLeft.png',
+    },
+    '1.8.6': {
+        'face_image_family': 'blank face normal; green catch assets present',
+        'normal_towards_image': 'BlankFaceLookingRight (1).png',
+        'normal_away_image': 'BlankFaceLookingLeft (1).png',
+        'blindfold_towards_image': '',
+        'blindfold_away_image': '',
+    },
+    '1.9.2': {
+        'face_image_family': 'blank face normal; green catch assets present',
+        'normal_towards_image': 'BlankFaceLookingRight (1).png',
+        'normal_away_image': 'BlankFaceLookingLeft (1).png',
+        'blindfold_towards_image': '',
+        'blindfold_away_image': '',
+    },
+    '1.10': {
+        'face_image_family': 'blank face + drawing blindfold; green catch assets present',
+        'normal_towards_image': 'BlankFaceLookingRight (1).png',
+        'normal_away_image': 'BlankFaceLookingLeft (1).png',
+        'blindfold_towards_image': 'BlindfoldDrawingRight.png',
+        'blindfold_away_image': 'BlindfoldDrawingLeft.png',
+    },
+}
+
 def get_image(filename, target_zoom_height=350):
     """Load a stimulus image for embedding into a plot."""
     path = os.path.join(IMG_DIR, filename)
@@ -43,6 +143,356 @@ def draw_vertical_divider(ax, x):
     """Draw a graphical dashed line between sub-experiments."""
     ln = ax.axvline(x=x, color='#bbbbbb', linewidth=1.5, linestyle='--', zorder=0)
     ln.set_clip_on(False)
+
+def describe_rdk_alignment(center_y):
+    """Convert the code-level centerY expression into a readable geometry label."""
+    center_y = str(center_y)
+    if '- 75' in center_y:
+        return 'shifted down 75 px (~1.5 deg)'
+    if '- 50' in center_y:
+        return 'shifted down 50 px (~1.0 deg)'
+    if 'height / 2' in center_y:
+        return 'centered on fixation'
+    return center_y
+
+def center_y_offset_deg(center_y):
+    center_y = str(center_y)
+    if '- 75' in center_y:
+        return -75 / PX_PER_DEG
+    if '- 50' in center_y:
+        return -50 / PX_PER_DEG
+    if 'height / 2' in center_y:
+        return 0.0
+    return np.nan
+
+def center_y_offset_px(center_y):
+    center_y = str(center_y)
+    if '- 75' in center_y:
+        return -75
+    if '- 50' in center_y:
+        return -50
+    if 'height / 2' in center_y:
+        return 0
+    return np.nan
+
+def load_version_metadata():
+    """Load and enrich version-level mechanical metadata for joins and labels."""
+    metadata_path = os.path.join(RESULTS_DIR, 'star_snapshot_parameters.csv')
+    if not os.path.exists(metadata_path):
+        return pd.DataFrame()
+
+    meta = pd.read_csv(metadata_path)
+    meta['metadata_source'] = 'star_snapshot_parameters.csv'
+    for version, overrides in VERSION_PARAMETER_OVERRIDES.items():
+        mask = meta['version'].astype(str) == version
+        for col, value in overrides.items():
+            meta.loc[mask, col] = value
+
+    for col in ['aperture_deg', 'density', 'dot_speed_declared',
+                'effective_speed_deg_s', 'coherence']:
+        meta[col] = pd.to_numeric(meta[col], errors='coerce')
+
+    meta['actual_speed_deg_s'] = meta['effective_speed_deg_s']
+    meta['stars'] = (meta['aperture_deg'] ** 2 * meta['density']).round().astype('Int64')
+    meta['story_type'] = meta['version'].astype(str).map(VERSION_STORY_TYPE).fillna('')
+    meta['platform'] = meta['version'].astype(str).map(VERSION_PLATFORM).fillna('')
+    image_meta = pd.DataFrame.from_dict(FACE_IMAGE_METADATA, orient='index')
+    image_meta.index.name = 'version'
+    image_meta = image_meta.reset_index()
+    meta = meta.merge(image_meta, on='version', how='left')
+    image_cols = [
+        'face_image_family', 'normal_towards_image', 'normal_away_image',
+        'blindfold_towards_image', 'blindfold_away_image',
+    ]
+    meta[image_cols] = meta[image_cols].fillna('')
+    meta['rdk_alignment'] = meta['centerY'].map(describe_rdk_alignment)
+    meta['center_y_offset_deg'] = meta['centerY'].map(center_y_offset_deg)
+    meta['center_y_offset_px'] = meta['centerY'].map(center_y_offset_px)
+    meta['version_note'] = meta['version'].astype(str).map(VERSION_NOTES).fillna('')
+    meta['plot_metadata_label'] = meta.apply(
+        lambda row: (
+            f"{row['actual_speed_deg_s']:.2f} deg/s actual\n"
+            f"{row['density']:.0f} dots/deg^2, "
+            f"{int(row['stars']) if pd.notna(row['stars']) else 'NA'} stars\n"
+            f"coh {row['coherence']:.2f}, {row['platform']}\n"
+            f"{row['rdk_alignment']}\n"
+            f"{row['story_type']}"
+        ),
+        axis=1,
+    )
+
+    column_order = [
+        'version', 'name', 'exp', 'treatment', 'platform', 'story_type',
+        'dot_speed_declared', 'actual_speed_deg_s', 'effective_speed_deg_s',
+        'speed_interleave_fix', 'aperture_deg', 'density', 'stars',
+        'dot_diam_deg', 'coherence', 'interleaved_sets', 'centerY',
+        'rdk_alignment', 'center_y_offset_deg', 'center_y_offset_px',
+        'border', 'fixation_ms',
+        'face_ms', 'test_ms', 'trials_per_condition', 'random_motion',
+        'face_image_family', 'normal_towards_image', 'normal_away_image',
+        'blindfold_towards_image', 'blindfold_away_image',
+        'eyes_condition_logging', 'face_direction_logging',
+        'condition_payload', 'metadata_source', 'version_note',
+        'plot_metadata_label',
+    ]
+    return meta[[col for col in column_order if col in meta.columns]]
+
+def export_metadata_tables():
+    """Write standalone and stats-joined metadata tables for downstream plots."""
+    meta = load_version_metadata()
+    if meta.empty:
+        print("No star_snapshot_parameters.csv found; skipping metadata export.")
+        return pd.DataFrame()
+
+    metadata_path = os.path.join(RESULTS_DIR, 'star_version_metadata.csv')
+    meta.to_csv(metadata_path, index=False)
+    print(f"Saved {metadata_path}")
+
+    stats_path = os.path.join(RESULTS_DIR, 'star_batch_group_stats.csv')
+    if not os.path.exists(stats_path):
+        return pd.DataFrame()
+
+    stats = pd.read_csv(stats_path)
+    stats['version'] = stats['version'].astype(str)
+    summary_path = os.path.join(RESULTS_DIR, 'star_batch_summary.csv')
+    if os.path.exists(summary_path):
+        summary = pd.read_csv(summary_path)
+        summary['experiment_version'] = summary['experiment_version'].astype(str)
+        summary = summary.rename(columns={
+            'experiment_version': 'version',
+            'n_trials': 'presented_trials_per_subject',
+        })
+        stats = stats.merge(
+            summary[['experiment', 'version', 'presented_trials_per_subject']],
+            on=['experiment', 'version'],
+            how='left',
+        )
+    join_cols = [
+        'version', 'platform', 'story_type', 'dot_speed_declared', 'actual_speed_deg_s',
+        'aperture_deg', 'density', 'stars', 'dot_diam_deg', 'coherence',
+        'centerY', 'rdk_alignment', 'center_y_offset_deg',
+        'center_y_offset_px', 'border',
+        'speed_interleave_fix', 'face_image_family', 'normal_towards_image',
+        'normal_away_image', 'blindfold_towards_image',
+        'blindfold_away_image', 'metadata_source', 'plot_metadata_label',
+        'version_note',
+    ]
+    joined = stats.merge(meta[[col for col in join_cols if col in meta.columns]],
+                         on='version', how='left')
+    joined_path = os.path.join(RESULTS_DIR, 'star_batch_group_stats_with_metadata.csv')
+    joined.to_csv(joined_path, index=False)
+    print(f"Saved {joined_path}")
+    return joined
+
+def plot_rt_by_version_with_metadata(group_stats):
+    """Create an RT-by-version plot with mechanical metadata in the x labels."""
+    if group_stats.empty:
+        return
+
+    df = group_stats[group_stats['experiment'] == 'rdk-face-1'].copy()
+    if df.empty:
+        return
+
+    version_order = ['1.3', '1.4', '1.5', '1.6', '1.7', '1.8.6', '1.9.2', '1.10']
+    df['version_order'] = pd.Categorical(df['version'], categories=version_order, ordered=True)
+    df = df.sort_values(['version_order', 'subgroup'])
+
+    labels = [
+        f"v{row.version}\n{row.subgroup}\n{row.plot_metadata_label}"
+        for row in df.itertuples()
+    ]
+    x = np.arange(len(df))
+    vals = df['delta_rt_ms'].to_numpy()
+    errs = df['delta_rt_sem'].to_numpy()
+    pvals = df['delta_rt_p'].to_numpy()
+    colors = np.where(df['subgroup'].str.contains('blindfold', na=False), '#D9822B', '#4A90D9')
+    colors = np.where(df['subgroup'].str.contains('away', na=False), '#7E57C2', colors)
+
+    fig, ax = plt.subplots(figsize=(18, 10))
+    ax.bar(x, vals, yerr=errs, capsize=4, color=colors, edgecolor='black', linewidth=0.8)
+    ax.axhline(0, color='black', linewidth=1)
+    ax.set_ylabel('Delta RT (Congruent - Incongruent, ms)', fontsize=12)
+    ax.set_title('Starfield Face Runs by Version with Mechanical Metadata', fontsize=15, fontweight='bold')
+    ax.set_xticks(x)
+    ax.set_xticklabels(labels, rotation=55, ha='right', fontsize=8)
+
+    y_extent = max(np.nanmax(np.abs(vals + errs)), np.nanmax(np.abs(vals - errs)), 10)
+    ax.set_ylim(-y_extent * 1.45, y_extent * 1.45)
+    for i, (val, err, pval) in enumerate(zip(vals, errs, pvals)):
+        if pval < 0.05:
+            y = val + err + y_extent * 0.08 if val >= 0 else val - err - y_extent * 0.08
+            ax.text(i, y, '*', ha='center', va='center', fontsize=18, fontweight='bold')
+        ax.text(i, -y_extent * 1.25, f"p={pval:.3f}", ha='center', va='center', fontsize=7)
+
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    fig.tight_layout()
+
+    plot_path = os.path.join(RESULTS_DIR, 'star_rt_by_version_with_metadata.png')
+    fig.savefig(plot_path, dpi=200, bbox_inches='tight', facecolor='white')
+    plt.close(fig)
+    print(f"Saved {plot_path}")
+
+def select_stimulus_image(row):
+    """Pick the local image asset that best matches the plotted subgroup."""
+    subgroup = str(row.subgroup).lower()
+    if row.experiment == 'rdk-bars':
+        return 'Grating.png'
+    if 'blindfold' in subgroup:
+        return row.blindfold_away_image if 'away' in subgroup else row.blindfold_towards_image
+    if 'away' in subgroup:
+        return row.normal_away_image
+    return row.normal_towards_image
+
+def significance_label(pval):
+    if pval < 0.001:
+        return '***'
+    if pval < 0.01:
+        return '**'
+    if pval < 0.05:
+        return '*'
+    return ''
+
+def stimulus_y_position(row):
+    """Move the stimulus preview downward for versions whose RDK was shifted."""
+    offset_px = row.center_y_offset_px
+    if pd.isna(offset_px):
+        return 0.36
+    return 0.36 - min(abs(offset_px) / 1000, 0.08)
+
+def offset_label(offset_px):
+    if pd.isna(offset_px) or int(offset_px) == 0:
+        return 'centered'
+    return f"offset {abs(int(offset_px))} px down"
+
+def plot_rt_by_version_with_stimuli(group_stats, output_stem='star_rt_by_version_with_stimuli',
+                                    include_away=True):
+    """Recreate the intuitive visual-stimuli plot with version-specific face assets."""
+    if group_stats.empty:
+        return
+
+    version_order = ['1.0', '1.3', '1.4', '1.5', '1.6', '1.7', '1.8.6', '1.9.2', '1.10']
+    subgroup_order = {
+        'bars': 0,
+        'sighted / towards': 1,
+        'blindfold / towards': 2,
+        'sighted / away': 3,
+        'unknown / towards': 4,
+    }
+    df = group_stats.copy()
+    df['version_order'] = pd.Categorical(df['version'], categories=version_order, ordered=True)
+    df['subgroup_order'] = df['subgroup'].map(subgroup_order).fillna(99)
+    if not include_away:
+        df = df[~df['subgroup'].str.contains('away', case=False, na=False)].copy()
+    df = df.sort_values(['version_order', 'subgroup_order'])
+
+    x = np.arange(len(df))
+    vals = df['delta_rt_ms'].to_numpy()
+    errs = df['delta_rt_sem'].to_numpy()
+    pvals = df['delta_rt_p'].to_numpy()
+    colors = np.where(df['subgroup'].str.contains('blindfold', na=False), '#D9822B', '#4A90D9')
+    colors = np.where(df['subgroup'].str.contains('away', na=False), '#7E57C2', colors)
+
+    fig = plt.figure(figsize=(20, 10))
+    fig.suptitle(
+        'Starfield Experiment: Reaction Time Difference by Version\n'
+        '* p < 0.05, ** p < 0.01, *** p < 0.001 (1-sample t-test vs 0)',
+        fontsize=14,
+        fontweight='bold',
+        y=0.98,
+    )
+    gs = gridspec.GridSpec(2, 1, height_ratios=[0.36, 0.64], hspace=0.03,
+                           left=0.06, right=0.99, top=0.86, bottom=0.16)
+    ax_img = fig.add_subplot(gs[0])
+    ax = fig.add_subplot(gs[1], sharex=ax_img)
+
+    ax_img.set_axis_off()
+    ax_img.set_xlim(-0.5, len(df) - 0.5)
+
+    for i, row in enumerate(df.itertuples()):
+        img_name = select_stimulus_image(row)
+        zoom_height = 170 if str(row.version) == '1.3' else 220
+        if img_name:
+            img_box = get_image(img_name, target_zoom_height=zoom_height)
+            if img_box:
+                add_image_annotation(ax_img, img_box, x[i], stimulus_y_position(row))
+        if 'unknown' in str(row.subgroup).lower():
+            ax_img.text(x[i], 0.58, '?', ha='center', va='center',
+                        fontsize=24, fontweight='bold', color='#333')
+
+    # Version separators and headers.
+    version_groups = df.groupby('version', sort=False).indices
+    for version, indices in version_groups.items():
+        indices = np.array(list(indices))
+        start = indices.min()
+        end = indices.max()
+        center = (start + end) / 2
+        first = df.iloc[start]
+        ax_img.text(center, 0.98,
+                    (
+                        f"v{version} | {first.platform}\n"
+                        f"{first.actual_speed_deg_s:.2f} deg/s, coh {first.coherence:.2f}\n"
+                        f"{first.density:.0f} dots/deg^2 ({int(first.stars)} dots)\n"
+                        f"{offset_label(first.center_y_offset_px)}"
+                    ),
+                    ha='center', va='top', fontsize=7.4, fontweight='bold',
+                    linespacing=1.05)
+        ax.text(center, -0.17, f"v{version}", ha='center', va='top',
+                fontsize=9, fontweight='bold', transform=ax.get_xaxis_transform())
+        if start > 0:
+            for axis in (ax_img, ax):
+                axis.axvline(start - 0.5, color='#c7c7c7', linestyle='--', linewidth=1)
+
+    bars = ax.bar(x, vals, yerr=errs, capsize=4, color=colors,
+                  edgecolor='black', linewidth=0.8)
+    ax.axhline(0, color='black', linewidth=1)
+    ax.set_ylabel('Delta Reaction Time (ms)\nCongruent - Incongruent', fontsize=11)
+    y_extent = max(np.nanmax(np.abs(vals + errs)), np.nanmax(np.abs(vals - errs)), 10)
+    ax.set_ylim(-y_extent * 0.95, y_extent * 1.25)
+    for i, (bar, val, err, pval, n_count, presented_trials, accepted_trials) in enumerate(
+            zip(bars, vals, errs, pvals, df['participants_with_rt_pair'],
+                df['presented_trials_per_subject'], df['trials'])):
+        sig = significance_label(pval)
+        if sig:
+            y = val + err + y_extent * 0.08 if val >= 0 else val - err - y_extent * 0.08
+            va = 'bottom' if val >= 0 else 'top'
+            ax.text(i, y, sig, ha='center', va=va, fontsize=13, fontweight='bold')
+        accepted_trials_per_condition_subject = accepted_trials / (n_count * 2) if n_count else np.nan
+        ax.text(i, y_extent * 1.02,
+                (
+                    f"N={int(n_count)}\n"
+                    f"trials/subj={presented_trials:.0f}\n"
+                    f"accpt/cond/subj={accepted_trials_per_condition_subject:.0f}"
+                ),
+                ha='center', va='center', fontsize=5.9, linespacing=1.05)
+        ax.text(i, -y_extent * 0.82, f"p={pval:.3f}", ha='center', va='center', fontsize=6, color='#555')
+
+    subgroup_labels = []
+    for row in df.itertuples():
+        label = str(row.subgroup).replace(' / ', '\n').title()
+        if row.experiment == 'rdk-bars':
+            label = 'Bars'
+        subgroup_labels.append(label)
+    ax.set_xticks(x)
+    ax.set_xticklabels(subgroup_labels, fontsize=7, fontweight='bold')
+    ax.tick_params(axis='x', length=0)
+    ax.grid(axis='y', alpha=0.15)
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+
+    plot_path = os.path.join(RESULTS_DIR, f'{output_stem}.png')
+    fig.savefig(plot_path, dpi=200, bbox_inches='tight', facecolor='white')
+    print(f"Saved {plot_path}")
+
+    svg_path = os.path.join(RESULTS_DIR, f'{output_stem}.svg')
+    fig.savefig(svg_path, format='svg', bbox_inches='tight', facecolor='white')
+    print(f"Saved {svg_path}")
+
+    pdf_path = os.path.join(RESULTS_DIR, f'{output_stem}.pdf')
+    fig.savefig(pdf_path, format='pdf', bbox_inches='tight', facecolor='white')
+    print(f"Saved {pdf_path}")
+
+    plt.close(fig)
 
 def run_analysis():
     os.makedirs(RESULTS_DIR, exist_ok=True)
@@ -218,6 +668,11 @@ def run_analysis():
     print("\n--- Generating plots for Congruent - Incongruent Differences ---")
     st = plot_metric('acc', 'Accuracy Difference (Congruent - Incongruent)\n* p < 0.05 (1-sample t-test vs 0)', 'Δ Accuracy (%)', 'star_accuracy.png')
     st_rt = plot_metric('rt', 'Reaction Time Difference (Congruent - Incongruent)\n* p < 0.05 (1-sample t-test vs 0)', 'Δ Reaction Time (ms)', 'star_rt.png')
+
+    print("\n--- Exporting version metadata for downstream plots ---")
+    group_stats_with_metadata = export_metadata_tables()
+    plot_rt_by_version_with_metadata(group_stats_with_metadata)
+    plot_rt_by_version_with_stimuli(group_stats_with_metadata)
 
 if __name__ == '__main__':
     run_analysis()

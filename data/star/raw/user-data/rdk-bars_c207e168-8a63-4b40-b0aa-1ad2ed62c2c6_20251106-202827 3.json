@@ -1,0 +1,393 @@
+{
+  "experiment": "rdk-bars",
+  "UUID": "c207e168-8a63-4b40-b0aa-1ad2ed62c2c6",
+  "data": {
+    "session": {
+      "experiment_version": "1.0",
+      "treatment": "bars",
+      "file_version": "1.1",
+      "totalTrials": 30,
+      "session_group": "default",
+      "browserData": {
+        "os": "Windows",
+        "browser": "Chrome",
+        "screenResolution": "1920x1080",
+        "browserViewport": "1920x945",
+        "extraHardware": {
+          "uaCh": {
+            "mobile": false,
+            "brands": [
+              {
+                "brand": "Google Chrome",
+                "version": "141"
+              },
+              {
+                "brand": "Not?A_Brand",
+                "version": "8"
+              },
+              {
+                "brand": "Chromium",
+                "version": "141"
+              }
+            ],
+            "architecture": "x86",
+            "bitness": "64",
+            "fullVersionList": [
+              {
+                "brand": "Google Chrome",
+                "version": "141.0.7390.125"
+              },
+              {
+                "brand": "Not?A_Brand",
+                "version": "8.0.0.0"
+              },
+              {
+                "brand": "Chromium",
+                "version": "141.0.7390.125"
+              }
+            ],
+            "model": "",
+            "platform": "Windows",
+            "platformVersion": "19.0.0",
+            "wow64": false
+          },
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+          "platform": "Win32",
+          "hardwareConcurrency": 16,
+          "deviceMemory": 8,
+          "gpu": {
+            "vendor": "Google Inc. (NVIDIA)",
+            "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 3060 (0x00002504) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080,
+            "availWidth": 1920,
+            "availHeight": 1032,
+            "colorDepth": 24
+          },
+          "viewport": {
+            "width": 1920,
+            "height": 945
+          },
+          "devicePixelRatio": 1,
+          "maxTouchPoints": 0,
+          "pointer": {
+            "coarse": false,
+            "fine": true,
+            "hover": true
+          },
+          "connection": {
+            "effectiveType": "4g",
+            "downlink": 10,
+            "rtt": 150,
+            "saveData": false
+          },
+          "timeZone": "America/Denver",
+          "language": "en-US",
+          "languages": [
+            "en-US",
+            "en"
+          ],
+          "battery": {
+            "charging": true,
+            "level": 1,
+            "chargingTime": 0,
+            "dischargingTime": null
+          }
+        }
+      },
+      "calibration": {
+        "monitorWidthCm": 38,
+        "viewingDistanceCm": 54,
+        "pixelsPerDegree": 0
+      },
+      "parameters": {
+        "coherence": 0.4,
+        "apertureDeg": 5,
+        "dotSpeedDegPerSec": 2,
+        "lifetimeMs": 200,
+        "fixationDurationMs": 1500,
+        "adaptorDurationMs": 1500,
+        "testDurationMs": 2000
+      },
+      "mturk": {
+        "assignmentId": "",
+        "workerId": "",
+        "hitId": ""
+      }
+    },
+    "trials": [
+      {
+        "trial_index": 47,
+        "rt": 1567,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": true,
+        "adaptorDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_index": 52,
+        "rt": null,
+        "correct": false,
+        "response": null,
+        "congruent": true,
+        "adaptorDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_index": 57,
+        "rt": 1466,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": true,
+        "adaptorDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_index": 62,
+        "rt": 1295,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": true,
+        "adaptorDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_index": 67,
+        "rt": 1320,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": false,
+        "adaptorDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_index": 72,
+        "rt": 1263,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": true,
+        "adaptorDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_index": 77,
+        "rt": 1004,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": false,
+        "adaptorDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_index": 82,
+        "rt": 1305,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": false,
+        "adaptorDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_index": 87,
+        "rt": 899,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": false,
+        "adaptorDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_index": 92,
+        "rt": 1409,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": true,
+        "adaptorDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_index": 97,
+        "rt": 975,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": false,
+        "adaptorDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_index": 102,
+        "rt": 823,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": false,
+        "adaptorDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_index": 107,
+        "rt": 731,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": false,
+        "adaptorDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_index": 112,
+        "rt": 990,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": true,
+        "adaptorDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_index": 117,
+        "rt": 973,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": true,
+        "adaptorDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_index": 122,
+        "rt": 730,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": false,
+        "adaptorDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_index": 127,
+        "rt": 723,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": false,
+        "adaptorDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_index": 132,
+        "rt": 727,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": false,
+        "adaptorDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_index": 137,
+        "rt": 669,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": false,
+        "adaptorDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_index": 142,
+        "rt": 936,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": true,
+        "adaptorDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_index": 147,
+        "rt": 1159,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": true,
+        "adaptorDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_index": 152,
+        "rt": 1185,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": true,
+        "adaptorDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_index": 157,
+        "rt": 880,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": true,
+        "adaptorDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_index": 162,
+        "rt": 867,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": true,
+        "adaptorDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_index": 167,
+        "rt": 728,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": false,
+        "adaptorDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_index": 172,
+        "rt": 675,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": false,
+        "adaptorDirection": 0,
+        "testDirection": 180
+      },
+      {
+        "trial_index": 177,
+        "rt": 636,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": false,
+        "adaptorDirection": 180,
+        "testDirection": 0
+      },
+      {
+        "trial_index": 182,
+        "rt": 734,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": true,
+        "adaptorDirection": 0,
+        "testDirection": 0
+      },
+      {
+        "trial_index": 187,
+        "rt": 803,
+        "correct": true,
+        "response": "ArrowLeft",
+        "congruent": true,
+        "adaptorDirection": 180,
+        "testDirection": 180
+      },
+      {
+        "trial_index": 192,
+        "rt": 696,
+        "correct": true,
+        "response": "ArrowRight",
+        "congruent": false,
+        "adaptorDirection": 180,
+        "testDirection": 0
+      }
+    ]
+  }
+}
